@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CP-AMS 퍼블리싱 작업현황판</title>
+  <style>
+    html,
+    body,
+    div,
+    span,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    em,
+    img,
+    strong,
+    b,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    footer,
+    header,
+    menu,
+    nav,
+    section {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      padding: 2em;
+      line-height: 1.4;
+      font-family: applegothic, '나눔고딕', nanumgothic, '맑은 고딕', malgungothic, dotum, '돋움';
+      font-size: 13px;
+      color: #333;
+    }
+
+    ul,
+    ol {
+      list-style-type: none;
+    }
+
+    table {
+      border-spacing: 0;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    h1 {
+      font-size: 1.45em;
+    }
+
+    h2 {
+      margin-bottom: 5px;
+      font-size: 1.3em;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    th {
+      vertical-align: middle;
+      word-break: break-all;
+    }
+
+    td {
+      vertical-align: middle;
+      word-break: break-all;
+    }
+
+    a {
+      color: #666;
+    }
+
+    .hidden {
+      position: absolute;
+      top: -99999em;
+      left: -99999em;
+    }
+    .work {
+      width: 100%;
+      margin: 0 0 3em;
+      width: 100%;
+      border-top: 2px solid #aaa;
+      text-align:center;
+    }
+
+    .work th {
+      font-family: 'calbri';
+      padding: 0.5em;
+      border: 1px solid #ddd;
+      border-left-width: 0;
+      background: #f9f9f9;
+    }
+
+    .work td {
+      padding: 0.5em;
+      border-bottom: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      background: #fff;
+      vertical-align: middle;
+    }
+
+    .work th:last-child,
+    .work td:last-child {
+      border-right-width: 0;
+    }
+
+    .tit td {
+      border-top: 2px solid #ccc;
+    }
+
+    .work td:nth-last-child(2),
+    .work td:nth-last-child(3) {
+      text-align: center;
+      color: #666;
+    }
+
+    .yellow td {
+      background: #fff8d0;
+    }
+
+    .red {
+      color: #dc5959;
+    }
+
+    .status {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+
+    .status h2 {
+      float: left;
+    }
+
+    .status span {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .tit1 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .work tbody {
+      counter-reset: num;
+    }
+
+    .work tbody tr td:nth-last-child(2)::before {
+      counter-increment: num;
+      content: counter(num);
+    }
+
+  </style>
+</head>
+
+<body>  
+  <div class="status">
+    <h2 style="font-family: 'calbri'">Publish List</h2>
+    <span>○ 퍼블 대기중</span> <span>◐ 퍼블 작업중</span>
+    <span>● 퍼블 완료</span>
+  </div>
+  <table class="work">
+    <colgroup>
+      <col style="width: 100px" />
+      <col style="width: 200px" />
+      <col style="width: 80px" />
+      <col style="width: 200px" />
+      <col style="width: 80px" />
+      <col />
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col">TYPE</th>
+        <th scope="col">화면명</th>
+        <th scope="col">PAGE</th>     
+        <th scope="col">FileName</th>        
+        <th scope="col">num</th>
+        <th scope="col">Memo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="tit">
+        <td>공통</td>
+        <td>left 메뉴</td>
+        <td>7</td>
+        <td><a href="menu.html" target="_blank">menu.html</a></td>
+        <td></td>
+        <td></td>
+      </tr>    
+    </tbody>
+  </table>
+</body>
+</html>

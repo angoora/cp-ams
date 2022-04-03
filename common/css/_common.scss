@@ -1,0 +1,150 @@
+/*레이아웃*/
+#wrap {position:relative;min-height:100%;}
+.header {width:280px;height:100%;position:absolute;left:0;top:0;bottom:0;}
+#container {margin-left:280px;}
+
+/*헤더 & GNB*/
+.header {background-color:$color1;padding:20px;color:#fff;text-align:center;height:100%;
+  .logo {
+    a {display:inline-block;width:152px;height:47px;background:url(../images/logo.png) no-repeat center;transition:all 0.2s;
+    }
+   }
+  #gnb {text-align:left;
+    margin-top: 23px;  
+    >.dep1 {
+      border-top: 1px solid #268ad2;
+      > li {
+        border-bottom:1px solid #268ad2;
+        > a {padding:6px 0;position:relative;
+          i,span {vertical-align:middle;}
+          i {display:inline-block;width:48px;height:48px;line-height:48px;border-radius:48px;text-align:center;
+            img {vertical-align:middle;}
+          }
+          &.btn {
+            &:before {width:9px;height:9px;position:absolute;right:13px;top:50%;transform:translateY(-50%);background:url(../images/gnb_open.png) no-repeat center;content:'';}
+            }
+        }        
+        &.active {
+          border:1px solid #fff;margin-bottom:10px;
+          > a {background-color:$color2;
+            &.btn {
+              &:before {background-image: url(../images/gnb_close.png);
+              }
+            }
+          }  
+        }        
+        &:not(.active):hover {border:1px solid #fff;border-top:0;box-shadow:0 -1px 0 0 #fff;
+          >a {
+            background-color: $color2;
+          }
+        }
+      }
+    }
+    .dep2 {display:none;background-color:#fff;
+    color:$color1;
+      > li {display:flex;align-items:center;padding:12px 0;
+        border-bottom:1px solid #3b92e5;
+        &:last-of-type{border-bottom:0;}
+        > a {flex:initial;width:104px;padding:0 15px 0 20px;color:$color1;font-weight: 500;}
+        .dep3 {flex:auto;}
+      }
+    }
+    .dep3 {color:#555555;
+      > li {padding:3px 20px 3px 13px;position:relative;
+        &:before {content:none;width:7px;height:10px;background:url(../images/gnb_point.png) no-repeat 50% 50%;position:absolute;left:0;top:50%;margin-top:-4px;}
+        &.active,&:hover {
+          &:before {content:'';}
+          color: $color1;
+          font-weight: 500;        
+          > a {
+            text-decoration: underline;
+            text-underline-position: under;
+          }
+        }
+      }     
+    }
+  }
+  .btn_menu {position:absolute;right:-9px;top:33px; width:26px;height:26px;border-radius:26px;overflow:hidden;background:$color1 url(../images/menu_close.png) no-repeat center center;box-shadow:0 0 5px 0 rgba(0,0,0,0.2);}
+  &.sm {padding:20px 0;
+    .logo {
+      a {margin-left:-10px;width:50px;height:47px;background-image:url(../images/logo_a.png);
+      }
+     }
+    #gnb {text-align:center;
+      >.dep1 {
+        border-top:0;
+        > li {
+          border-bottom:0;
+          > a { 
+            span {display:none;} 
+            &.btn {
+              &:before {content:none;}
+            }
+          }
+          &.active {
+            border:0;margin-bottom:0;
+            > a {background:none;
+              i {background-color:$color2;}
+              span {display:none;}
+              &.btn {
+                &:before {content:none;}
+              }
+            }  
+          }        
+          &:not(.active):hover {border:none;box-shadow:none;
+            >a {background:none;
+              i {background-color:$color2;}
+              span {display:none;}
+              background-color:none;
+            }
+          }
+        }
+      }
+      .dep2 {display:none;background-color:#fff;
+      color:$color1;
+        > li {display:flex;align-items:center;padding:12px 0;
+          border-bottom:1px solid #3b92e5;
+          &:last-of-type{border-bottom:0;}
+          > a {flex:initial;width:104px;padding:0 15px 0 20px;color:$color1;font-weight: 500;}
+          .dep3 {flex:auto;}
+        }
+      }
+      .dep3 {display:none;color:#555555;
+        > li {padding:3px 20px 3px 13px;position:relative;
+          &:before {content:none;width:7px;height:10px;background:url(../images/gnb_point.png) no-repeat 50% 50%;position:absolute;left:0;top:50%;margin-top:-4px;}
+          &.active,&:hover {
+            &:before {content:'';}
+            color: $color1;
+            font-weight: 500;        
+            > a {
+              text-decoration: underline;
+              text-underline-position: under;
+            }
+          }
+        }     
+      }
+    }
+    .btn_menu {background-image:url(../images/menu_open.png);}
+  }
+}
+
+/*컨테이너*/
+#container {padding-left:50px;padding-right:50px;background-color:#fff;
+  .title{@include clear;
+    margin-bottom:50px;padding:25px 0 23px;border-bottom:1px solid #666;text-align:right;
+    h2 {float:left;color:#222;font-size:30px;font-weight:500;
+      span {margin-left:10px;
+        &:before {display:inline-block;width:8px;height:8px;background-color:$color2;margin-right:10px;vertical-align:7px;content:'';}
+      }
+    }
+    a {display:inline-block;width:42px;height:42px;border-radius:42px;background:#e2e2e2 url(../images/icon_mypage.png) no-repeat 50% 50%;overflow:hidden;text-indent:42px;white-space:nowrap;}
+  }
+}
+
+/*검색 폼*/
+
+/*checkbox & radio*/
+input[type="checkbox"] {display:inline-block;width:19px;height:18px;background: url(../images/chk_off.png) no-repeat center;vertical-align:middle;
+  + label {margin-left:5px;display:inline-block;cursor:pointer;vertical-align:middle;}
+  &:checked {background-image:url(../images/chk_on.png);}
+}
