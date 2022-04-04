@@ -1,5 +1,3 @@
-
-
 //gnb 관련 함수
 function gnbAction() {
   // dep2가 있는 경우 dep1에 btn클래스 부여,  
@@ -62,6 +60,21 @@ function gnbAction() {
     }
   });
 }
+
+//팝업
+function modalPopup(){
+  $('[data-popopen]').click(function(){
+    console.log(this);
+    var popName = $(this).data('popopen');
+    $('[data-pop="'+popName+'"]').stop().fadeIn(200);
+  });
+  $('.pop-close').click(function(){
+    $(this).closest('[data-pop]').fadeOut(200);
+  }); 
+}
+
+
 $(function () {//document 로드 후 실행
   gnbAction();
+  modalPopup();
 });
