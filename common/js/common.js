@@ -32,18 +32,18 @@ function gnbAction() {
   });
 
   //전체메뉴 펼침
-  $('.logo a').on('click',function(){
-    if($('.header').hasClass('sm')){
-      return false;
-    }
-    var gnb = $('#gnb .dep1 > li')
-    gnb.each(function(){
-      if($(this).children('a').hasClass('btn')){
-        $(this).find('.dep2').stop().slideDown(200);
-      }
-      gnb.addClass('active')
-    });
-  });
+  // $('.logo a').on('click',function(){
+  //   if($('.header').hasClass('sm')){
+  //     return false;
+  //   }
+  //   var gnb = $('#gnb .dep1 > li')
+  //   gnb.each(function(){
+  //     if($(this).children('a').hasClass('btn')){
+  //       $(this).find('.dep2').stop().slideDown(200);
+  //     }
+  //     gnb.addClass('active')
+  //   });
+  // });
 
   //gnb 감추기
   $('.btn_menu').on('click',function(){
@@ -73,8 +73,15 @@ function modalPopup(){
   }); 
 }
 
+//페이징
+function pagination(){//pagination 클릭하면 active
+  $('.page-wrap a').click(function(){
+    $(this).addClass('active').siblings('a').removeClass('active');
+  });
+}
 
 $(function () {//document 로드 후 실행
   gnbAction();
   modalPopup();
+  pagination();
 });

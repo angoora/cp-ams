@@ -215,11 +215,63 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 select { width: 100%; max-width: 200px; border: 1px solid #e8e8e8; padding: 0 12px; line-height: 40px; background: #fff url(../images/arrow_select.png) no-repeat right 15px center; border-radius: 5px; color: #111; }
 
 /*checkbox & radio*/
-input[type="checkbox"] { display: inline-block; width: 19px; height: 18px; background: url(../images/chk_off.png) no-repeat center; vertical-align: middle; }
+input[type="checkbox"] { display: inline-block; width: 19px; height: 18px; cursor: pointer; background: url(../images/chk_off.png) no-repeat center; vertical-align: middle; }
 
 input[type="checkbox"] + label { margin-left: 5px; display: inline-block; cursor: pointer; vertical-align: middle; }
 
 input[type="checkbox"]:checked { background-image: url(../images/chk_on.png); }
+
+/*테이블*/
+.table { margin: 10px 0; text-align: center; }
+
+.table.ta_c, .table .ta_c { text-align: center; }
+
+.table .ta_r { text-align: right; }
+
+.table .ta_l { text-align: left; }
+
+.table table { background-color: #fff; border-top: 2px solid #0076ca; font-size: 15px; }
+
+.table th, .table td { border-bottom: 1px solid #e2e2e2; padding: 12px 8px; }
+
+.table th:first-child, .table td:first-child { border-left: 0; }
+
+.table th:last-child, .table td:last-child { border-right: 0; }
+
+.table thead { background-color: #fff; font-size: 16px; }
+
+.table thead th { padding: 15px 8px; }
+
+.table thead th:after { content: ''; height: 15px; width: 1px; vertical-align: middle; background-color: #e2e2e2; float: right; position: relative; left: 9px; top: 5px; }
+
+.table thead th:last-of-type:after { content: none; }
+
+/*페이징*/
+.pagination { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-size: 15px; margin-top: 50px; text-align: center; }
+
+.pagination a { display: block; width: 40px; height: 40px; line-height: 40px; color: #636363; border-right: 1px solid #e2e2e2; overflow: hidden; white-space: nowrap; }
+
+.pagination a:last-of-type { border-right: 0; }
+
+.pagination a.active { color: #fff; background-color: #1b53a0; -webkit-box-shadow: 0 0 0 1px #1b53a0; box-shadow: 0 0 0 1px #1b53a0; border-right: 0; }
+
+.pagination .page-wrap, .pagination .prev-wrap, .pagination .next-wrap { display: -webkit-box; display: -ms-flexbox; display: flex; border: 1px solid #e2e2e2; }
+
+.pagination .prev-wrap { margin-right: 3px; text-indent: 40px; }
+
+.pagination .next-wrap { margin-left: 3px; text-indent: 40px; }
+
+.pagination .arrw-first, .pagination .arrw-last { background-color: #f4f4f4; }
+
+.pagination .arrw-first, .pagination .arrw-last, .pagination .arrw-prev, .pagination .arrw-next { background-repeat: no-repeat; background-position: center; }
+
+.pagination .arrw-first { background-image: url(../images/btn_arrw_first.png); }
+
+.pagination .arrw-last { background-image: url(../images/btn_arrw_last.png); }
+
+.pagination .arrw-prev { background-image: url(../images/btn_arrw_prev.png); }
+
+.pagination .arrw-next { background-image: url(../images/btn_arrw_next.png); }
 
 /*검색 상자*/
 .sch-box { padding: 20px 40px 25px 20px; background-color: #f3f9ff; margin-bottom: 30px; -ms-flex-line-pack: end; align-content: flex-end; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; }
