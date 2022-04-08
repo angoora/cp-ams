@@ -1,5 +1,22 @@
 //gnb 관련 함수
 function gnbAction() {
+  function openGnb(el){//gnb 펼치기
+    $('#container').stop().animate({marginLeft:'280px'},200);
+    $('.header').stop().animate({width:'280px'},200,function(){
+      $(this).removeClass('sm');
+      slideGnb(el);
+    });   
+  }
+  function slideGnb(el){
+    var thisWrap = $(el).closest('li');
+    if ($(el).hasClass('btn')) { //하위 메뉴 있는 경우 토글슬라이드
+      $(el).next('.dep2').stop().slideToggle(200).closest('li').siblings('li').removeClass('active').find('.dep2').stop().slideUp(200);
+      thisWrap.toggleClass('active');
+      return false;
+    } else {//하위메뉴 없는 경우 active
+      thisWrap.toggleClass('active').siblings('li').removeClass('active').find('.dep2').stop().slideUp(200);
+    }
+  }
   // dep2가 있는 경우 dep1에 btn클래스 부여,  
   $('#gnb .dep1 > li > a').each(function () {
     if ($(this).next('.dep2').length) {
@@ -11,17 +28,11 @@ function gnbAction() {
   });
 
   //dep1 클릭시 active 표기 하위메뉴 노출
-  $('#gnb .dep1 > li > a').on('click', function () {
+  $('#gnb .dep1 > li > a').on('click', function () {    
     if($('.header').hasClass('sm')){
-      return false;
-    }
-    var thisWrap = $(this).closest('li');
-    if ($(this).hasClass('btn')) { //하위 메뉴 있는 경우 토글슬라이드
-      $(this).next('.dep2').stop().slideToggle(200).closest('li').siblings('li').removeClass('active').find('.dep2').stop().slideUp(200);
-      thisWrap.toggleClass('active');
-      return false;
-    } else {//하위메뉴 없는 경우 active
-      thisWrap.toggleClass('active').siblings('li').removeClass('active').find('.dep2').stop().slideUp(200);
+      openGnb(this);      
+    }else{
+      slideGnb(this);
     }
   });
  
@@ -48,10 +59,7 @@ function gnbAction() {
   //gnb 감추기
   $('.btn_menu').on('click',function(){
     if($('.header').hasClass('sm')){//gnb펼치기
-      $('.header').stop().animate({width:'280px'},200,function(){
-        $(this).removeClass('sm');
-      });
-      $('#container').stop().animate({marginLeft:'280px'},200);
+      openGnb();
     }else{//gnb줄이기
       $('.header').addClass('sm').stop().animate({width:'80px'},200);
       $('#container').stop().animate({marginLeft:'80px'},200);
