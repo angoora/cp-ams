@@ -1,3 +1,23 @@
+//스크롤바 width 구하기
+function getScrollWidth(){
+  const outer = document.createElement('div');
+  outer.style.visibility = 'hidden';
+  outer.style.overflow = 'scroll'; // forcing scrollbar to appear
+  outer.style.msOverflowStyle = 'scrollbar'; // needed for WinJS apps
+  document.body.appendChild(outer);
+
+  // Creating inner element and placing it in the container
+  const inner = document.createElement('div');
+  outer.appendChild(inner);
+
+  // Calculating difference between container's full width and the child width
+  const scrollbarWidth = (outer.offsetWidth - inner.offsetWidth);
+
+  // Removing temporary elements from the DOM
+  outer.parentNode.removeChild(outer);
+  return scrollbarWidth;
+}
+
 //gnb 관련 함수
 function gnbAction() {
   function openGnb(el){//gnb 펼치기
@@ -72,13 +92,13 @@ function gnbAction() {
 //팝업
 function modalPopup(){
   $('[data-popopen]').click(function(){
-    console.log(this);
     var popName = $(this).data('popopen');
     $('[data-pop="'+popName+'"]').stop().fadeIn(200);
   });
   $('.pop-close').click(function(){
     $(this).closest('[data-pop]').fadeOut(200);
   }); 
+
 }
 
 //페이징
@@ -88,7 +108,17 @@ function pagination(){//pagination 클릭하면 active
   });
 }
 
+//테이블 
+function fxTable(arg){
+  $('.table.fx-hd').each(function(){
+    $(this).find('table').clone().prependTo(this).addClass('clone-tb').attr('tabindex','-1').next('table').wrap('<div class="scr-y"></div>');
+    $(this).find('.clone-tb').css('width','calc(100% - '+arg+'px)');
+  });
+}
+
 $(function () {//document 로드 후 실행
+  var scrollWidth = getScrollWidth();
+  fxTable(scrollWidth);
   gnbAction();
   modalPopup();
   pagination();

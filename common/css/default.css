@@ -201,6 +201,11 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 
 .btn3.blue { color: #fff; background-color: #1b53a0; border-color: #1b53a0; }
 
+/*추가&삭제 버튼*/
+.btn_add { width: 100%; height: 42px; vertical-align: middle; background: url(../images/btn_add.png) no-repeat center; }
+
+.btn_del { width: 100%; height: 42px; vertical-align: middle; background: url(../images/btn_add.png) no-repeat center; }
+
 /*input*/
 .inp-txt { width: 100%; max-width: 200px; border: 1px solid #e8e8e8; padding: 0 12px; line-height: 40px; height: 42px; background-color: #fff; border-radius: 5px; color: #111; }
 
@@ -222,9 +227,27 @@ input[type="checkbox"] + label { margin-left: 5px; display: inline-block; cursor
 input[type="checkbox"]:checked { background-image: url(../images/chk_on.png); }
 
 /*테이블*/
-.table { margin: 10px 0; text-align: center; }
+.table { margin: 10px 0; text-align: center; word-break: break-all; }
 
 .table.ta_c, .table .ta_c { text-align: center; }
+
+.table.fx-hd { position: relative; }
+
+.table.fx-hd .scr-y { overflow-x: hidden; overflow-y: scroll; }
+
+.table.fx-hd .clone-tb { position: absolute; left: 0; top: 0; width: 100%; z-index: 1; }
+
+.table.fx-hd .clone-tb > tbody, .table.fx-hd .clone-tb tfoot { display: none; }
+
+.table.board th, .table.board td { border: 0; border-bottom: 1px solid #e2e2e2; }
+
+.table.board th:first-child, .table.board td:first-child { border-left: 0; }
+
+.table.board th:last-child, .table.board td:last-child { border-right: 0; }
+
+.table.board thead th:after { content: ''; height: 15px; width: 1px; vertical-align: middle; background-color: #e2e2e2; float: right; position: relative; left: 9px; top: 5px; }
+
+.table.board thead th:last-of-type:after { content: none; }
 
 .table .ta_r { text-align: right; }
 
@@ -232,19 +255,13 @@ input[type="checkbox"]:checked { background-image: url(../images/chk_on.png); }
 
 .table table { background-color: #fff; border-top: 2px solid #0076ca; font-size: 15px; }
 
-.table th, .table td { border-bottom: 1px solid #e2e2e2; padding: 12px 8px; }
+.table table select { border: 0; }
 
-.table th:first-child, .table td:first-child { border-left: 0; }
-
-.table th:last-child, .table td:last-child { border-right: 0; }
+.table th, .table td { border: 1px solid #e2e2e2; padding: 0 4px; height: 46px; vertical-align: middle; }
 
 .table thead { background-color: #fff; font-size: 16px; }
 
-.table thead th { padding: 15px 8px; }
-
-.table thead th:after { content: ''; height: 15px; width: 1px; vertical-align: middle; background-color: #e2e2e2; float: right; position: relative; left: 9px; top: 5px; }
-
-.table thead th:last-of-type:after { content: none; }
+.table thead th { height: 53px; }
 
 /*페이징*/
 .pagination { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-size: 15px; margin-top: 50px; text-align: center; }
@@ -299,13 +316,19 @@ input[type="checkbox"]:checked { background-image: url(../images/chk_on.png); }
 
 .pop-wrap .pop-inner { padding: 30px 50px 50px; max-height: calc(100% - 80px); overflow-x: hidden; overflow-y: auto; background-color: #fff; }
 
+.pop-wrap .scr-y { max-height: 284px; }
+
 .pop-wrap .pop-inp { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 0 -15px -10px; }
 
 .pop-wrap .pop-inp > li { width: calc(50% - 30px); margin: 0 15px 10px; }
 
-.pop-wrap .pop-inp > li .inp-set label { -webkit-box-flex: 0; -ms-flex: none; flex: none; min-width: 75px; font-weight: 500; }
+.pop-wrap .pop-inp > li .inp-set label { -webkit-box-flex: 0; -ms-flex: none; flex: none; min-width: 120px; width: 14%; font-weight: 500; padding-right: 10px; }
 
 .pop-wrap .pop-inp > li .inp-set .inp-txt, .pop-wrap .pop-inp > li .inp-set select { max-width: 290px; margin-left: auto; line-height: 50px; height: 52px; padding: 0 20px; }
+
+.pop-wrap .pop-inp > li.full { width: 100%; }
+
+.pop-wrap .pop-inp > li.full .inp-txt, .pop-wrap .pop-inp > li.full select { max-width: 100%; }
 
 .pop-wrap .pop-btn { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: auto; -ms-flex-positive: auto; flex-grow: auto; margin-top: 30px; }
 
