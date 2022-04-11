@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>CP-AMS에 오신 것을 환영합니다.</title>
+  <link rel="stylesheet" href="../common/css/default.css">
+  <script src="../common/js/prefixfree.min.js"></script>
+  <script src="../common/js/jquery-3.6.0.min.js"></script>
+  <script src="../common/js/common.js"></script>
+
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- 헤더 -->
+    <header class="header">
+      <h1 class="logo"><a href="#"><span class="hide">AerQ</span></a></h1>
+      <nav id="gnb">
+        <ul class="dep1">
+          <li class="active"><a href="#"><i><img src="../common/images/icon_gnb_1.png" alt=""></i><span>관리</span></a>
+            <ul class="dep2">
+              <li><a href="#">USER 관리</a>
+                <ul class="dep3">
+                  <li><a href="#">기관 사용자</a></li>
+                  <li class="active"><a href="#">일반 사용자</a></li>
+                  <li><a href="#">사용 권한</a></li>
+                </ul>
+              </li>
+              <li><a href="#">설정 관리</a>
+                <ul class="dep3">
+                  <li><a href="#">Local서버</a></li>
+                  <li><a href="#">센서</a></li>
+                  <li><a href="#">측정기 관리</a></li>
+                  <li><a href="#">공기살균정화기</a></li>
+                </ul>
+              </li>
+              <li><a href="#">설정 관리</a>
+                <ul class="dep3">
+                  <li><a href="#">측정기</a></li>
+                  <li><a href="#">센서</a></li>
+                  <li><a href="#">그룹</a></li>
+                  <li><a href="#">장애</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#"><i><img src="../common/images/icon_gnb_2.png" alt=""></i><span>모니터링</span></a></li>
+          <li><a href="#"><i><img src="../common/images/icon_gnb_3.png" alt=""></i><span>현황</span></a>
+            <ul class="dep2">
+              <li><a href="#">측정기</a>
+                <ul class="dep3">
+                  <li><a href="#">미등록 현황</a></li>
+                  <li><a href="#">개별 현황</a></li>
+                  <li><a href="#">기간별 현황</a></li>
+                </ul>
+              </li>
+              <li><a href="#">센서</a>
+                <ul class="dep3">
+                  <li><a href="#">평균 현황</a></li>
+                  <li><a href="#">기간별 현황</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#"><i><img src="../common/images/icon_gnb_4.png" alt=""></i><span>도움말</span></a></li>
+        </ul>
+      </nav>
+      <button type="button" class="btn_menu"><span class="hide">메뉴닫기</span></button>
+    </header>
+    <!-- //헤더 -->
+    <!-- container -->
+    <div id="container">
+      <!-- 페이지 제목 -->
+      <div class="title">
+        <h2>청파초등학교 <span>측정기관리</span></h2>
+        <a href="#" class="mypage">마이페이지</a>
+      </div>
+      <!-- 페이지 제목 -->
+      <!-- 컨텐츠 -->
+      <div class="contents">
+        <!-- 검색 상자 -->
+        <div class="sch-box">
+          <div class="inp-set">
+            <label for="inp1">기관</label>
+            <input type="text" id="inp1" value="청파초등학교" name="#" class="inp-txt">
+          </div>
+          <div class="inp-set">
+            <label for="inp2">측정기명</label>
+            <input type="text" id="inp2" value="교실1" name="#" class="inp-txt">
+            <button type="button" class="btn1 btn-sch">조회</button>
+            <button type="button" class="btn1">초기화</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn1" data-popopen="pop1">등록</button>
+            <button type="button" class="btn1" data-popopen="pop1">수정</button>
+            <button type="button" class="btn1" data-popopen="pop2">삭제</button>
+          </div>
+        </div>
+        <!-- 검색 상자 -->
+        <!-- 리스트 테이블 -->
+        <div class="table board">
+          <table>
+            <colgroup>
+              <col style="width:6%;">
+              <col style="width:6%;">
+              <col style="width:15%;">
+              <col style="width:auto;" span="4">
+              <col style="width:6%;">
+              <col style="width:6%;">
+              <col style="width:10%;">
+              <col style="width:6%;">
+              <col style="width:6%;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>번호</th>
+                <th>선택</th>
+                <th>기관명</th>
+                <th>아이피</th>
+                <th>그룹명</th>
+                <th>측정기코드</th>
+                <th>측정기명</th>
+                <th>표시유무</th>
+                <th>등록유무</th>
+                <th>공기살균정화기</th>
+                <th>수신일시</th>
+                <th>가동시작일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>00010</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>청파초등학교</td>
+                <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td></td>
+                <td>유</td>
+                <td>유</td>
+                <td></td>
+                <td>22.03.22</td>
+                <td>22.03.22</td>
+              </tr>
+              <tr>
+                <td>00009</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>청파초등학교</td>
+                <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td></td>
+                <td>유</td>
+                <td>유</td>
+                <td></td>
+                <td>22.03.22</td>
+                <td>22.03.22</td>
+              </tr>
+              <tr>
+                <td>00008</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>청파초등학교</td>
+                <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td></td>
+                <td>유</td>
+                <td>유</td>
+                <td></td>
+                <td>22.03.22</td>
+                <td>22.03.22</td>
+              </tr>
+              <tr>
+                <td>00007</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>청파초등학교</td>
+                <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td></td>
+                <td>유</td>
+                <td>유</td>
+                <td></td>
+                <td>22.03.22</td>
+                <td>22.03.22</td>
+              </tr>
+              <tr>
+                <td>00006</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>청파초등학교</td>
+                <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td></td>
+                <td>유</td>
+                <td>유</td>
+                <td></td>
+                <td>22.03.22</td>
+                <td>22.03.22</td>
+              </tr>
+              <tr>
+                <td>00005</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>청파초등학교</td>
+                <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td></td>
+                <td>유</td>
+                <td>유</td>
+                <td></td>
+                <td>22.03.22</td>
+                <td>22.03.22</td>
+              </tr>
+              <tr>
+                <td>00004</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>청파초등학교</td>
+                <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td></td>
+                <td>유</td>
+                <td>유</td>
+                <td></td>
+                <td>22.03.22</td>
+                <td>22.03.22</td>
+              </tr>
+              <tr>
+                <td>00003</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>청파초등학교</td>
+                <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td></td>
+                <td>유</td>
+                <td>유</td>
+                <td></td>
+                <td>22.03.22</td>
+                <td>22.03.22</td>
+              </tr>
+              <tr>
+                <td>00002</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>청파초등학교</td>
+                <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td></td>
+                <td>유</td>
+                <td>유</td>
+                <td></td>
+                <td>22.03.22</td>
+                <td>22.03.22</td>
+              </tr>
+              <tr>
+                <td>00001</td>
+                <td><input type="checkbox" name="#" checked></td>
+                <td>청파초등학교</td>
+                <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td></td>
+                <td>유</td>
+                <td>유</td>
+                <td></td>
+                <td>22.03.22</td>
+                <td>22.03.22</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 리스트 테이블 -->
+        <!-- pagination -->
+        <div class="pagination">
+          <div class="prev-wrap">
+            <a href="#" class="arrw-first">처음페이지</a>
+            <a href="#" class="arrw-prev">이전페이지</a>
+          </div>
+          <div class="page-wrap">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+          </div>
+          <div class="next-wrap">
+            <a href="#" class="arrw-next">다음페이지</a>
+            <a href="#" class="arrw-last">마지막페이지</a>
+          </div>
+        </div>
+        <!-- //pagination -->
+
+      </div>
+      <!-- //컨텐츠 -->
+    </div>
+    <!-- container -->
+  </div>
+
+  <!-- 팝업창
+    1. 팝업열기 클릭한 버튼 [data-popopen]속성 값과 동일한 값을 가지는[data-pop] 요소를 나타냄.
+    2. 팝업닫기 클릭한 버튼 pop-close 클래스
+    -->
+  <div class="pop-wrap" data-pop="pop1">
+    <div class="pop-box">
+      <h2 class="pop-head">측정기 관리</h2>
+      <div class="pop-inner">
+        <form action="#" method="post">
+          <ul class="pop-inp">
+            <li>
+              <div class="inp-set">
+                <label for="inp3">아이피</label>
+                <input type="text" id="inp3" value="127.0.0.1" name="#" class="inp-txt">
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp4">측정기코드</label>
+                <input type="text" id="inp4" value="001" name="#" class="inp-txt">
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp5">측정기명</label>
+                <input type="text" id="inp5" value="교실1" name="#" class="inp-txt">
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp7">표시유무</label>
+                <select name="#" id="inp7">
+                  <option value="">유</option>
+                  <option value="">무</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp8">공기살균정화기</label>
+                <select name="#" id="inp8">
+                  <option value="">유</option>
+                  <option value="">무</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+          <div class="pop-btn">
+            <button type="button" class="btn2 blue" data-popopen="pop3">저장</button>
+            <button type="button" class="btn2 pop-close">취소</button>
+          </div>
+          <!-- 확인창 -->
+          <div class="confirm-wrap" data-pop="pop3">
+            <div class="confirm-box">
+              <strong>저장하겠습니까?</strong>
+              <button type="button" class="btn3 blue">확인</button>
+              <button type="button" class="btn3 pop-close">취소</button>
+            </div>
+          </div>
+          <!-- //확인창 -->
+        </form>
+      </div>
+      <button type="button" class="pop-close">닫기</button>
+    </div>
+  </div>
+  <!-- //팝업창 -->
+  <!-- 확인창 -->
+  <div class="confirm-wrap" data-pop="pop2">
+    <div class="confirm-box">
+      <strong>삭제하겠습니까?</strong>
+      <button type="button" class="btn3 blue">확인</button>
+      <button type="button" class="btn3 pop-close">취소</button>
+    </div>
+  </div>
+  <!-- //확인창 -->
+</body>
+
+</html>
