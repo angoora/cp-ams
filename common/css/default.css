@@ -10,6 +10,10 @@
 
 @font-face { font-family: 'Noto Sans'; font-weight: 700; font-style: normal; src: url("../fonts/NotoSansKR-Bold.eot"); src: local(※), url("../fonts/NotoSansKR-Bold.eot#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Bold.woff") format("woff"), url("../fonts/NotoSansKR-Bold.otf") format("opentype"); }
 
+@font-face { font-family: 'GmarketSans'; src: url("../fonts/GmarketSansMedium.woff") format("woff"); font-weight: 400; font-style: normal; }
+
+@font-face { font-family: 'GmarketSans'; src: url("../fonts/GmarketSansBold.woff") format("woff"); font-weight: 600; font-style: normal; }
+
 /********* reset.css **********/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ul, ol, li, form, fieldset, legend, label, input, button, select, textarea, header, main, footer, section, article, aside, menu, nav, table, caption, tbody, tfoot, thead, tr, th, td, summary, figure, figcaption, hgroup { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
@@ -227,13 +231,15 @@ input[type="checkbox"] + label { margin-left: 5px; display: inline-block; cursor
 input[type="checkbox"]:checked { background-image: url(../images/chk_on.png); }
 
 /*테이블*/
-.table { margin: 10px 0; text-align: center; word-break: break-all; }
+.table { margin: 10px 0; text-align: center; word-break: break-all; border-top: 2px solid #0076ca; }
 
 .table.ta_c, .table .ta_c { text-align: center; }
 
-.table.fx-hd { position: relative; }
+.table.fx-hd { position: relative; border-bottom: 1px solid #e2e2e2; }
 
 .table.fx-hd .scr-y { overflow-x: hidden; overflow-y: scroll; }
+
+.table.fx-hd .scr-y tbody tr:last-of-type th, .table.fx-hd .scr-y tbody tr:last-of-type td { border-bottom: 0; }
 
 .table.fx-hd .clone-tb { position: absolute; left: 0; top: 0; width: 100%; z-index: 1; }
 
@@ -253,9 +259,9 @@ input[type="checkbox"]:checked { background-image: url(../images/chk_on.png); }
 
 .table .ta_l { text-align: left; }
 
-.table table { background-color: #fff; border-top: 2px solid #0076ca; font-size: 15px; }
+.table table { background-color: #fff; font-size: 15px; }
 
-.table table select { border: 0; }
+.table table select { border: 0; max-width: 100%; }
 
 .table th, .table td { border: 1px solid #e2e2e2; padding: 0 4px; height: 46px; vertical-align: middle; }
 
@@ -316,8 +322,6 @@ input[type="checkbox"]:checked { background-image: url(../images/chk_on.png); }
 
 .pop-wrap .pop-inner { padding: 30px 50px 50px; max-height: calc(100% - 80px); overflow-x: hidden; overflow-y: auto; background-color: #fff; }
 
-.pop-wrap .scr-y { max-height: 284px; }
-
 .pop-wrap .pop-inp { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 0 -15px -10px; }
 
 .pop-wrap .pop-inp > li { width: calc(50% - 30px); margin: 0 15px 10px; }
@@ -344,3 +348,14 @@ input[type="checkbox"]:checked { background-image: url(../images/chk_on.png); }
 .confirm-wrap .confirm-box strong { display: block; margin-bottom: 28px; font-size: 16px; }
 
 .confirm-wrap .confirm-box .btn3 ~ .btn3 { margin-left: 5px; }
+
+/*로그인 GmarketSans*/
+#login { position: relative; min-height: 100vh; background-color: #0076ca; border: 1px solid red; }
+
+#login:before { content: ''; position: absolute; left: 0; top: 380px; width: 100%; height: calc(100% - 380px); background-color: #fff; }
+
+#login .logo { position: absolute; left: 150px; top: 60px; }
+
+#login .login-box { max-width: 614px; margin: 136px auto 0; }
+
+#login .login-box h1 { border: 2px solid #fff; border-radius: 16px 16px 0 0; border-bottom: 0; height: 244px; }

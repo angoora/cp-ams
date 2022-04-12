@@ -185,10 +185,16 @@ input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:point
 }
 
 /*테이블*/
-.table {margin:10px 0;text-align:center;word-break:break-all;
+.table {margin:10px 0;text-align:center;word-break:break-all;border-top:2px solid $color1;
   &.ta_c,.ta_c {text-align:center;}
-  &.fx-hd {position:relative;
-    .scr-y {overflow-x:hidden;overflow-y:scroll;}
+  &.fx-hd {position:relative;border-bottom:1px solid #e2e2e2;
+    .scr-y {overflow-x:hidden;overflow-y:scroll;
+      tbody{
+        tr:last-of-type {
+          th,td {border-bottom:0;}
+        }
+      }
+    }
     .clone-tb {position:absolute;left:0;top:0;width:100%;z-index:1;
       > tbody,tfoot{display:none;}
     }
@@ -209,8 +215,8 @@ input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:point
   }
   .ta_r {text-align:right;}
   .ta_l {text-align:left;}
-  table {background-color:#fff;border-top:2px solid $color1;font-size:15px;
-    select {border:0;}
+  table {background-color:#fff;font-size:15px;
+    select {border:0;max-width:100%;}
   }
   th,td {border:1px solid #e2e2e2;padding:0 4px;height:46px;vertical-align:middle;}
   thead {background-color:#fff;font-size:16px;
@@ -258,7 +264,6 @@ input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:point
   }
   .pop-head {padding:0 50px;font-size:20px;color:#fff;font-weight: 500;line-height:80px;background-color:$color2;}
   .pop-inner {padding:30px 50px 50px;max-height:calc(100% - 80px);overflow-x:hidden;overflow-y:auto;background-color:#fff;}
-  .scr-y {max-height:284px;}
   .pop-inp {display:flex;flex-wrap:wrap;margin:0 -15px -10px;
     > li {width:calc(50% - 30px);margin:0 15px 10px;      
       .inp-set {
@@ -288,4 +293,13 @@ input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:point
   }
 }
 
+/*로그인 GmarketSans*/
+
+#login {position:relative;min-height:100vh;background-color:$color1;border:1px solid red;
+  &:before {content:'';position:absolute;left:0;top:380px;width:100%;height:calc(100% - 380px);background-color:#fff;}
+  .logo {position:absolute;left:150px;top:60px;}
+  .login-box {max-width:614px;margin:136px auto 0;
+    h1 {border:2px solid #fff;border-radius:16px 16px 0 0;border-bottom:0;height:244px;}
+  }
+}
 

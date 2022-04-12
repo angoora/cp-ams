@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
   <title>CP-AMS에 오신 것을 환영합니다.</title>
-  <link rel="stylesheet" href="../common/css/default.css">  
+  <link rel="stylesheet" href="../common/css/default.css">
   <script src="../common/js/prefixfree.min.js"></script>
   <script src="../common/js/jquery-3.6.0.min.js"></script>
   <script src="../common/js/common.js"></script>
-  
+
 </head>
 
 <body>
@@ -113,7 +113,7 @@
               <col style="width:auto;">
               <col style="width:9%;">
               <col style="width:9%;">
-              <col style="width:9%;">             
+              <col style="width:9%;">
             </colgroup>
             <thead>
               <tr>
@@ -256,29 +256,378 @@
         </div>
         <!-- 리스트 테이블 -->
         <!-- pagination -->
-          <div class="pagination">
-            <div class="prev-wrap">
-              <a href="#" class="arrw-first">처음페이지</a>
-              <a href="#" class="arrw-prev">이전페이지</a>
-            </div>
-            <div class="page-wrap">
-              <a href="#" class="active">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>
-              <a href="#">6</a>
-              <a href="#">7</a>
-              <a href="#">8</a>
-              <a href="#">9</a>
-              <a href="#">10</a>
-            </div>
-            <div class="next-wrap">
-              <a href="#" class="arrw-next">다음페이지</a>
-              <a href="#" class="arrw-last">마지막페이지</a>
-            </div>
+        <div class="pagination">
+          <div class="prev-wrap">
+            <a href="#" class="arrw-first">처음페이지</a>
+            <a href="#" class="arrw-prev">이전페이지</a>
           </div>
+          <div class="page-wrap">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+          </div>
+          <div class="next-wrap">
+            <a href="#" class="arrw-next">다음페이지</a>
+            <a href="#" class="arrw-last">마지막페이지</a>
+          </div>
+        </div>
         <!-- //pagination -->
+        <!-- 
+        테이블 헤더가 고정되고 스크롤 발생하는 경우 fx-hd 클래스 추가 
+        data-row="노출되고자 하는 줄의 개수"
+        -->
+        <div class="table fx-hd"  data-row="3">
+          <table>
+            <colgroup>
+              <col style="width:6%;">
+              <col style="width:6%;">
+              <col style="width:18%;">
+              <col span="6">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>번호</th>
+                <th>선택</th>
+                <th>센서명</th>
+                <th>사용유무</th>
+                <th>좋음</th>
+                <th>보통</th>
+                <th>나쁨</th>
+                <th>매우 나쁨</th>
+                <th>추가</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>8</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>
+                  <select name="#">
+                    <option value="온도">온도</option>
+                    <option value="습도">습도</option>
+                    <option value="PM10">PM10</option>
+                    <option value="HCHO">HCHO</option>
+                    <option value="CO2">CO2</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="유">유</option>
+                    <option value="무">무</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="100">100</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="80">80</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="60">60</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="40">40</option>
+                  </select>
+                </td>
+                <td><button type="button" class="btn_add"></button></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>
+                  <select name="#">
+                    <option value="온도">온도</option>
+                    <option value="습도">습도</option>
+                    <option value="PM10">PM10</option>
+                    <option value="HCHO">HCHO</option>
+                    <option value="CO2">CO2</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="유">유</option>
+                    <option value="무">무</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="100">100</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="80">80</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="60">60</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="40">40</option>
+                  </select>
+                </td>
+                <td><button type="button" class="btn_add"></button></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>
+                  <select name="#">
+                    <option value="온도">온도</option>
+                    <option value="습도">습도</option>
+                    <option value="PM10">PM10</option>
+                    <option value="HCHO">HCHO</option>
+                    <option value="CO2">CO2</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="유">유</option>
+                    <option value="무">무</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="100">100</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="80">80</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="60">60</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="40">40</option>
+                  </select>
+                </td>
+                <td><button type="button" class="btn_add"></button></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>
+                  <select name="#">
+                    <option value="온도">온도</option>
+                    <option value="습도">습도</option>
+                    <option value="PM10">PM10</option>
+                    <option value="HCHO">HCHO</option>
+                    <option value="CO2">CO2</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="유">유</option>
+                    <option value="무">무</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="100">100</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="80">80</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="60">60</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="40">40</option>
+                  </select>
+                </td>
+                <td><button type="button" class="btn_del"></button></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>
+                  <select name="#">
+                    <option value="온도">온도</option>
+                    <option value="습도">습도</option>
+                    <option value="PM10">PM10</option>
+                    <option value="HCHO">HCHO</option>
+                    <option value="CO2">CO2</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="유">유</option>
+                    <option value="무">무</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="100">100</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="80">80</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="60">60</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="40">40</option>
+                  </select>
+                </td>
+                <td><button type="button" class="btn_del"></button></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>
+                  <select name="#">
+                    <option value="온도">온도</option>
+                    <option value="습도">습도</option>
+                    <option value="PM10">PM10</option>
+                    <option value="HCHO">HCHO</option>
+                    <option value="CO2">CO2</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="유">유</option>
+                    <option value="무">무</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="100">100</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="80">80</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="60">60</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="40">40</option>
+                  </select>
+                </td>
+                <td><button type="button" class="btn_add"></button></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>
+                  <select name="#">
+                    <option value="온도">온도</option>
+                    <option value="습도">습도</option>
+                    <option value="PM10">PM10</option>
+                    <option value="HCHO">HCHO</option>
+                    <option value="CO2">CO2</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="유">유</option>
+                    <option value="무">무</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="100">100</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="80">80</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="60">60</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="40">40</option>
+                  </select>
+                </td>
+                <td><button type="button" class="btn_add"></button></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><input type="checkbox" name="#"></td>
+                <td>
+                  <select name="#">
+                    <option value="온도">온도</option>
+                    <option value="습도">습도</option>
+                    <option value="PM10">PM10</option>
+                    <option value="HCHO">HCHO</option>
+                    <option value="CO2">CO2</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="유">유</option>
+                    <option value="무">무</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="100">100</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="80">80</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="60">60</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="#">
+                    <option value="40">40</option>
+                  </select>
+                </td>
+                <td><button type="button" class="btn_add"></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <!-- select -->
         <select name="#">
           <option value="#">선택1</option>

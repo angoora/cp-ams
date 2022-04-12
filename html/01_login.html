@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>CP-AMS에 오신 것을 환영합니다.</title>
+  <link rel="stylesheet" href="../common/css/default.css">  
+  <script src="../common/js/prefixfree.min.js"></script>
+  <script src="../common/js/jquery-3.6.0.min.js"></script>
+  <script src="../common/js/common.js"></script>
+  
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- 로그인 -->
+    <div id="login">      
+      <span class="logo"><img src="../common/images/logo_chungpa.png" alt="청파 로고"></span>
+      <div class="login-box">
+        <h1>
+          <span>CP-AMS</span>
+          <b>Login</b><img src="../common/images/txt_aerq.png" alt="aerq">
+        </h1>
+        <div>
+          <input type="text" id="inp1" value="" name="#" class="inp code" placeholder="CODE">
+          <input type="text" id="inp1" value="" name="#" class="inp id" placeholder="ID">
+          <input type="text" id="inp1" value="" name="#" class="inp pw" placeholder="PW">
+          <div class="inp-set">
+            <input type="checkbox" id="chk1" name="#" class="chk">
+            <label for="chk1">정보 저장</label>
+          </div>
+          <a href="#" class="btn_login">로그인</a>
+          <button type="button" class="btn-find">아이디/패스워드 찾기</button>
+        </div>
+      </div>
+    </div>
+    <!-- //로그인 -->
+  </div>
+
+  <!-- 팝업창
+    1. 팝업열기 클릭한 버튼 [data-popopen]속성 값과 동일한 값을 가지는[data-pop] 요소를 나타냄.
+    2. 팝업닫기 클릭한 버튼 pop-close 클래스
+    -->
+  <div class="pop-wrap" data-pop="pop1">
+    <div class="pop-box">
+      <h2 class="pop-head">사용자 관리</h2>
+      <div class="pop-inner">
+        <form action="#" method="post">
+          <ul class="pop-inp">
+            <li>
+              <div class="inp-set">
+                <label for="inp3">사용자명</label>
+                <input type="text" id="inp3" value="" name="#" class="inp-txt">
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp4">아이디</label>
+                <input type="text" id="inp4" value="" name="#" class="inp-txt">
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp5">전화번호</label>
+                <input type="text" id="inp5" value="" name="#" class="inp-txt">
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp6">메일주소</label>
+                <input type="text" id="inp6" value="" name="#" class="inp-txt">
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp7">권한등급</label>
+                <select name="#" id="inp7">
+                  <option value="">기관사용자</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp8">SMS알림</label>
+                <select name="#" id="inp8">
+                  <option value="">전송</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp9">기본언어</label>
+                <select name="#" id="inp9">
+                  <option value="">한국어</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+          <div class="pop-btn">
+            <button type="button" class="btn2 blue" data-popopen="pop3">저장</button>
+            <button type="button" class="btn2 pop-close">취소</button>
+          </div>
+          <!-- 확인창 -->
+          <div class="confirm-wrap" data-pop="pop3">
+            <div class="confirm-box">
+              <strong>저장하겠습니까?</strong>
+              <button type="button" class="btn3 blue">확인</button>
+              <button type="button" class="btn3 pop-close">취소</button>
+            </div>
+          </div>
+          <!-- //확인창 -->
+        </form>
+      </div>
+      <button type="button" class="pop-close">닫기</button>
+    </div>
+  </div>
+  <!-- //팝업창 -->
+  <!-- 확인창 -->
+  <div class="confirm-wrap" data-pop="pop2">
+    <div class="confirm-box">
+      <strong>삭제하겠습니까?</strong>
+      <button type="button" class="btn3 blue">확인</button>
+      <button type="button" class="btn3 pop-close">취소</button>
+    </div>
+  </div>
+  <!-- //확인창 -->
+</body>
+
+</html>
