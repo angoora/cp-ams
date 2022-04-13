@@ -162,7 +162,10 @@
 .btn_del {width:100%;height:42px;vertical-align:middle;background:url(../images/btn_del.png) no-repeat center;}
 
 /*input*/
-.inp-txt {width:100%;max-width:200px;border:1px solid #e8e8e8;padding:0 12px;line-height:40px;height:42px;background-color:#fff;border-radius:5px;color:#111;}
+.inp-txt {width:100%;max-width:200px;border:1px solid #e8e8e8;padding:0 12px;line-height:40px;height:42px;background-color:#fff;border-radius:5px;color:#111;
+  &::placeholder {color:rgba(0,0,0,0.4);}
+  +.ref {display:block;text-align:right;font-size:14px;margin-top:17px;}
+}
 
 /*input wrap*/
 .inp-set {display:flex;align-items:center;flex:none;
@@ -258,9 +261,28 @@ input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:point
 
 
 /*팝업*/
-.pop-wrap {display:none;position:fixed;left:0;top:0;bottom:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);
+.pop-wrap {display:none;position:fixed;left:0;top:0;bottom:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);z-index:10;
   .pop-box {max-width:948px;width:100%;position:absolute;top:50%;left:50%;transform:translate(-50% ,-50%);max-height:90vh;
     > .pop-close {position:absolute;right:28px;top:28px;width:24px;height:24px;border-radius:24px;background:url(../images/btn_closepop.png) no-repeat 50% 50%;white-space:nowrap;text-indent:28px;overflow:hidden;}
+    &.pop-login {max-width:860px;
+      h2 {font-size:36px;text-align:center;color:#000;margin-bottom:35px;}
+      .pop-inner {padding:60px 60px 60px;}
+      .inp-wrap {display:flex;justify-content:space-between;
+        > div {display:flex;flex-direction: column;width:calc(50% - 15px);
+          h3 {font-size:20px;line-height:130px;text-align:center;color:#fff;border-radius:0 0 10px 10px;
+            &.blue1{background-color:$color1;}
+            &.blue2{background-color:$color2;}
+          }
+          .inp-list {margin-bottom:45px;
+            > li {margin-top:10px;}
+          }
+          .inp-txt {max-width:100%;height:56px;border-radius:10px;border-color:#c8c8c8;}
+          .btn2 {margin-top:auto;}
+        }
+        
+      }
+      > .pop-close {background-image:url(../images/btn_closepop2.png);}
+    }
   }
   .pop-head {padding:0 50px;font-size:20px;color:#fff;font-weight: 500;line-height:80px;background-color:$color2;}
   .pop-inner {padding:30px 50px 50px;max-height:calc(100% - 80px);overflow-x:hidden;overflow-y:auto;background-color:#fff;}
@@ -282,12 +304,12 @@ input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:point
   }
   
 }
-
+ 
 /*확인창*/
-.confirm-wrap {display:none;position:fixed;left:0;top:0;bottom:0;width:100%;height:100%;z-index:1;
+.confirm-wrap {display:none;position:fixed;left:0;top:0;bottom:0;width:100%;height:100%;z-index:11;
   .confirm-box {font-size:0;
     position:absolute;left:50%;top: 50%;transform:translate(-50%, -50%);
-    max-width:465px;width:90%;height:185px;border:5px solid $color2;background-color:#fff;text-align:center;padding:45px 30px 33px;
+    max-width:465px;width:90%;min-height:185px;border:5px solid $color2;background-color:#fff;text-align:center;padding:45px 30px 33px;
     strong {display:block;margin-bottom:28px;font-size:16px;}
     .btn3 ~ .btn3 {margin-left:5px;}
   }
@@ -295,11 +317,37 @@ input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:point
 
 /*로그인 GmarketSans*/
 
-#login {position:relative;min-height:100vh;background-color:$color1;border:1px solid red;
-  &:before {content:'';position:absolute;left:0;top:380px;width:100%;height:calc(100% - 380px);background-color:#fff;}
+#login {padding-top:136px;padding-bottom:151px;position:relative;min-height:100vh;background-color:$color1;
+  &:before {content:'';position:absolute;left:0;top:380px;width:100%;height:calc(100% - 380px);background:#fff url(../images/bg_login.png) no-repeat center 64px;}
   .logo {position:absolute;left:150px;top:60px;}
-  .login-box {max-width:614px;margin:136px auto 0;
-    h1 {border:2px solid #fff;border-radius:16px 16px 0 0;border-bottom:0;height:244px;}
+  .login-box {position:relative;z-index:1;max-width:614px;margin:auto;
+    h1 {border:2px solid #fff;border-radius:16px 16px 0 0;border-bottom:0;height:244px;font-family: 'GmarketSans',sans-serif;padding:73px 0 0 80px;
+      color:#fff;position:relative;
+      span {font-weight:400;font-size:36px;color:#1b53a0;display:block;margin-bottom:5px;}
+      b {white-space:nowrap;font-weight:600;font-size:65px;vertical-align:middle;}
+      img {vertical-align:middle;display:inline-block;margin-top:-12px;margin-left:23px;}
+      &:before {content:'';width:589px;height:91px;background:url(../images/bg_login_left.png) no-repeat left top;position:absolute;left:-19px;bottom:-6px;transform:translateX(-100%);}
+      &:after {content:'';width:535px;height:67px;background:url(../images/bg_login_right.png) no-repeat right top;position:absolute;right:-31px;bottom:0;transform:translateX(100%);}
+    }
+    > div {text-align:center;background-color:#fff;border:2px solid #e2e2e2;border-radius:0 0 16px 16px;border-top:0;padding:50px 80px 55px;
+      .inp {margin-bottom:10px;height:65px;line-height:65px;padding:0 69px;background-color:#f8f8f8;font-size:20px;background-repeat:no-repeat;background-position:30px center;
+        &.code {background-image:url(../images/icon_login_code.png);}
+        &.id {background-image:url(../images/icon_login_id.png);}
+        &.pw {background-image:url(../images/icon_login_pw.png);}
+        &::placeholder {color:rgba(0,0,0,0.2);}
+      }
+    }
+    .inp-set {justify-content:center;margin-top:49px;
+      input[type="checkbox"] {width:28px;height:27px;background-image:url(../images/chk2_off.png);margin-left:-10px;
+       + label {font-size:20px;color:#000;margin-left:10px;}
+      }
+      input[type="checkbox"]:checked {background-image:url(../images/chk2_on.png);}
+      
+    }
+    .btn_login {margin-top:30px;display:block;width:100%;line-height:80px;color:#fff;border-radius:80px;background-color:$color2;text-align:center;font-size:30px;}
+    .btn-find {margin-top:35px;color:rgba(34,34,34,0.6);padding-left:25px;padding-bottom:2px;background:url(../images/icon_login_lock.png) no-repeat left center;}
   }
 }
+
+
 
