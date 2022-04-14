@@ -137,11 +137,13 @@
         &:before {display:inline-block;width:8px;height:8px;background-color:$color2;margin-right:10px;vertical-align:7px;content:'';}
       }
     }
-    a {display:inline-block;width:42px;height:42px;border-radius:42px;background:#e2e2e2 url(../images/icon_mypage.png) no-repeat 50% 50%;overflow:hidden;text-indent:42px;white-space:nowrap;}
+    a {display:inline-block;width:42px;height:42px;border-radius:42px;background:#e2e2e2 url(../images/icon_mypage.png) no-repeat 50% 50%;overflow:hidden;text-indent:42px;white-space:nowrap;
+      
+    }
   }
 }
 
-/*버튼*/
+/*검색창 버튼*/
 .btn1 {min-width:81px;height:42px;line-height:40px;border:1px solid #bfbfbf;background-color:#fff;text-align:center;font-size:14px;border-radius:5px;padding:0 20px;width:auto;
   &.btn-sch {background-color:$color2;color:#fff;border-color:$color2;
     &:after {content:'';width:17px;height:17px;display:inline-block;vertical-align:-3px;margin-left:10px;background:url(../images/icon_sch_1.png) no-repeat 50% 50%;}
@@ -151,10 +153,16 @@
 .btn2 {line-height:69px;font-size:20px;text-align:center;border:1px solid #dedede;border-radius:5px;background-color:#fff;padding:0 20px;
   &.blue {color:$color2;border-color:$color2;}
 }
+
 /*확인창 버튼*/
 .btn3 {
   line-height:47px;border:1px solid #dedede;border-radius:2px;background-color:#fff;text-align:center;font-size:14px;min-width:101px;
   &.blue {color:#fff;background-color:$color2;border-color:$color2;}
+}
+
+/*input버튼*/
+.btn4 {padding:0 24px;white-space:nowrap;color:#fff;background-color:$color2;border-radius:3px;font-size:14px;
+  height:52px;
 }
 
 /*추가&삭제 버튼*/
@@ -163,6 +171,7 @@
 
 /*input*/
 .inp-txt {width:100%;max-width:200px;border:1px solid #e8e8e8;padding:0 12px;line-height:40px;height:42px;background-color:#fff;border-radius:5px;color:#111;
+  &:disabled {color:#000;background-color:#f8f8f8;}
   &::placeholder {color:rgba(0,0,0,0.4);}
   +.ref {display:block;text-align:right;font-size:14px;margin-top:17px;}
 }
@@ -170,7 +179,7 @@
 /*input wrap*/
 .inp-set {display:flex;align-items:center;flex:none;
   label {
-    ~ .btn1 {margin-left:5px;
+    ~ .btn1,~.btn4 {margin-left:5px;
       &.btn-sch {margin-left:3px;}
     } 
   } 
@@ -263,6 +272,7 @@ input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:point
 /*팝업*/
 .pop-wrap {display:none;position:fixed;left:0;top:0;bottom:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);z-index:10;
   .pop-box {max-width:948px;width:100%;position:absolute;top:50%;left:50%;transform:translate(-50% ,-50%);max-height:90vh;
+    &[data-pop]{display:none;max-width:665px;box-shadow:0 0 50px rgba(0,0,0,0.15);}
     > .pop-close {position:absolute;right:28px;top:28px;width:24px;height:24px;border-radius:24px;background:url(../images/btn_closepop.png) no-repeat 50% 50%;white-space:nowrap;text-indent:28px;overflow:hidden;}
     &.pop-login {max-width:860px;
       h2 {font-size:36px;text-align:center;color:#000;margin-bottom:35px;}
@@ -291,10 +301,27 @@ input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:point
       .inp-set {
         label {flex:none;min-width:120px;width:14%;font-weight:500;padding-right:10px;}
         .inp-txt,select {max-width:290px;margin-left:auto;line-height:50px;height:52px;padding:0 20px;}
-      }
+      }      
       &.full {width:100%;
         .inp-txt,select {max-width:100%;}
       }
+    }
+  }
+  /*마이페이지 팝업*/
+  .pop-inp2 {margin:0 -10px -10px;
+    > li {width:calc(50% - 20px);margin:0 10px 10px;  
+      &.br {margin-right:20px;}  
+      .inp-set {
+        label {min-width:150px;width:10%;padding-left:35px;background:url(../images/bullet_mypage.png) no-repeat left center;}
+        &.email {
+          .inp-txt {max-width:290px;}
+          > span {flex:none;width:40px;text-align:center;
+            ~select,~.inp-txt {flex:none;width:197px;}
+            ~.inp-txt {margin-left:5px;}
+          }
+        }        
+      }
+      .inp-txt,select {max-width:260px;}
     }
   }
   .pop-btn {display:flex;flex-grow:auto;margin-top:30px;
@@ -317,11 +344,11 @@ input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:point
 
 /*로그인 GmarketSans*/
 
-#login {padding-top:136px;padding-bottom:151px;position:relative;min-height:100vh;background-color:$color1;
-  &:before {content:'';position:absolute;left:0;top:380px;width:100%;height:calc(100% - 380px);background:#fff url(../images/bg_login.png) no-repeat center 64px;}
-  .logo {position:absolute;left:150px;top:60px;}
+#login {padding-top:106px;padding-bottom:30px;position:relative;min-height:100vh;background-color:$color1;
+  &:before {content:'';position:absolute;left:0;top:330px;width:100%;height:calc(100% - 330px);background:#fff url(../images/bg_login.png) no-repeat center 64px;}
+  .logo {position:absolute;left:150px;top:30px;}
   .login-box {position:relative;z-index:1;max-width:614px;margin:auto;
-    h1 {border:2px solid #fff;border-radius:16px 16px 0 0;border-bottom:0;height:244px;font-family: 'GmarketSans',sans-serif;padding:73px 0 0 80px;
+    h1 {border:2px solid #fff;border-radius:16px 16px 0 0;border-bottom:0;height:224px;font-family: 'GmarketSans',sans-serif;padding:53px 0 0 80px;
       color:#fff;position:relative;
       span {font-weight:400;font-size:36px;color:#1b53a0;display:block;margin-bottom:5px;}
       b {white-space:nowrap;font-weight:600;font-size:65px;vertical-align:middle;}
@@ -329,7 +356,7 @@ input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:point
       &:before {content:'';width:589px;height:91px;background:url(../images/bg_login_left.png) no-repeat left top;position:absolute;left:-19px;bottom:-6px;transform:translateX(-100%);}
       &:after {content:'';width:535px;height:67px;background:url(../images/bg_login_right.png) no-repeat right top;position:absolute;right:-31px;bottom:0;transform:translateX(100%);}
     }
-    > div {text-align:center;background-color:#fff;border:2px solid #e2e2e2;border-radius:0 0 16px 16px;border-top:0;padding:50px 80px 55px;
+    > div {text-align:center;background-color:#fff;border:2px solid #e2e2e2;border-radius:0 0 16px 16px;border-top:0;padding:40px 80px 35px;
       .inp {margin-bottom:10px;height:65px;line-height:65px;padding:0 69px;background-color:#f8f8f8;font-size:20px;background-repeat:no-repeat;background-position:30px center;
         &.code {background-image:url(../images/icon_login_code.png);}
         &.id {background-image:url(../images/icon_login_id.png);}

@@ -188,7 +188,7 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 
 #container .title a { display: inline-block; width: 42px; height: 42px; border-radius: 42px; background: #e2e2e2 url(../images/icon_mypage.png) no-repeat 50% 50%; overflow: hidden; text-indent: 42px; white-space: nowrap; }
 
-/*버튼*/
+/*검색창 버튼*/
 .btn1 { min-width: 81px; height: 42px; line-height: 40px; border: 1px solid #bfbfbf; background-color: #fff; text-align: center; font-size: 14px; border-radius: 5px; padding: 0 20px; width: auto; }
 
 .btn1.btn-sch { background-color: #1b53a0; color: #fff; border-color: #1b53a0; }
@@ -205,6 +205,9 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 
 .btn3.blue { color: #fff; background-color: #1b53a0; border-color: #1b53a0; }
 
+/*input버튼*/
+.btn4 { padding: 0 24px; white-space: nowrap; color: #fff; background-color: #1b53a0; border-radius: 3px; font-size: 14px; height: 52px; }
+
 /*추가&삭제 버튼*/
 .btn_add { width: 100%; height: 42px; vertical-align: middle; background: url(../images/btn_add.png) no-repeat center; }
 
@@ -212,6 +215,8 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 
 /*input*/
 .inp-txt { width: 100%; max-width: 200px; border: 1px solid #e8e8e8; padding: 0 12px; line-height: 40px; height: 42px; background-color: #fff; border-radius: 5px; color: #111; }
+
+.inp-txt:disabled { color: #000; background-color: #f8f8f8; }
 
 .inp-txt::-webkit-input-placeholder { color: rgba(0, 0, 0, 0.4); }
 
@@ -226,9 +231,9 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 /*input wrap*/
 .inp-set { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-flex: 0; -ms-flex: none; flex: none; }
 
-.inp-set label ~ .btn1 { margin-left: 5px; }
+.inp-set label ~ .btn1, .inp-set label ~ .btn4 { margin-left: 5px; }
 
-.inp-set label ~ .btn1.btn-sch { margin-left: 3px; }
+.inp-set label ~ .btn1.btn-sch, .inp-set label ~ .btn4.btn-sch { margin-left: 3px; }
 
 /*select*/
 select { width: 100%; max-width: 200px; border: 1px solid #e8e8e8; padding: 0 12px; line-height: 40px; height: 42px; background: #fff url(../images/arrow_select.png) no-repeat right 15px center; border-radius: 5px; color: #111; }
@@ -322,9 +327,11 @@ input[type="checkbox"]:checked { background-image: url(../images/chk_on.png); }
 .sch-box .btn-group .btn1 { margin-left: 5px; }
 
 /*팝업*/
-.pop-wrap { display: none; position: fixed; left: 0; top: 0; bottom: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 10; }
+.pop-wrap { display: none; position: fixed; left: 0; top: 0; bottom: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 10; /*마이페이지 팝업*/ }
 
 .pop-wrap .pop-box { max-width: 948px; width: 100%; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-height: 90vh; }
+
+.pop-wrap .pop-box[data-pop] { display: none; max-width: 665px; -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.15); box-shadow: 0 0 50px rgba(0, 0, 0, 0.15); }
 
 .pop-wrap .pop-box > .pop-close { position: absolute; right: 28px; top: 28px; width: 24px; height: 24px; border-radius: 24px; background: url(../images/btn_closepop.png) no-repeat 50% 50%; white-space: nowrap; text-indent: 28px; overflow: hidden; }
 
@@ -370,6 +377,24 @@ input[type="checkbox"]:checked { background-image: url(../images/chk_on.png); }
 
 .pop-wrap .pop-inp > li.full .inp-txt, .pop-wrap .pop-inp > li.full select { max-width: 100%; }
 
+.pop-wrap .pop-inp2 { margin: 0 -10px -10px; }
+
+.pop-wrap .pop-inp2 > li { width: calc(50% - 20px); margin: 0 10px 10px; }
+
+.pop-wrap .pop-inp2 > li.br { margin-right: 20px; }
+
+.pop-wrap .pop-inp2 > li .inp-set label { min-width: 150px; width: 10%; padding-left: 35px; background: url(../images/bullet_mypage.png) no-repeat left center; }
+
+.pop-wrap .pop-inp2 > li .inp-set.email .inp-txt { max-width: 290px; }
+
+.pop-wrap .pop-inp2 > li .inp-set.email > span { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 40px; text-align: center; }
+
+.pop-wrap .pop-inp2 > li .inp-set.email > span ~ select, .pop-wrap .pop-inp2 > li .inp-set.email > span ~ .inp-txt { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 197px; }
+
+.pop-wrap .pop-inp2 > li .inp-set.email > span ~ .inp-txt { margin-left: 5px; }
+
+.pop-wrap .pop-inp2 > li .inp-txt, .pop-wrap .pop-inp2 > li select { max-width: 260px; }
+
 .pop-wrap .pop-btn { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: auto; -ms-flex-positive: auto; flex-grow: auto; margin-top: 30px; }
 
 .pop-wrap .pop-btn .btn2 { -webkit-box-flex: 1; -ms-flex: 1 1 0px; flex: 1 1 0; }
@@ -386,15 +411,15 @@ input[type="checkbox"]:checked { background-image: url(../images/chk_on.png); }
 .confirm-wrap .confirm-box .btn3 ~ .btn3 { margin-left: 5px; }
 
 /*로그인 GmarketSans*/
-#login { padding-top: 136px; padding-bottom: 151px; position: relative; min-height: 100vh; background-color: #0076ca; }
+#login { padding-top: 106px; padding-bottom: 30px; position: relative; min-height: 100vh; background-color: #0076ca; }
 
-#login:before { content: ''; position: absolute; left: 0; top: 380px; width: 100%; height: calc(100% - 380px); background: #fff url(../images/bg_login.png) no-repeat center 64px; }
+#login:before { content: ''; position: absolute; left: 0; top: 330px; width: 100%; height: calc(100% - 330px); background: #fff url(../images/bg_login.png) no-repeat center 64px; }
 
-#login .logo { position: absolute; left: 150px; top: 60px; }
+#login .logo { position: absolute; left: 150px; top: 30px; }
 
 #login .login-box { position: relative; z-index: 1; max-width: 614px; margin: auto; }
 
-#login .login-box h1 { border: 2px solid #fff; border-radius: 16px 16px 0 0; border-bottom: 0; height: 244px; font-family: 'GmarketSans',sans-serif; padding: 73px 0 0 80px; color: #fff; position: relative; }
+#login .login-box h1 { border: 2px solid #fff; border-radius: 16px 16px 0 0; border-bottom: 0; height: 224px; font-family: 'GmarketSans',sans-serif; padding: 53px 0 0 80px; color: #fff; position: relative; }
 
 #login .login-box h1 span { font-weight: 400; font-size: 36px; color: #1b53a0; display: block; margin-bottom: 5px; }
 
@@ -406,7 +431,7 @@ input[type="checkbox"]:checked { background-image: url(../images/chk_on.png); }
 
 #login .login-box h1:after { content: ''; width: 535px; height: 67px; background: url(../images/bg_login_right.png) no-repeat right top; position: absolute; right: -31px; bottom: 0; -webkit-transform: translateX(100%); transform: translateX(100%); }
 
-#login .login-box > div { text-align: center; background-color: #fff; border: 2px solid #e2e2e2; border-radius: 0 0 16px 16px; border-top: 0; padding: 50px 80px 55px; }
+#login .login-box > div { text-align: center; background-color: #fff; border: 2px solid #e2e2e2; border-radius: 0 0 16px 16px; border-top: 0; padding: 40px 80px 35px; }
 
 #login .login-box > div .inp { margin-bottom: 10px; height: 65px; line-height: 65px; padding: 0 69px; background-color: #f8f8f8; font-size: 20px; background-repeat: no-repeat; background-position: 30px center; }
 
