@@ -2,18 +2,16 @@
 function getScrollWidth() {
   const outer = document.createElement('div');
   outer.style.visibility = 'hidden';
-  outer.style.overflow = 'scroll'; // forcing scrollbar to appear
-  outer.style.msOverflowStyle = 'scrollbar'; // needed for WinJS apps
+  outer.style.overflow = 'scroll';
+  outer.style.msOverflowStyle = 'scrollbar';
   document.body.appendChild(outer);
-
-  // Creating inner element and placing it in the container
+  
   const inner = document.createElement('div');
   outer.appendChild(inner);
 
-  // Calculating difference between container's full width and the child width
   const scrollbarWidth = (outer.offsetWidth - inner.offsetWidth);
 
-  // Removing temporary elements from the DOM
+ 
   outer.parentNode.removeChild(outer);
   return scrollbarWidth;
 }
@@ -91,12 +89,12 @@ function gnbAction() {
 
 //팝업
 function modalPopup() {
-  $('[data-popopen]').click(function () {
-    var popName = $(this).data('popopen');
+  $('[data-pop-btn]').click(function () {
+    var popName = $(this).data('pop-btn');
     $('[data-pop="' + popName + '"]').stop().fadeIn(200);
   });
   $('.pop-close').click(function () {
-    $(this).closest('[data-pop]').fadeOut(200);
+    $(this).closest('[data-pop]').stop().fadeOut(200).find('[data-pop]').stop().fadeOut(200);
   });
 
 }

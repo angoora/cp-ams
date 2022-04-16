@@ -94,9 +94,9 @@
             <button type="button" class="btn1">초기화</button>
           </div>
           <div class="btn-group">
-            <button type="button" class="btn1" data-popopen="pop1">등록</button>
-            <button type="button" class="btn1" data-popopen="pop1">수정</button>
-            <button type="button" class="btn1" data-popopen="pop2">삭제</button>
+            <button type="button" class="btn1" data-pop-btn="pop1">등록</button>
+            <button type="button" class="btn1" data-pop-btn="pop1">수정</button>
+            <button type="button" class="btn1" data-pop-btn="pop2">삭제</button>
           </div>
         </div>
         <!-- 검색 상자 -->
@@ -246,8 +246,9 @@
   </div>
 
   <!-- 팝업창
-    1. 팝업열기 클릭한 버튼 [data-popopen]속성 값과 동일한 값을 가지는[data-pop] 요소를 나타냄.
-    2. 팝업닫기 클릭한 버튼 pop-close 클래스
+    1. 팝업열기 = 클릭한 버튼 [data-pop-btn]속성 값과 동일한 값을 가지는[data-pop] 요소를 나타냄.
+    2. 팝업닫기 = 버튼 pop-close 클래스
+    3. .pop-box width=948px , .pop-box.sm width="600px"
     -->
   <div class="pop-wrap" data-pop="pop1">
     <div class="pop-box">
@@ -324,7 +325,7 @@
           </div>
           <!-- 리스트 테이블 -->
           <div class="pop-btn">
-            <button type="button" class="btn2 blue" data-popopen="pop3">저장</button>
+            <button type="button" class="btn2 blue" data-pop-btn="pop3">저장</button>
             <button type="button" class="btn2 pop-close">취소</button>
           </div>
           <!-- 확인창 -->

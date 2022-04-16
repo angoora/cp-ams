@@ -76,7 +76,7 @@
       <!-- 페이지 제목 -->
       <div class="title">
         <h2>청파초등학교 <span>모니터링</span></h2>
-        <a href="#" class="mypage" data-popopen="mypage">마이페이지</a>
+        <a href="#" class="mypage" data-pop-btn="mypage">마이페이지</a>
       </div>
       <!-- 페이지 제목 -->
       <!-- 컨텐츠 -->
@@ -90,8 +90,9 @@
   </div>
 
   <!-- 팝업창
-    1. 팝업열기 클릭한 버튼 [data-popopen]속성 값과 동일한 값을 가지는[data-pop] 요소를 나타냄.
-    2. 팝업닫기 클릭한 버튼 pop-close 클래스
+    1. 팝업열기 = 클릭한 버튼 [data-pop-btn]속성 값과 동일한 값을 가지는[data-pop] 요소를 나타냄.
+    2. 팝업닫기 = 버튼 pop-close 클래스
+    3. .pop-box width=948px , .pop-box.sm width="600px"
     -->
   <div class="pop-wrap" data-pop="mypage">
     <div class="pop-box">
@@ -121,7 +122,7 @@
               <div class="inp-set">
                 <label for="inp4">비밀번호</label>
                 <input type="text" id="inp4" value="" name="#" class="inp-txt" placeholder="영문, 숫자, 특수문자 조합으로 8~16자리로 입력해주세요">
-                <button type="button" class="btn4" data-popopen="change-pw">비밀번호 변경</button>
+                <button type="button" class="btn4" data-pop-btn="change-pw">비밀번호 변경</button>
               </div>
             </li>
             <li>
@@ -149,7 +150,7 @@
             </li>
           </ul>
           <div class="pop-btn">
-            <button type="button" class="btn2 blue" data-popopen="pop1">저장</button>
+            <button type="button" class="btn2 blue" data-pop-btn="pop1">저장</button>
           </div>
           <!-- 확인창 -->
           <div class="confirm-wrap" data-pop="pop1">
@@ -167,55 +168,28 @@
       <h2 class="pop-head">비밀번호 변경</h2>
       <div class="pop-inner">
         <form action="#" method="post">
-          <ul class="pop-inp pop-inp2">
-            <li class="br">
-              <div class="inp-set">
-                <label for="inp1">기관명</label>
-                <input type="text" id="inp1" value="청파초등학교" name="#" class="inp-txt" disabled>
-              </div>
-            </li>
-            <li class="br">
-              <div class="inp-set">
-                <label for="inp2">기관코드</label>
-                <input type="text" id="inp2" value="KR12345A" name="#" class="inp-txt" disabled>
-              </div>
-            </li>
-            <li class="br">
-              <div class="inp-set">
-                <label for="inp3">아이디</label>
-                <input type="text" id="inp3" value="User123!@#" name="#" class="inp-txt" disabled>
-              </div>
-            </li>
+          <ul class="pop-inp pop-inp2">           
             <li class="full">
               <div class="inp-set">
-                <label for="inp4">비밀번호</label>
-                <input type="text" id="inp4" value="" name="#" class="inp-txt" placeholder="영문, 숫자, 특수문자 조합으로 8~16자리로 입력해주세요">
-                <button type="button" class="btn4" data-popopen="">비밀번호 변경</button>
+                <label for="inp8">현재 비밀번호</label>
+                <input type="text" id="inp8" value="" name="#" class="inp-txt" placeholder="영문, 숫자, 특수문자 조합으로 8~16자리로 입력해주세요">
               </div>
-            </li>
-            <li>
+            </li>    
+            <li class="full">
               <div class="inp-set">
-                <label for="inp5">이름</label>
-                <input type="text" id="inp5" value="" name="#" class="inp-txt" placeholder="홍길동">
+                <label for="inp8">신규 비밀번호</label>
+                <input type="text" id="inp8" value="" name="#" class="inp-txt" placeholder="영문, 숫자, 특수문자 조합으로 8~16자리로 입력해주세요">
               </div>
-            </li>
-            <li>
+            </li>    
+            <li class="full">
               <div class="inp-set">
-                <label for="inp6">휴대전화</label>
-                <input type="text" id="inp6" value="" name="#" class="inp-txt" placeholder="01012345678">
+                <label for="inp8">비밀번호 확인</label>
+                <input type="text" id="inp8" value="" name="#" class="inp-txt" placeholder="영문, 숫자, 특수문자 조합으로 8~16자리로 입력해주세요">
               </div>
-            </li>
-            <li>
-              <div class="inp-set">
-                <label for="inp7">이메일 주소</label>
-                <select name="#" id="inp7">
-                  <option value="">기관사용자</option>
-                </select>
-              </div>
-            </li>
+            </li>            
           </ul>
           <div class="pop-btn">
-            <button type="button" class="btn2 blue" data-popopen="pop2">저장</button>
+            <button type="button" class="btn2 blue" data-pop-btn="pop2">저장</button>
           </div>
           <!-- 확인창 -->
           <div class="confirm-wrap" data-pop="pop2">
