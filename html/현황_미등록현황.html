@@ -75,7 +75,7 @@
     <div id="container">
       <!-- 페이지 제목 -->
       <div class="title">
-        <h2>청파초등학교 <span>장애 관리</span></h2>
+        <h2>청파초등학교 <span>미등록 현황</span></h2>
         <a href="#" class="mypage">마이페이지</a>
       </div>
       <!-- 페이지 제목 -->
@@ -88,7 +88,7 @@
             <input type="text" id="inp1" value="청파이엠티" name="#" class="inp">
           </div>
           <div class="inp-set">
-            <label for="inp2">측정기명</label>
+            <label for="inp2">측정기</label>
             <input type="text" id="inp2" value="교실1" name="#" class="inp">
             <button type="button" class="btn1 btn-sch">조회</button>
             <button type="button" class="btn1">초기화</button>
@@ -106,31 +106,28 @@
             <colgroup>
               <col style="width:6%;">
               <col style="width:6%;">
+              <col style="width:15%;">
+              <col style="width:auto;" span="4">
+              <col style="width:7%;">
               <col style="width:10%;">
-              <col style="width:8%;">
-              <col style="width:8%;">
-              <col style="width:auto;">
-              <col style="width:8%;">
-              <col style="width:8%;">
-              <col style="width:8%;">
-              <col style="width:8%;">
-              <col style="width:10%;">
-              <col style="width:6%;">
+              <col style="width:7%;">
+              <col style="width:7%;">
+              <col style="width:7%;">
             </colgroup>
             <thead>
               <tr>
                 <th>번호</th>
                 <th>선택</th>
-                <th>기관</th>
-                <th>측정기</th>
-                <th>센서</th>
-                <th>알림내용</th>
-                <th>IP</th>
-                <th>장애등급</th>
-                <th>발생일시</th>
-                <th>해제일시</th>
-                <th>등록자/해제자</th>
-                <th>상태</th>
+                <th>기관명</th>
+                <th>아이피</th>
+                <th>그룹명</th>
+                <th>측정기코드</th>
+                <th>측정기명</th>
+                <th>표시유무</th>
+                <th>공기살균정화기</th>
+                <th>수신일시</th>
+                <th>가동시작일</th>
+                <th>등록일시</th>
               </tr>
             </thead>
             <tbody>
@@ -138,142 +135,143 @@
                 <td>00010</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
-                <td>1234</td>
-                <td>sa</td>
-                <td>온도 이상 (O℃)</td>
                 <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td>교실1</td>
+                <td>유</td>
                 <td></td>
-                <td>22.03.22</td>
-                <td>22.03.22</td>
-                <td>홍길동/홍길동</td>
-                <td>발생</td>
-              </tr>  
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
               <tr>
                 <td>00009</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
-                <td>1234</td>
-                <td>sa</td>
-                <td>센서통신 이상</td>
                 <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td>교실1</td>
+                <td>무</td>
                 <td></td>
-                <td>22.03.22</td>
-                <td>22.03.22</td>
-                <td>홍길동/홍길동</td>
-                <td>해제</td>
-              </tr>   
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
               <tr>
                 <td>00008</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
-                <td>1234</td>
-                <td>sa</td>
-                <td>먼지센서 통신이상</td>
                 <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td>교실1</td>
+                <td>유</td>
                 <td></td>
-                <td>22.03.22</td>
-                <td>22.03.22</td>
-                <td>홍길동/홍길동</td>
-                <td>발생</td>
-              </tr>  
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
               <tr>
                 <td>00007</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
-                <td>1234</td>
-                <td>sa</td>
-                <td></td>
                 <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td>교실1</td>
+                <td>무</td>
                 <td></td>
-                <td>22.03.22</td>
-                <td>22.03.22</td>
-                <td>홍길동/홍길동</td>
-                <td>해제</td>
-              </tr>   
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
               <tr>
                 <td>00006</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
-                <td>1234</td>
-                <td>sa</td>
-                <td></td>
                 <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td>교실1</td>
+                <td>유</td>
                 <td></td>
-                <td>22.03.22</td>
-                <td>22.03.22</td>
-                <td>홍길동/홍길동</td>
-                <td>발생</td>
-              </tr>  
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
               <tr>
                 <td>00005</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
-                <td>1234</td>
-                <td>sa</td>
-                <td></td>
                 <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td>교실1</td>
+                <td>무</td>
                 <td></td>
-                <td>22.03.22</td>
-                <td>22.03.22</td>
-                <td>홍길동/홍길동</td>
-                <td>해제</td>
-              </tr>   
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
               <tr>
                 <td>00004</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
-                <td>1234</td>
-                <td>sa</td>
-                <td></td>
                 <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td>교실1</td>
+                <td>유</td>
                 <td></td>
-                <td>22.03.22</td>
-                <td>22.03.22</td>
-                <td>홍길동/홍길동</td>
-                <td>발생</td>
-              </tr> 
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
               <tr>
                 <td>00003</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
-                <td>1234</td>
-                <td>sa</td>
-                <td></td>
                 <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td>교실1</td>
+                <td>무</td>
                 <td></td>
-                <td>22.03.22</td>
-                <td>22.03.22</td>
-                <td>홍길동/홍길동</td>
-                <td>해제</td>
-              </tr>   
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
               <tr>
                 <td>00002</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
-                <td>1234</td>
-                <td>sa</td>
-                <td></td>
                 <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td>교실1</td>
+                <td>유</td>
                 <td></td>
-                <td>22.03.22</td>
-                <td>22.03.22</td>
-                <td>홍길동/홍길동</td>
-                <td>발생</td>
-              </tr> 
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
               <tr>
                 <td>00001</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
-                <td>1234</td>
-                <td>sa</td>
-                <td></td>
                 <td>127.0.0.1</td>
+                <td>sa</td>
+                <td>1234</td>
+                <td>교실1</td>
+                <td>무</td>
                 <td></td>
-                <td>22.03.22</td>
-                <td>22.03.22</td>
-                <td>홍길동/홍길동</td>
-                <td>해제</td>
-              </tr>                  
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+             
             </tbody>
           </table>
         </div>
@@ -316,55 +314,44 @@
     -->
   <div class="pop-wrap" data-pop="pop1">
     <div class="pop-box">
-      <h2 class="pop-head">장애 관리</h2>
+      <h2 class="pop-head">측정기 관리</h2>
       <div class="pop-inner">
         <form action="#" method="post">
           <ul class="pop-inp">
             <li>
               <div class="inp-set">
-                <!-- 필수입력표기 rqt클래스 -->
-                <label for="inp3" class="rqd">기관명</label>
-                <input type="text" id="inp3" value="127.0.0.1" name="#" class="inp" required>
+                <label for="inp3">아이피</label>
+                <input type="text" id="inp3" value="127.0.0.1" name="#" class="inp">
               </div>
             </li>
             <li>
               <div class="inp-set">
-                <label for="inp4">측정기명</label>
-                <input type="text" id="inp4" value="청파초등학교" name="#" class="inp">
+                <label for="inp4">측정기코드</label>
+                <input type="text" id="inp4" value="001" name="#" class="inp">
               </div>
             </li>
             <li>
               <div class="inp-set">
-                <label for="inp5">센서명</label>
-                <input type="text" id="inp5" value="온도" name="#" class="inp">
+                <label for="inp5">측정기명</label>
+                <input type="text" id="inp5" value="교실1" name="#" class="inp">
               </div>
             </li>
             <li>
               <div class="inp-set">
-                <!-- 필수입력표기 rqt클래스 -->
-                <label for="inp6" class="rqd">IP</label>
-                <input type="text" id="inp6" value="127.0.0.1" name="#" class="inp" required>
-              </div>
-            </li>
-            <li>
-              <div class="inp-set">
-                <label for="inp7">장애등급</label>
-                <input type="text" id="inp7" value="경고" name="#" class="inp">
-              </div>
-            </li>
-            <li>
-              <div class="inp-set">
-                <label for="inp8">상태</label>
-                <select name="#" id="inp8">
-                  <option value="발생">발생</option>
-                  <option value="해제">해제</option>
+                <label for="inp7">표시유무</label>
+                <select name="#" id="inp7">
+                  <option value="">유</option>
+                  <option value="">무</option>
                 </select>
               </div>
             </li>
             <li>
               <div class="inp-set">
-                <label for="inp9">장애등급</label>
-                <input type="text" id="inp9" value="온도이상" name="#" class="inp">
+                <label for="inp8">공기살균정화기</label>
+                <select name="#" id="inp8">
+                  <option value="">유</option>
+                  <option value="">무</option>
+                </select>
               </div>
             </li>
           </ul>

@@ -170,11 +170,16 @@
 .btn_del {width:100%;height:42px;vertical-align:middle;background:url(../images/btn_del.png) no-repeat center;}
 
 /*input*/
-.inp-txt {width:100%;max-width:200px;border:1px solid #e8e8e8;padding:0 12px;line-height:40px;height:42px;background-color:#fff;border-radius:5px;color:#111;
+.inp {width:100%;max-width:200px;border:1px solid #e8e8e8;padding:0 12px;line-height:40px;height:42px;background-color:#fff;border-radius:5px;color:#111;
+
+  /*달력*/
+  &.date {max-width:152px;background:#fff url(../images/icon_inp_date.jpg) no-repeat right 15px center;margin-right:5px;}
+  /*사용불가*/
   &:disabled {color:#000;background-color:#f8f8f8;}
   &::placeholder {color:rgba(0,0,0,0.4);}
   +.ref {display:block;text-align:right;font-size:14px;margin-top:17px;}
 }
+
 
 /*input wrap*/
 .inp-set {display:flex;align-items:center;flex:none;
@@ -197,6 +202,16 @@ select {width: 100%;max-width:200px;border:1px solid #e8e8e8;padding:0 12px;line
 input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:pointer;background: url(../images/chk_off.png) no-repeat center;vertical-align:middle;
   + label {margin-left:5px;display:inline-block;cursor:pointer; vertical-align:middle;}
   &:checked {background-image:url(../images/chk_on.png);}
+}
+
+input[type="radio"] {display:inline-block;width:19px;height:18px;cursor:pointer;background: url(../images/chk_off.png) no-repeat center;vertical-align:middle;
+  + label {margin-left:5px;display:inline-block;cursor:pointer; vertical-align:middle;}
+  &:checked {background-image:url(../images/chk_on.png);}
+}
+
+.radio-btn { height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); margin: -1px; position:absolute;left:0;right:0;
+  + label {border:1px solid #b4cbea;height:42px;line-height:40px;background-color:#fff;text-align:center;font-size:14px;border-radius:5px;padding:0 20px;width:auto;margin:0;}
+  &:checked + label {border-color:1px solid #6977b8;box-shadow:inset 0 0 0 1px #6977b8;color:#48599e;}
 }
 
 /*테이블*/
@@ -260,10 +275,17 @@ input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:point
 /*검색 상자*/
 .sch-box {padding:20px 40px 25px 20px;background-color:#f3f9ff;margin-bottom:30px;align-content:flex-end;
   display:flex;align-items:center;flex-wrap:wrap;
+  .flex-col {display:flex;flex-direction:column;flex:1;width:100%;}
+  .flex-row {display:flex;flex:1;width:100%;align-items:center;}
   .inp-set {margin-left:20px;margin-top:5px;white-space:nowrap;
-    label {margin-right:16px;min-width:43px;}
-    .inp-txt {width:200px;}
+    label:first-child {margin-right:16px;min-width:43px;}
+    .inp {width:200px;
+      &.md {width:452px;max-width:none;}
+    }
     .btn1 {flex:none;}
+  }
+  .btn-set {margin-top:5px;width:344px;display:flex;
+    label,button {flex:1;}
   }
   .btn-group {display:flex;margin-top:5px;margin-left:auto;
     .btn1 {margin-left:5px;}
@@ -290,7 +312,7 @@ input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:point
           .inp-list {margin-bottom:45px;
             > li {margin-top:10px;}
           }
-          .inp-txt {max-width:100%;height:56px;border-radius:10px;border-color:#c8c8c8;}
+          .inp {max-width:100%;height:56px;border-radius:10px;border-color:#c8c8c8;}
           .btn2 {margin-top:auto;}
         }
         
@@ -304,10 +326,10 @@ input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:point
     > li {width:calc(50% - 30px);margin:0 15px 10px;      
       .inp-set {
         label {flex:none;min-width:120px;width:14%;font-weight:500;padding-right:10px;}
-        .inp-txt,select {max-width:290px;margin-left:auto;line-height:50px;height:52px;padding:0 20px;}
+        .inp,select {max-width:290px;margin-left:auto;line-height:50px;height:52px;padding:0 20px;}
       }      
       &.full {width:100%;
-        .inp-txt,select {max-width:100%;}
+        .inp,select {max-width:100%;}
       }
     }
   }
@@ -318,14 +340,14 @@ input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:point
       .inp-set {
         label {min-width:150px;width:10%;padding-left:35px;background:url(../images/bullet_mypage.png) no-repeat left center;}
         &.email {
-          .inp-txt {max-width:290px;}
+          .inp {max-width:290px;}
           > span {flex:none;width:40px;text-align:center;
-            ~select,~.inp-txt {flex:none;width:197px;}
-            ~.inp-txt {margin-left:5px;}
+            ~select,~.inp {flex:none;width:197px;}
+            ~.inp {margin-left:5px;}
           }
         }        
       }
-      .inp-txt,select {max-width:260px;}
+      .inp,select {max-width:260px;}
     }
   }
   .pop-btn {display:flex;flex-grow:auto;margin-top:30px;
