@@ -208,7 +208,7 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 .btn3.blue { color: #fff; background-color: #1b53a0; border-color: #1b53a0; }
 
 /*input버튼*/
-.btn4 { padding: 0 24px; white-space: nowrap; color: #fff; background-color: #1b53a0; border-radius: 3px; font-size: 14px; height: 52px; }
+.btn4 { padding: 0 24px; white-space: nowrap; color: #fff; background-color: #1b53a0; border-radius: 3px; font-size: 14px; }
 
 /*추가&삭제 버튼*/
 .btn_add { width: 100%; height: 42px; vertical-align: middle; background: url(../images/btn_add.png) no-repeat center; }
@@ -219,6 +219,8 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 .inp { width: 100%; max-width: 200px; border: 1px solid #e8e8e8; padding: 0 12px; line-height: 40px; height: 42px; background-color: #fff; border-radius: 5px; color: #111; /*달력*/ /*사용불가*/ }
 
 .inp.date { max-width: 152px; background: #fff url(../images/icon_inp_date.jpg) no-repeat right 15px center; margin-right: 5px; }
+
+.inp.date ~ .date { margin-right: 0; }
 
 .inp:disabled { color: #000; background-color: #f8f8f8; }
 
@@ -233,7 +235,7 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 .inp + .ref { display: block; text-align: right; font-size: 14px; margin-top: 17px; }
 
 /*input wrap*/
-.inp-set { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-flex: 0; -ms-flex: none; flex: none; }
+.inp-set { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 0; -ms-flex: none; flex: none; }
 
 .inp-set label.rqd:before { content: '*'; color: #da3539; font-size: 16px; }
 
@@ -257,11 +259,11 @@ input[type="radio"] + label { margin-left: 5px; display: inline-block; cursor: p
 
 input[type="radio"]:checked { background-image: url(../images/chk_on.png); }
 
-.radio-btn { height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); margin: -1px; position: absolute; left: 0; right: 0; }
+input[type="radio"].btn { height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); margin: -1px; position: absolute; left: 0; right: 0; }
 
-.radio-btn + label { border: 1px solid #b4cbea; height: 42px; line-height: 40px; background-color: #fff; text-align: center; font-size: 14px; border-radius: 5px; padding: 0 20px; width: auto; margin: 0; }
+input[type="radio"].btn + label { border: 1px solid #b4cbea; height: 42px; line-height: 40px; background-color: #fff; text-align: center; font-size: 14px; border-radius: 5px; padding: 0 20px; width: auto; margin: 0; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; margin-left: 5px; }
 
-.radio-btn:checked + label { border-color: 1px solid #6977b8; -webkit-box-shadow: inset 0 0 0 1px #6977b8; box-shadow: inset 0 0 0 1px #6977b8; color: #48599e; }
+input[type="radio"].btn:checked + label { border-color: #6977b8; -webkit-box-shadow: inset 0 0 0 1px #6977b8; box-shadow: inset 0 0 0 1px #6977b8; color: #48599e; }
 
 /*테이블*/
 .table { margin: 10px 0; text-align: center; word-break: break-all; border-top: 2px solid #0076ca; }
@@ -330,27 +332,29 @@ input[type="radio"]:checked { background-image: url(../images/chk_on.png); }
 .pagination .arrw-next { background-image: url(../images/btn_arrw_next.png); }
 
 /*검색 상자*/
-.sch-box { padding: 20px 40px 25px 20px; background-color: #f3f9ff; margin-bottom: 30px; -ms-flex-line-pack: end; align-content: flex-end; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+.sch-box { padding: 20px 40px 25px 20px; background-color: #f3f9ff; margin-bottom: 30px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-.sch-box .flex-col { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; width: 100%; }
+.sch-box .flex-col { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-flex: 18; -ms-flex: 18 1 0px; flex: 18 1 0; width: 100%; }
+
+.sch-box > .btn4 { -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; align-self: stretch; margin-top: 6px; margin-left: 7px; -webkit-box-flex: 1; -ms-flex: 1 1 0px; flex: 1 1 0; min-height: 42px; font-size: 17px; background-color: #206cb7; }
 
 .sch-box .flex-row { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; width: 100%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
-.sch-box .inp-set { margin-left: 20px; margin-top: 5px; white-space: nowrap; }
+.sch-box .flex-row .inp-set:first-child { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 
-.sch-box .inp-set label:first-child { margin-right: 16px; min-width: 43px; }
+.sch-box .flex-row .inp-set:first-child .inp { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; max-width: none; }
+
+.sch-box .flex-row .inp-set .btn1 { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 113px; }
+
+.sch-box .inp-set { margin-left: 20px; margin-top: 6px; white-space: nowrap; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.sch-box .inp-set label:first-child { margin-right: 16px; min-width: 56px; }
 
 .sch-box .inp-set .inp { width: 200px; }
 
-.sch-box .inp-set .inp.md { width: 452px; max-width: none; }
-
 .sch-box .inp-set .btn1 { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
 
-.sch-box .btn-set { margin-top: 5px; width: 344px; display: -webkit-box; display: -ms-flexbox; display: flex; }
-
-.sch-box .btn-set label, .sch-box .btn-set button { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
-
-.sch-box .btn-group { display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 5px; margin-left: auto; }
+.sch-box .btn-group { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 0; -ms-flex: none; flex: none; margin-top: 6px; margin-left: auto; width: 349px; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; padding-left: 5px; }
 
 .sch-box .btn-group .btn1 { margin-left: 5px; }
 
