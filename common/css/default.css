@@ -56,7 +56,7 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 /*요소중앙정렬*/
 /*아이템 정렬*/
 /*레이아웃*/
-#wrap { position: relative; min-height: 100%; }
+#wrap { position: relative; min-height: 100%; min-width: 1600px; }
 
 .header { width: 280px; height: 100%; position: absolute; left: 0; top: 0; bottom: 0; }
 
@@ -235,16 +235,22 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 .inp + .ref { display: block; text-align: right; font-size: 14px; margin-top: 17px; }
 
 /*input wrap*/
-.inp-set { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 0; -ms-flex: none; flex: none; }
+.inp-set { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 0; -ms-flex: none; flex: none; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 .inp-set label.rqd:before { content: '*'; color: #da3539; font-size: 16px; }
 
-.inp-set label ~ .btn1, .inp-set label ~ .btn4 { margin-left: 5px; }
+.inp-set label ~ .btn1, .inp-set label ~ .btn4 { margin-left: 5px; -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; align-self: stretch; }
 
-.inp-set label ~ .btn1.btn-sch, .inp-set label ~ .btn4.btn-sch { margin-left: 3px; }
+.inp-set.email .txt { width: 25px; margin-left: 5px; text-align: center; -webkit-box-flex: 0; -ms-flex: none; flex: none; }
+
+.inp-set.email select { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 180px; margin-left: 5px; }
+
+.inp-set.email .inp ~ .inp { margin-left: 5px; }
 
 /*select*/
 select { width: 100%; max-width: 200px; border: 1px solid #e8e8e8; padding: 0 12px; line-height: 40px; height: 42px; background: #fff url(../images/arrow_select.png) no-repeat right 15px center; border-radius: 5px; color: #111; }
+
+select:disabled { color: rgba(0, 0, 0, 0.4); }
 
 /*checkbox & radio*/
 input[type="checkbox"] { display: inline-block; width: 19px; height: 18px; cursor: pointer; background: url(../images/chk_off.png) no-repeat center; vertical-align: middle; }
@@ -399,13 +405,19 @@ input[type="radio"].btn:checked + label { border-color: #6977b8; -webkit-box-sha
 
 .pop-wrap .pop-inner { padding: 30px 50px 50px; max-height: calc(100% - 80px); overflow-x: hidden; overflow-y: auto; background-color: #fff; }
 
+.pop-wrap .sch-box { padding: 20px 20px 20px 0; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
+
+.pop-wrap .sch-box .inp-set { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+
+.pop-wrap .sch-box .inp-set .inp { max-width: none; width: 100%; }
+
 .pop-wrap .pop-inp { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 0 -15px -10px; }
 
 .pop-wrap .pop-inp > li { width: calc(50% - 30px); margin: 0 15px 10px; }
 
 .pop-wrap .pop-inp > li .inp-set label { -webkit-box-flex: 0; -ms-flex: none; flex: none; min-width: 120px; width: 14%; font-weight: 500; padding-right: 10px; }
 
-.pop-wrap .pop-inp > li .inp-set .inp, .pop-wrap .pop-inp > li .inp-set select { max-width: 290px; margin-left: auto; line-height: 50px; height: 52px; padding: 0 20px; }
+.pop-wrap .pop-inp > li .inp-set .inp, .pop-wrap .pop-inp > li .inp-set select { max-width: 290px; line-height: 50px; height: 52px; padding: 0 20px; }
 
 .pop-wrap .pop-inp > li.full { width: 100%; }
 

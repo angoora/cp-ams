@@ -75,24 +75,27 @@
     <div id="container">
       <!-- 페이지 제목 -->
       <div class="title">
-        <h2>청파초등학교 <span>기관관리</span></h2>
+        <h2>청파초등학교 <span>로그인이력</span></h2>
         <a href="#" class="mypage">마이페이지</a>
       </div>
       <!-- 페이지 제목 -->
       <!-- 컨텐츠 -->
       <div class="contents">
         <!-- 검색 상자 -->
-        <div class="sch-box">        
+        <div class="sch-box">
           <div class="inp-set">
             <label for="inp1">기관</label>
             <input type="text" id="inp1" value="청파이엠티" name="#" class="inp">
+          </div>
+          <div class="inp-set">
+            <label for="inp2">ID</label>
+            <input type="text" id="inp2" value="" name="#" class="inp">
             <button type="button" class="btn1 btn-sch">조회</button>
-            <button type="button" class="btn1">초기화</button>
           </div>
           <div class="btn-group">
-            <button type="button" class="btn1" data-pop-btn="pop1">등록</button>
-            <button type="button" class="btn1" data-pop-btn="pop1">수정</button>
-            <button type="button" class="btn1" data-pop-btn="pop2">삭제</button>
+            <button type="button" class="btn1" data-pop-btn="pop1" disabled>등록</button>
+            <button type="button" class="btn1" data-pop-btn="pop1" disabled>수정</button>
+            <button type="button" class="btn1" data-pop-btn="pop2" disabled>삭제</button>
           </div>
         </div>
         <!-- 검색 상자 -->
@@ -102,116 +105,111 @@
             <colgroup>
               <col style="width:6%;">
               <col style="width:6%;">
-              <col style="width:12%;">
-              <col style="width:12%;">
-              <col style="width:auto;">              
-              <col style="width:12%;">
-              <col style="width:12%;">
+              <col style="width:auto;" span="5">
+
             </colgroup>
             <thead>
               <tr>
                 <th>번호</th>
                 <th>선택</th>
-                <th>기관코드</th>
-                <th>기관명</th>
-                <th>주소</th>
-                <th>대표 IP 주소</th>
-                <th>비고</th>
+                <th>기관</th>
+                <th>로그인ID</th>
+                <th>IP</th>
+                <th>로그인 일시</th>
+                <th>로그아웃 일시</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>00010</td>
-                <td><input type="checkbox" name="#"></td>
-                <td>EDU12345A</td>
+                <td><input type="checkbox" name="#" checked="checked"></td>
                 <td>청파초등학교</td>
-                <td class="ta-l">경기도 부천시 원미구 정주로91(약대동)</td>
-                <td>127.0.0.1</td>             
-                <td></td>
+                <td>Admin</td>
+                <td>192.168.0.2</td>
+                <td>2022-03-04 12:00:00</td>
+                <td>2022-03-04 12:00:00</td>
               </tr>
               <tr>
                 <td>00009</td>
                 <td><input type="checkbox" name="#"></td>
-                <td>EDU12345A</td>
                 <td>청파초등학교</td>
-                <td class="ta-l">경기도 부천시 원미구 정주로91(약대동)</td>
-                <td>127.0.0.1</td>             
-                <td></td>
+                <td>홍길동</td>
+                <td>192.168.0.2</td>
+                <td>2022-03-04 12:00:00</td>
+                <td>2022-03-04 12:00:00</td>
               </tr>
               <tr>
                 <td>00008</td>
                 <td><input type="checkbox" name="#"></td>
-                <td>EDU12345A</td>
                 <td>청파초등학교</td>
-                <td class="ta-l">경기도 부천시 원미구 정주로91(약대동)</td>
-                <td>127.0.0.1</td>             
-                <td></td>
+                <td>admin</td>
+                <td>192.168.0.2</td>
+                <td>2022-03-04 12:00:00</td>
+                <td>2022-03-04 12:00:00</td>
               </tr>
               <tr>
                 <td>00007</td>
                 <td><input type="checkbox" name="#"></td>
-                <td>EDU12345A</td>
                 <td>청파초등학교</td>
-                <td class="ta-l">경기도 부천시 원미구 정주로91(약대동)</td>
-                <td>127.0.0.1</td>             
-                <td></td>
+                <td>홍길동</td>
+                <td>192.168.0.2</td>
+                <td>2022-03-04 12:00:00</td>
+                <td>2022-03-04 12:00:00</td>
               </tr>
               <tr>
                 <td>00006</td>
                 <td><input type="checkbox" name="#"></td>
-                <td>EDU12345A</td>
                 <td>청파초등학교</td>
-                <td class="ta-l">경기도 부천시 원미구 정주로91(약대동)</td>
-                <td>127.0.0.1</td>             
-                <td></td>
+                <td>admin</td>
+                <td>192.168.0.2</td>
+                <td>2022-03-04 12:00:00</td>
+                <td>2022-03-04 12:00:00</td>
               </tr>
               <tr>
                 <td>00005</td>
                 <td><input type="checkbox" name="#"></td>
-                <td>EDU12345A</td>
                 <td>청파초등학교</td>
-                <td class="ta-l">경기도 부천시 원미구 정주로91(약대동)</td>
-                <td>127.0.0.1</td>             
-                <td></td>
+                <td>홍길동</td>
+                <td>192.168.0.2</td>
+                <td>2022-03-04 12:00:00</td>
+                <td>2022-03-04 12:00:00</td>
               </tr>
               <tr>
                 <td>00004</td>
                 <td><input type="checkbox" name="#"></td>
-                <td>EDU12345A</td>
                 <td>청파초등학교</td>
-                <td class="ta-l">경기도 부천시 원미구 정주로91(약대동)</td>
-                <td>127.0.0.1</td>             
-                <td></td>
+                <td>admin</td>
+                <td>192.168.0.2</td>
+                <td>2022-03-04 12:00:00</td>
+                <td>2022-03-04 12:00:00</td>
               </tr>
               <tr>
                 <td>00003</td>
                 <td><input type="checkbox" name="#"></td>
-                <td>EDU12345A</td>
                 <td>청파초등학교</td>
-                <td class="ta-l">경기도 부천시 원미구 정주로91(약대동)</td>
-                <td>127.0.0.1</td>             
-                <td></td>
+                <td>홍길동</td>
+                <td>192.168.0.2</td>
+                <td>2022-03-04 12:00:00</td>
+                <td>2022-03-04 12:00:00</td>
               </tr>
               <tr>
                 <td>00002</td>
                 <td><input type="checkbox" name="#"></td>
-                <td>EDU12345A</td>
                 <td>청파초등학교</td>
-                <td class="ta-l">경기도 부천시 원미구 정주로91(약대동)</td>
-                <td>127.0.0.1</td>             
-                <td></td>
+                <td>admin</td>
+                <td>192.168.0.2</td>
+                <td>2022-03-04 12:00:00</td>
+                <td>2022-03-04 12:00:00</td>
               </tr>
               <tr>
                 <td>00001</td>
                 <td><input type="checkbox" name="#"></td>
-                <td>EDU12345A</td>
                 <td>청파초등학교</td>
-                <td class="ta-l">경기도 부천시 원미구 정주로91(약대동)</td>
-                <td>127.0.0.1</td>             
-                <td></td>
+                <td>홍길동</td>
+                <td>192.168.0.2</td>
+                <td>2022-03-04 12:00:00</td>
+                <td>2022-03-04 12:00:00</td>
               </tr>
-              
-
             </tbody>
           </table>
         </div>
@@ -239,102 +237,13 @@
             <a href="#" class="arrw-last">마지막페이지</a>
           </div>
         </div>
-        <!-- //pagination -->      
+        <!-- //pagination -->
+
       </div>
       <!-- //컨텐츠 -->
     </div>
     <!-- container -->
   </div>
-
-  <!-- 팝업창
-    1. 팝업열기 = 클릭한 버튼 [data-pop-btn]속성 값과 동일한 값을 가지는[data-pop] 요소를 나타냄.
-    2. 팝업닫기 = 버튼 pop-close 클래스
-    3. .pop-box width=948px , .pop-box.sm width="600px"
-    -->
-  <div class="pop-wrap" data-pop="pop1">
-    <div class="pop-box">
-      <h2 class="pop-head">사용자 관리</h2>
-      <div class="pop-inner">
-        <form action="#" method="post">
-          <ul class="pop-inp">
-            <li>
-              <div class="inp-set">
-                <label for="inp3">기관코드</label>
-                <input type="text" id="inp3" value="KR12345a" name="#" class="inp">
-              </div>
-            </li>
-            <li>
-              <div class="inp-set">
-                <label for="inp4">대표 IP 주소</label>
-                <input type="text" id="inp4" value="127.0.0.1" name="#" class="inp">
-              </div>
-            </li>  
-            <li>
-              <div class="inp-set">
-                <label for="inp5">기관명</label>
-                <input type="text" id="inp5" value="청파초등학교" name="#" class="inp">
-              </div>
-            </li>  
-            <li>
-              <div class="inp-set">
-                <label for="inp6">대표 전화번호</label>
-                <input type="text" id="inp6" value="청파초등학교" name="#" class="inp">
-              </div>
-            </li>  
-            <li class="full">
-              <div class="inp-set">
-                <label for="inp7">주소</label>
-                <input type="text" id="inp7" value="경기도 부천시 원미구 정주로91" name="#" class="inp">
-                <button type="button" class="btn4">우편번호</button>
-              </div>
-            </li> 
-            <li class="full">
-              <div class="inp-set">
-                <label for="inp8">비고</label>
-                <input type="text" id="inp8" value="테스트 등록" name="#" class="inp">
-              </div>
-            </li>   
-            <li class="full">
-              <div class="inp-set email">
-                <label for="inp9">이메일 주소</label>
-                <input type="text" id="inp9" value="" name="#" class="inp">
-                <span class="txt">@</span>
-                <select name="#" disabled>
-                  <option value="gmail.com">gmail.com</option>
-                  <option value="naver.com">naver.com</option>
-                </select>
-                <input type="text" value="" name="#" class="inp" placeholder="직접입력">
-              </div>
-            </li>   
-          </ul>
-          <div class="pop-btn">
-            <button type="button" class="btn2 blue" data-pop-btn="pop3">저장</button>
-            <button type="button" class="btn2 pop-close">취소</button>
-          </div>
-          <!-- 확인창 -->
-          <div class="confirm-wrap" data-pop="pop3">
-            <div class="confirm-box">
-              <strong>저장하겠습니까?</strong>
-              <button type="button" class="btn3 blue">확인</button>
-              <button type="button" class="btn3 pop-close">취소</button>
-            </div>
-          </div>
-          <!-- //확인창 -->
-        </form>
-      </div>
-      <button type="button" class="pop-close">닫기</button>
-    </div>
-  </div>
-  <!-- //팝업창 -->
-  <!-- 확인창 -->
-  <div class="confirm-wrap" data-pop="pop2">
-    <div class="confirm-box">
-      <strong>삭제하겠습니까?</strong>
-      <button type="button" class="btn3 blue">확인</button>
-      <button type="button" class="btn3 pop-close">취소</button>
-    </div>
-  </div>
-  <!-- //확인창 -->
 </body>
 
 </html>
