@@ -423,6 +423,10 @@ input[type="radio"].btn:checked + label { border-color: #6977b8; -webkit-box-sha
 
 .pop-wrap .pop-inp > li.full .inp, .pop-wrap .pop-inp > li.full select { max-width: 100%; }
 
+.pop-wrap .table .inp { height: 37px; line-height: 35px; text-align: center; }
+
+.pop-wrap .table select { padding: 0 2px; background-position: right 2px center; }
+
 .pop-wrap .pop-inp2 { margin: 0 -10px -10px; }
 
 .pop-wrap .pop-inp2 > li { width: calc(50% - 20px); margin: 0 10px 10px; }
@@ -433,7 +437,7 @@ input[type="radio"].btn:checked + label { border-color: #6977b8; -webkit-box-sha
 
 .pop-wrap .pop-inp2 > li .inp-set.email .inp { max-width: 290px; }
 
-.pop-wrap .pop-inp2 > li .inp-set.email > span { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 40px; text-align: center; }
+.pop-wrap .pop-inp2 > li .inp-set.email > span { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 30px; text-align: center; }
 
 .pop-wrap .pop-inp2 > li .inp-set.email > span ~ select, .pop-wrap .pop-inp2 > li .inp-set.email > span ~ .inp { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 197px; }
 

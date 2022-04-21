@@ -106,8 +106,8 @@
             <colgroup>
               <col style="width:6%;">
               <col style="width:6%;">
-              <col style="width:15%;">
-              <col style="width:auto;" span="4">
+              <col style="width:10%;">
+              <col style="width:auto;" span="6">
               <col style="width:6%;">
               <col style="width:6%;">
               <col style="width:10%;">
@@ -119,6 +119,8 @@
                 <th>번호</th>
                 <th>선택</th>
                 <th>기관명</th>
+                <th>상위그룹</th>
+                <th>하위그룹</th>
                 <th>아이피</th>
                 <th>그룹명</th>
                 <th>측정기코드</th>
@@ -135,6 +137,8 @@
                 <td>00010</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
+                <td>1학년</td>
+                <td>2반</td>
                 <td>127.0.0.1</td>
                 <td>sa</td>
                 <td>1234</td>
@@ -149,6 +153,8 @@
                 <td>00009</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
+                <td>1학년</td>
+                <td>2반</td>
                 <td>127.0.0.1</td>
                 <td>sa</td>
                 <td>1234</td>
@@ -163,6 +169,8 @@
                 <td>00008</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
+                <td>1학년</td>
+                <td>2반</td>
                 <td>127.0.0.1</td>
                 <td>sa</td>
                 <td>1234</td>
@@ -177,6 +185,8 @@
                 <td>00007</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
+                <td>1학년</td>
+                <td>2반</td>
                 <td>127.0.0.1</td>
                 <td>sa</td>
                 <td>1234</td>
@@ -191,6 +201,8 @@
                 <td>00006</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
+                <td>1학년</td>
+                <td>2반</td>
                 <td>127.0.0.1</td>
                 <td>sa</td>
                 <td>1234</td>
@@ -205,6 +217,8 @@
                 <td>00005</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
+                <td>1학년</td>
+                <td>2반</td>
                 <td>127.0.0.1</td>
                 <td>sa</td>
                 <td>1234</td>
@@ -219,6 +233,8 @@
                 <td>00004</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
+                <td>1학년</td>
+                <td>2반</td>
                 <td>127.0.0.1</td>
                 <td>sa</td>
                 <td>1234</td>
@@ -233,6 +249,8 @@
                 <td>00003</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
+                <td>1학년</td>
+                <td>2반</td>
                 <td>127.0.0.1</td>
                 <td>sa</td>
                 <td>1234</td>
@@ -247,6 +265,8 @@
                 <td>00002</td>
                 <td><input type="checkbox" name="#"></td>
                 <td>청파초등학교</td>
+                <td>1학년</td>
+                <td>2반</td>
                 <td>127.0.0.1</td>
                 <td>sa</td>
                 <td>1234</td>
@@ -261,6 +281,8 @@
                 <td>00001</td>
                 <td><input type="checkbox" name="#" checked></td>
                 <td>청파초등학교</td>
+                <td>1학년</td>
+                <td>2반</td>
                 <td>127.0.0.1</td>
                 <td>sa</td>
                 <td>1234</td>
@@ -319,26 +341,38 @@
           <ul class="pop-inp">
             <li>
               <div class="inp-set">
-                <label for="inp3">아이피</label>
-                <input type="text" id="inp3" value="127.0.0.1" name="#" class="inp">
+                <label for="inp3">상위그룹</label>
+                <input type="text" id="inp3" value="1학년" name="#" class="inp">
               </div>
             </li>
             <li>
               <div class="inp-set">
-                <label for="inp4">측정기코드</label>
-                <input type="text" id="inp4" value="001" name="#" class="inp">
+                <label for="inp4">하위그룹</label>
+                <input type="text" id="inp4" value="2반" name="#" class="inp">
               </div>
             </li>
             <li>
               <div class="inp-set">
-                <label for="inp5">측정기명</label>
-                <input type="text" id="inp5" value="교실1" name="#" class="inp">
+                <label for="inp5">아이피</label>
+                <input type="text" id="inp5" value="127.0.0.1" name="#" class="inp">
               </div>
             </li>
             <li>
               <div class="inp-set">
-                <label for="inp7">표시유무</label>
-                <select name="#" id="inp7">
+                <label for="inp6">측정기코드</label>
+                <input type="text" id="inp6" value="001" name="#" class="inp">
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp7">측정기명</label>
+                <input type="text" id="inp7" value="교실1" name="#" class="inp">
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp8">표시유무</label>
+                <select name="#" id="inp8">
                   <option value="">유</option>
                   <option value="">무</option>
                 </select>
@@ -346,8 +380,8 @@
             </li>
             <li>
               <div class="inp-set">
-                <label for="inp8">공기살균정화기</label>
-                <select name="#" id="inp8">
+                <label for="inp9">공기살균정화기</label>
+                <select name="#" id="inp9">
                   <option value="">유</option>
                   <option value="">무</option>
                 </select>

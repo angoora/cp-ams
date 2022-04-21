@@ -109,11 +109,14 @@ function pagination() {//pagination 클릭하면 active
 //테이블 
 function fxTable(arg) {
   $('.table.fx-hd').each(function () {
-    var theadH = $(this).find('thead').outerHeight();
+    var theadH = $(this).find('thead th').outerHeight();
     var tdH = $(this).find('tbody td').outerHeight();
     var maxHeight = $(this).data('row') * tdH + theadH;
     $(this).find('table').clone().prependTo(this).addClass('clone-tb').attr('tabindex', '-1').next('table').wrap('<div class="scr-y" style="max-height:' + maxHeight + 'px"></div>');
     $(this).find('.clone-tb').css('width', 'calc(100% - ' + arg + 'px)');
+    console.log(theadH);
+    console.log(tdH);
+    console.log(maxHeight);
   });
 }
 
