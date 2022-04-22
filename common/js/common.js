@@ -114,9 +114,6 @@ function fxTable(arg) {
     var maxHeight = $(this).data('row') * tdH + theadH;
     $(this).find('table').clone().prependTo(this).addClass('clone-tb').attr('tabindex', '-1').next('table').wrap('<div class="scr-y" style="max-height:' + maxHeight + 'px"></div>');
     $(this).find('.clone-tb').css('width', 'calc(100% - ' + arg + 'px)');
-    console.log(theadH);
-    console.log(tdH);
-    console.log(maxHeight);
   });
 }
 

@@ -277,9 +277,11 @@ input[type="radio"].btn:checked + label { border-color: #6977b8; -webkit-box-sha
 input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color: #fff; border-color: #8590c8; -webkit-box-shadow: none; box-shadow: none; }
 
 /*테이블*/
-.table { margin: 10px 0; text-align: center; word-break: break-all; border-top: 2px solid #0076ca; }
+.table-wrap { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
-.table.ta-c, .table .ta-c { text-align: center; }
+.table-wrap .table { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+
+.table { margin: 10px 0; text-align: center; word-break: break-all; border-top: 2px solid #0076ca; }
 
 .table.fx-hd { position: relative; border-bottom: 1px solid #e2e2e2; }
 
@@ -301,9 +303,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .table.board thead th:last-of-type:after { content: none; }
 
-.table .ta-r { text-align: right; }
-
-.table .ta-l { text-align: left; padding-left: 15px; }
+.table .ta-l { padding-left: 15px; }
 
 .table table { background-color: #fff; font-size: 15px; }
 
@@ -313,7 +313,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .table thead { background-color: #fff; font-size: 16px; }
 
-.table thead th { height: 53px; }
+.table thead th { height: 53px; border-top-color: transparent; }
 
 /*페이징*/
 .pagination { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-size: 15px; margin-top: 50px; text-align: center; }
@@ -519,3 +519,9 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 #login .login-box .btn_login { margin-top: 30px; display: block; width: 100%; line-height: 80px; color: #fff; border-radius: 80px; background-color: #1b53a0; text-align: center; font-size: 30px; }
 
 #login .login-box .btn-find { margin-top: 35px; color: rgba(34, 34, 34, 0.6); padding-left: 25px; padding-bottom: 2px; background: url(../images/icon_login_lock.png) no-repeat left center; }
+
+.ta-c { text-align: center; }
+
+.ta-l { text-align: left; }
+
+.ta-r { text-align: right; }
