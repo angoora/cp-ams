@@ -56,7 +56,7 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 /*요소중앙정렬*/
 /*아이템 정렬*/
 /*레이아웃*/
-#wrap { position: relative; min-height: 100%; min-width: 1600px; }
+#wrap { position: relative; min-height: 100%; min-width: 1900px; }
 
 .header { width: 280px; height: 100%; position: absolute; left: 0; top: 0; bottom: 0; }
 
@@ -191,11 +191,17 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 #container .title a:hover, #container .title a.active { background-color: #1b53a0; }
 
 /*검색창 버튼*/
-.btn1 { min-width: 81px; height: 42px; line-height: 40px; border: 1px solid #bfbfbf; background-color: #fff; text-align: center; font-size: 14px; border-radius: 5px; padding: 0 20px; width: auto; }
+.btn1 { border: 1px solid #bfbfbf; background-color: #fff; text-align: center; font-size: 14px; border-radius: 5px; padding: 0 24px; width: auto; white-space: nowrap; }
 
 .btn1.btn-sch { background-color: #1b53a0; color: #fff; border-color: #1b53a0; }
 
 .btn1.btn-sch:after { content: ''; width: 17px; height: 17px; display: inline-block; vertical-align: -3px; margin-left: 10px; background: url(../images/icon_sch_1.png) no-repeat 50% 50%; }
+
+.btn1.blue { color: #fff; background-color: #1b53a0; border-color: #1b53a0; }
+
+.btn1.blue2 { color: #1b53a0; background-color: #fff; border-color: #1b53a0; }
+
+.btn1.black { color: #000; background-color: #fff; border: 1px solid #000; }
 
 /*팝업버튼*/
 .btn2 { line-height: 69px; font-size: 20px; text-align: center; border: 1px solid #dedede; border-radius: 5px; background-color: #fff; padding: 0 20px; }
@@ -206,9 +212,6 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 .btn3 { line-height: 47px; border: 1px solid #dedede; border-radius: 2px; background-color: #fff; text-align: center; font-size: 14px; min-width: 101px; }
 
 .btn3.blue { color: #fff; background-color: #1b53a0; border-color: #1b53a0; }
-
-/*input버튼*/
-.btn4 { padding: 0 24px; white-space: nowrap; color: #fff; background-color: #1b53a0; border-radius: 3px; font-size: 14px; }
 
 /*추가&삭제 버튼*/
 .btn_add { width: 100%; height: 42px; vertical-align: middle; background: url(../images/btn_add.png) no-repeat center; }
@@ -270,6 +273,8 @@ input[type="radio"].btn { height: 1px; width: 1px; overflow: hidden; clip: rect(
 input[type="radio"].btn + label { border: 1px solid #b4cbea; height: 42px; line-height: 40px; background-color: #fff; text-align: center; font-size: 14px; border-radius: 5px; padding: 0 20px; width: auto; margin: 0; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; margin-left: 5px; }
 
 input[type="radio"].btn:checked + label { border-color: #6977b8; -webkit-box-shadow: inset 0 0 0 1px #6977b8; box-shadow: inset 0 0 0 1px #6977b8; color: #48599e; }
+
+input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color: #fff; border-color: #8590c8; -webkit-box-shadow: none; box-shadow: none; }
 
 /*테이블*/
 .table { margin: 10px 0; text-align: center; word-break: break-all; border-top: 2px solid #0076ca; }
@@ -340,9 +345,11 @@ input[type="radio"].btn:checked + label { border-color: #6977b8; -webkit-box-sha
 /*검색 상자*/
 .sch-box { padding: 20px 40px 25px 20px; background-color: #f3f9ff; margin-bottom: 30px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-.sch-box .flex-col { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-flex: 18; -ms-flex: 18 1 0px; flex: 18 1 0; width: 100%; }
+.sch-box .flex-col { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; width: 70%; }
 
-.sch-box > .btn4 { -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; align-self: stretch; margin-top: 6px; margin-left: 7px; -webkit-box-flex: 1; -ms-flex: 1 1 0px; flex: 1 1 0; min-height: 42px; font-size: 17px; background-color: #206cb7; }
+.sch-box .flex-col + .btn-group { max-width: 230px; -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; align-self: stretch; }
+
+.sch-box .flex-col + .btn-group button { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; padding: 0; width: 50%; font-size: 17px; }
 
 .sch-box .flex-row { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; width: 100%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
@@ -352,6 +359,8 @@ input[type="radio"].btn:checked + label { border-color: #6977b8; -webkit-box-sha
 
 .sch-box .flex-row .inp-set .btn1 { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 113px; }
 
+.sch-box .flex-row .inp-set .btn1.blue2 { width: 133px; }
+
 .sch-box .inp-set { margin-left: 20px; margin-top: 6px; white-space: nowrap; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 .sch-box .inp-set label:first-child { margin-right: 16px; min-width: 56px; }
@@ -360,9 +369,9 @@ input[type="radio"].btn:checked + label { border-color: #6977b8; -webkit-box-sha
 
 .sch-box .inp-set .btn1 { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
 
-.sch-box .btn-group { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 0; -ms-flex: none; flex: none; margin-top: 6px; margin-left: auto; width: 349px; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; padding-left: 5px; }
+.sch-box .btn-group { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 0; -ms-flex: none; flex: none; margin-top: 6px; margin-left: auto; width: 349px; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; padding-left: 5px; -ms-flex-item-align: stretch; align-self: stretch; }
 
-.sch-box .btn-group .btn1 { margin-left: 5px; }
+.sch-box .btn-group button { margin-left: 5px; }
 
 /*팝업*/
 .pop-wrap { display: none; position: fixed; left: 0; top: 0; bottom: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 10; /*마이페이지 팝업*/ }
