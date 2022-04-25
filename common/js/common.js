@@ -117,10 +117,21 @@ function fxTable(arg) {
   });
 }
 
+function changeContent(){
+  if($('.radio-content').length){
+    $('[type="radio"].change').on('change',function(){
+
+      var val = $(this).val();
+      $('.radio-content [data-radio="'+val+'"]').addClass('active').siblings().removeClass('active');
+    });
+  }
+}
+
 $(function () {//document 로드 후 실행
   var scrollWidth = getScrollWidth();
   fxTable(scrollWidth);
   gnbAction();
   modalPopup();
   pagination();
+  changeContent()
 });

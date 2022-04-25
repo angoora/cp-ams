@@ -2,6 +2,7 @@
 #wrap {position:relative;min-height:100%;min-width:1900px;}
 .header {width:280px;height:100%;position:absolute;left:0;top:0;bottom:0;}
 #container {margin-left:280px;}
+.contents {padding-bottom:50px;}
 
 /*헤더 & GNB*/
 .header {background-color:$color1;padding:20px;color:#fff;text-align:center;height:100%;
@@ -208,7 +209,7 @@ select {width: 100%;max-width:200px;border:1px solid #e8e8e8;padding:0 12px;line
 
 /*checkbox & radio*/
 input[type="checkbox"] {display:inline-block;width:19px;height:18px;cursor:pointer;background: url(../images/chk_off.png) no-repeat center;vertical-align:middle;
-  + label {margin-left:5px;display:inline-block;cursor:pointer; vertical-align:middle;}
+  + label {margin-left:5px;display:inline-block;cursor:pointer; vertical-align:middle;margin-top:-2px;}
   &:checked {background-image:url(../images/chk_on.png);}
 }
 
@@ -227,6 +228,14 @@ input[type="radio"] {display:inline-block;width:19px;height:18px;cursor:pointer;
   }
 }
 
+.chk-list {
+  > li {float:left;margin-right:15px;
+    &:last-of-type{margin-right:0;}
+  }
+  &.center {margin-bottom:30px;text-align:center;
+    >li {display:inline-block;vertical-align:middle;float:none;}
+  }
+}
 
 /*테이블*/
 .table-wrap {display:flex;
@@ -312,6 +321,44 @@ input[type="radio"] {display:inline-block;width:19px;height:18px;cursor:pointer;
   }
   .btn-group {display:flex;flex:none;margin-top:6px;margin-left:auto;width:349px;justify-content:flex-end;padding-left:5px;align-self:stretch;
     button {margin-left:5px;}
+  }
+}
+
+.radio-content {
+  > li{display:none;
+    &.active {display:block;}
+  }
+}
+
+/*그래프 콘텐츠*/
+.graph {display:flex;flex-wrap:wrap;
+  .g-head {@include clear;line-height:60px;border-top:2px solid $color1;border-bottom:1px solid #e2e2e2;padding:0 30px;margin-bottom:20px;width:100%;
+    .lt {float:left;
+      span {margin-left:50px;
+        em {display:inline-block;margin:0 10px;height:15px;width:1px;background-color:#000;vertical-align:-2px;}
+      }
+    }
+    .rt {float:right;
+      .chk-list {float:left;}
+      .status {float:left;margin-left:30px;
+        padding-left:28px;background:url(../images/icon_sensor.png) no-repeat left 22px;
+        b {color:$color1;font-weight:500;}
+      }
+    }
+  }
+
+  > .chk-bar {flex:none;width:280px;margin-top:40px;
+    h3 {background-color:$color1;text-align:center;color:#fff;line-height:80px;font-size:20px;}
+    > ul {
+      > li {border:1px solid #c8c8ca;margin-top:2px;line-height:49px;padding-left:50px;}
+    }
+  }
+  .rt {flex:1;padding-right:30px;padding-left:30px;
+    .chart + .ref {text-align:right;margin-top:30px;
+      span{margin-left:10px;
+        &:before {content:'*';}
+      }
+    }
   }
 }
 
@@ -402,7 +449,6 @@ input[type="radio"] {display:inline-block;width:19px;height:18px;cursor:pointer;
 }
 
 /*로그인 GmarketSans*/
-
 #login {padding-top:106px;padding-bottom:30px;position:relative;min-height:100vh;background-color:$color1;
   &:before {content:'';position:absolute;left:0;top:330px;width:100%;height:calc(100% - 330px);background:#fff url(../images/bg_login.png) no-repeat center 64px;}
   .logo {position:absolute;left:150px;top:30px;}

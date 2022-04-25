@@ -75,7 +75,7 @@
     <div id="container">
       <!-- 페이지 제목 -->
       <div class="title">
-        <h2>청파초등학교 <span>미등록 현황</span></h2>
+        <h2>청파초등학교 <span>센서 현황</span></h2>
         <a href="#" class="mypage">마이페이지</a>
       </div>
       <!-- 페이지 제목 -->
@@ -92,8 +92,8 @@
               <div class="inp-set">
                 <label for="inp2">일자</label>
                 <input type="text" id="inp2" value="2022.03.25" name="#" class="inp date">
-                <input type="text" value="2022.03.25" name="#" class="inp date">                
-              </div>   
+                <input type="text" value="2022.03.25" name="#" class="inp date">
+              </div>
               <div class="btn-group">
                 <input type="radio" id="inp3" value="" name="date" class="btn" checked="checked">
                 <label for="inp3">1일</label>
@@ -101,7 +101,7 @@
                 <label for="inp4">주간</label>
                 <input type="radio" id="inp5" value="" name="date" class="btn">
                 <label for="inp5">월간</label>
-              </div>           
+              </div>
             </div>
             <div class="flex-row">
               <div class="inp-set">
@@ -109,20 +109,260 @@
                 <input type="text" id="inp6" value="교실4" name="#" class="inp ta-c">
                 <button type="button" class="btn1 blue2" data-pop-btn="pop1">선택</button>
               </div>
+              <!-- radio.change 변경시 value값과 .radio-content data-radio 값이 잃치하는 컨텐츠 active (보이기) -->
               <div class="btn-group">
-                <input type="radio" id="inp7" value="" name="view" class="btn" checked="checked">
+                <input type="radio" id="inp7" value="graph" name="#" class="btn change">
                 <label for="inp7" class="type2">그래프</label>
-                <input type="radio" id="inp8" value="" name="view" class="btn">
+                <input type="radio" id="inp8" value="list" name="#" class="btn change" checked="checked">
                 <label for="inp8" class="type2">목록</label>
               </div>
             </div>
-          </div>  
+          </div>
           <div class="btn-group">
             <button type="button" class="btn1 blue">조회</button>
             <button type="button" class="btn1 black">다운로드</button>
           </div>
         </div>
         <!-- 검색 상자 -->
+        <ul class="radio-content">
+          <li data-radio="graph">
+            <!-- 그래프 -->
+            <div class="graph">
+              <div class="rt">
+                작업전입니다.
+              </div>
+            </div>
+            <!-- //그래프 -->
+          </li>
+          <li class="active" data-radio="list">
+             <!-- 리스트 테이블 -->
+             <div class="table board">
+              <table>
+                <colgroup>               
+                  <col style="width:8%;">
+                  <col style="width:auto;" span="12">
+                  <col style="width:10%;" span="2">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>기준일자</th>
+                    <th>측정기</th>
+                    <th>그룹</th>
+                    <th>값기준</th>
+                    <th>CO2</th>
+                    <th>PM10</th>
+                    <th>PM2.5</th>
+                    <th>PM0.1</th>
+                    <th>TEMP</th>
+                    <th>RH</th>
+                    <th>HCHO</th>
+                    <th>CO</th>
+                    <th>TVOC</th>
+                    <th>공기살균정화기</th>
+                    <th>수신일시</th>                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //리스트 테이블 -->
+            <!-- pagination -->
+            <div class="pagination">
+              <div class="prev-wrap">
+                <a href="#" class="arrw-first">처음페이지</a>
+                <a href="#" class="arrw-prev">이전페이지</a>
+              </div>
+              <div class="page-wrap">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+              </div>
+              <div class="next-wrap">
+                <a href="#" class="arrw-next">다음페이지</a>
+                <a href="#" class="arrw-last">마지막페이지</a>
+              </div>
+            </div>
+            <!-- //pagination -->
+          </li>
+        </ul>
       </div>
       <!-- //컨텐츠 -->
     </div>
@@ -194,7 +434,7 @@
                     <td>체육관</td>
                   </tr>
                 </tbody>
-              </table>            
+              </table>
             </div>
             <div class="table fx-hd" data-row="5">
               <table>
@@ -220,7 +460,7 @@
                   <tr>
                     <td><input type="checkbox" name="#"></td>
                     <td>교실3</td>
-                  </tr>                
+                  </tr>
                   <tr>
                     <td><input type="checkbox" name="#"></td>
                     <td>교실4</td>
@@ -232,15 +472,15 @@
                   <tr>
                     <td><input type="checkbox" name="#"></td>
                     <td>교실6</td>
-                  </tr>                
+                  </tr>
                 </tbody>
-              </table>            
+              </table>
             </div>
           </div>
           <div class="pop-btn">
             <button type="button" class="btn2 blue">조회</button>
             <button type="button" class="btn2 pop-close">닫기</button>
-          </div>          
+          </div>
         </form>
       </div>
       <button type="button" class="pop-close">닫기</button>

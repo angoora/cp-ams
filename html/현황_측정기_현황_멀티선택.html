@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>CP-AMS에 오신 것을 환영합니다.</title>
+  <link rel="stylesheet" href="../common/css/default.css">
+  <script src="../common/js/prefixfree.min.js"></script>
+  <script src="../common/js/jquery-3.6.0.min.js"></script>
+  <script src="../common/js/common.js"></script>
+
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- 헤더 -->
+    <header class="header">
+      <h1 class="logo"><a href="#"><span class="hide">AerQ</span></a></h1>
+      <nav id="gnb">
+        <ul class="dep1">
+          <li class="active"><a href="#"><i><img src="../common/images/icon_gnb_1.png" alt=""></i><span>관리</span></a>
+            <ul class="dep2">
+              <li><a href="#">USER 관리</a>
+                <ul class="dep3">
+                  <li><a href="#">기관 사용자</a></li>
+                  <li class="active"><a href="#">일반 사용자</a></li>
+                  <li><a href="#">사용 권한</a></li>
+                </ul>
+              </li>
+              <li><a href="#">설정 관리</a>
+                <ul class="dep3">
+                  <li><a href="#">Local서버</a></li>
+                  <li><a href="#">센서</a></li>
+                  <li><a href="#">측정기 관리</a></li>
+                  <li><a href="#">공기살균정화기</a></li>
+                </ul>
+              </li>
+              <li><a href="#">설정 관리</a>
+                <ul class="dep3">
+                  <li><a href="#">측정기</a></li>
+                  <li><a href="#">센서</a></li>
+                  <li><a href="#">그룹</a></li>
+                  <li><a href="#">장애</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#"><i><img src="../common/images/icon_gnb_2.png" alt=""></i><span>모니터링</span></a></li>
+          <li><a href="#"><i><img src="../common/images/icon_gnb_3.png" alt=""></i><span>현황</span></a>
+            <ul class="dep2">
+              <li><a href="#">측정기</a>
+                <ul class="dep3">
+                  <li><a href="#">미등록 현황</a></li>
+                  <li><a href="#">개별 현황</a></li>
+                  <li><a href="#">기간별 현황</a></li>
+                </ul>
+              </li>
+              <li><a href="#">센서</a>
+                <ul class="dep3">
+                  <li><a href="#">평균 현황</a></li>
+                  <li><a href="#">기간별 현황</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#"><i><img src="../common/images/icon_gnb_4.png" alt=""></i><span>도움말</span></a></li>
+        </ul>
+      </nav>
+      <button type="button" class="btn_menu"><span class="hide">메뉴닫기</span></button>
+    </header>
+    <!-- //헤더 -->
+    <!-- container -->
+    <div id="container">
+      <!-- 페이지 제목 -->
+      <div class="title">
+        <h2>청파초등학교 <span>측정기 현황</span></h2>
+        <a href="#" class="mypage">마이페이지</a>
+      </div>
+      <!-- 페이지 제목 -->
+      <!-- 컨텐츠 -->
+      <div class="contents">
+        <!-- 검색 상자 -->
+        <div class="sch-box">
+          <div class="flex-col">
+            <div class="flex-row">
+              <div class="inp-set">
+                <label for="inp1">기관</label>
+                <input type="text" id="inp1" value="청파초등학교" name="#" class="inp">
+              </div>
+              <div class="inp-set">
+                <label for="inp2">일자</label>
+                <input type="text" id="inp2" value="2022.03.25" name="#" class="inp date">
+                <input type="text" value="2022.03.25" name="#" class="inp date">
+              </div>
+              <div class="btn-group">
+                <input type="radio" id="inp3" value="" name="date" class="btn" checked="checked">
+                <label for="inp3">1일</label>
+                <input type="radio" id="inp4" value="" name="date" class="btn">
+                <label for="inp4">주간</label>
+                <input type="radio" id="inp5" value="" name="date" class="btn">
+                <label for="inp5">월간</label>
+              </div>
+            </div>
+            <div class="flex-row">
+              <div class="inp-set">
+                <label for="inp6">선택항목</label>
+                <input type="text" id="inp6" value="교실4" name="#" class="inp ta-c">
+                <button type="button" class="btn1 blue2" data-pop-btn="pop1">선택</button>
+              </div>
+              <!-- radio.change 변경시 value값과 .radio-content data-radio 값이 잃치하는 컨텐츠 active (보이기) -->
+              <div class="btn-group">
+                <input type="radio" id="inp7" value="graph" name="#" class="btn change" >
+                <label for="inp7" class="type2">그래프</label>
+                <input type="radio" id="inp8" value="list" name="#" class="btn change" checked="checked">
+                <label for="inp8" class="type2">목록</label>
+              </div>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn1 blue">조회</button>
+            <button type="button" class="btn1 black">다운로드</button>
+          </div>
+        </div>
+        <!-- 검색 상자 -->
+        <ul class="radio-content">
+          <li data-radio="graph">
+            <!-- 그래프 -->
+            <div class="graph">
+              <div class="rt">
+                작업전입니다.
+              </div>
+            </div>
+            <!-- //그래프 -->
+          </li>
+          <li class="active" data-radio="list">
+            <!-- 리스트 테이블 -->
+            <div class="table board">
+              <table>
+                <colgroup>               
+                  <col style="width:8%;">
+                  <col style="width:auto;" span="12">
+                  <col style="width:10%;" span="2">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>기준일자</th>
+                    <th>측정기</th>
+                    <th>그룹</th>
+                    <th>값기준</th>
+                    <th>CO2</th>
+                    <th>PM10</th>
+                    <th>PM2.5</th>
+                    <th>PM0.1</th>
+                    <th>TEMP</th>
+                    <th>RH</th>
+                    <th>HCHO</th>
+                    <th>CO</th>
+                    <th>TVOC</th>
+                    <th>공기살균정화기</th>
+                    <th>수신일시</th>                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>22.03.30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //리스트 테이블 -->
+            <!-- pagination -->
+            <div class="pagination">
+              <div class="prev-wrap">
+                <a href="#" class="arrw-first">처음페이지</a>
+                <a href="#" class="arrw-prev">이전페이지</a>
+              </div>
+              <div class="page-wrap">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+              </div>
+              <div class="next-wrap">
+                <a href="#" class="arrw-next">다음페이지</a>
+                <a href="#" class="arrw-last">마지막페이지</a>
+              </div>
+            </div>
+            <!-- //pagination -->
+          </li>
+        </ul>
+      </div>
+      <!-- //컨텐츠 -->
+    </div>
+    <!-- container -->
+  </div>
+
+  <!-- 팝업창
+    1. 팝업열기 = 클릭한 버튼 [data-pop-btn]속성 값과 동일한 값을 가지는[data-pop] 요소를 나타냄.
+    2. 팝업닫기 = 버튼 pop-close 클래스
+    3. .pop-box width=948px , .pop-box.sm width="600px"
+    -->
+  <div class="pop-wrap" data-pop="pop1">
+    <div class="pop-box">
+      <h2 class="pop-head">측정기 현황</h2>
+      <div class="pop-inner">
+        <form action="#" method="post">
+          <div class="table-wrap">
+            <div class="table fx-hd" data-row="5">
+              <table>
+                <colgroup>
+                  <col style="width:15%;">
+                  <col style="width:auto;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>선택</th>
+                    <th>그룹</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>교실그룹1</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>교실그룹2</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>교실그룹3</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>1층 화장실</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>체육관</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>교실그룹1</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>교실그룹2</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>교실그룹3</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>1층 화장실</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>체육관</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table fx-hd" data-row="5">
+              <table>
+                <colgroup>
+                  <col style="width:15%;">
+                  <col style="width:auto;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>선택</th>
+                    <th>측정기</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>교실1</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>교실2</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>교실3</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>교실4</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>교실5</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="#"></td>
+                    <td>교실6</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="pop-btn">
+            <button type="button" class="btn2 blue">조회</button>
+            <button type="button" class="btn2 pop-close">닫기</button>
+          </div>
+        </form>
+      </div>
+      <button type="button" class="pop-close">닫기</button>
+    </div>
+  </div>
+  <!-- //팝업창 -->
+  <!-- 확인창 -->
+  <div class="confirm-wrap" data-pop="pop2">
+    <div class="confirm-box">
+      <strong>삭제하겠습니까?</strong>
+      <button type="button" class="btn3 blue">확인</button>
+      <button type="button" class="btn3 pop-close">취소</button>
+    </div>
+  </div>
+  <!-- //확인창 -->
+</body>
+
+</html>
