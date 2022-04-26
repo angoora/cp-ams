@@ -541,7 +541,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 #login .login-box > div { text-align: center; background-color: #fff; border: 2px solid #e2e2e2; border-radius: 0 0 16px 16px; border-top: 0; padding: 40px 80px 35px; }
 
-#login .login-box > div .inp { margin-bottom: 10px; height: 65px; line-height: 65px; padding: 0 69px; background-color: #f8f8f8; font-size: 20px; background-repeat: no-repeat; background-position: 30px center; }
+#login .login-box > div .inp { margin-bottom: 10px; height: 65px; line-height: 65px; padding: 0 69px; background-color: #f8f8f8; font-size: 20px; background-repeat: no-repeat; background-position: 30px center; max-width: 100%; }
 
 #login .login-box > div .inp.code { background-image: url(../images/icon_login_code.png); }
 
