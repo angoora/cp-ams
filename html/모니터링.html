@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>CP-AMS에 오신 것을 환영합니다.</title>
+  <link rel="stylesheet" href="../common/css/default.css">
+  <script src="../common/js/prefixfree.min.js"></script>
+  <script src="../common/js/jquery-3.6.0.min.js"></script>
+  <script src="../common/js/common.js"></script>
+
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- 헤더 -->
+    <header class="header">
+      <h1 class="logo"><a href="#"><span class="hide">AerQ</span></a></h1>
+      <nav id="gnb">
+        <ul class="dep1">
+          <li class="active"><a href="#"><i><img src="../common/images/icon_gnb_1.png" alt=""></i><span>관리</span></a>
+            <ul class="dep2">
+              <li><a href="#">USER 관리</a>
+                <ul class="dep3">
+                  <li><a href="#">기관 사용자</a></li>
+                  <li class="active"><a href="#">일반 사용자</a></li>
+                  <li><a href="#">사용 권한</a></li>
+                </ul>
+              </li>
+              <li><a href="#">설정 관리</a>
+                <ul class="dep3">
+                  <li><a href="#">Local서버</a></li>
+                  <li><a href="#">센서</a></li>
+                  <li><a href="#">측정기 관리</a></li>
+                  <li><a href="#">공기살균정화기</a></li>
+                </ul>
+              </li>
+              <li><a href="#">설정 관리</a>
+                <ul class="dep3">
+                  <li><a href="#">측정기</a></li>
+                  <li><a href="#">센서</a></li>
+                  <li><a href="#">그룹</a></li>
+                  <li><a href="#">장애</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#"><i><img src="../common/images/icon_gnb_2.png" alt=""></i><span>모니터링</span></a></li>
+          <li><a href="#"><i><img src="../common/images/icon_gnb_3.png" alt=""></i><span>현황</span></a>
+            <ul class="dep2">
+              <li><a href="#">측정기</a>
+                <ul class="dep3">
+                  <li><a href="#">미등록 현황</a></li>
+                  <li><a href="#">개별 현황</a></li>
+                  <li><a href="#">기간별 현황</a></li>
+                </ul>
+              </li>
+              <li><a href="#">센서</a>
+                <ul class="dep3">
+                  <li><a href="#">평균 현황</a></li>
+                  <li><a href="#">기간별 현황</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#"><i><img src="../common/images/icon_gnb_4.png" alt=""></i><span>도움말</span></a></li>
+        </ul>
+      </nav>
+      <button type="button" class="btn_menu"><span class="hide">메뉴닫기</span></button>
+    </header>
+    <!-- //헤더 -->
+    <!-- container -->
+    <div id="container">
+      <!-- 페이지 제목 -->
+      <div class="title">
+        <h2>청파초등학교 <span>기관관리</span></h2>
+        <a href="#" class="fullpage">마이페이지</a>
+        <a href="#" class="mypage">마이페이지</a>
+      </div>
+      <!-- 페이지 제목 -->
+      <!-- 컨텐츠 -->
+      <div class="contents">        
+        <div class="update"><span>업데이트 시간 : 2022.03.02 16:18</spa></div>
+        <div class="group-list">
+          <a href="#">전체그룹 상위그룹명</a>
+          <a href="#">전체그룹 하위그룹명</a>
+          <a href="#">전체그룹 측정기명</a>
+        </div>
+        <div class="monitor">
+          <div class="status">
+            <div class="device">
+              <h3>장치 현황</h3>
+              <ul>
+                <li>측정기 <b>10</b></li>
+                <li>센서 <b>9</b></li>
+                <li>지역화센서 <b>5</b></li>
+                <li>공기살균정화기 <b>8</b></li>
+              </ul>
+            </div>
+            <div class="air">
+              <h3>공기질 지수 그래프</h3>
+              <div class="chart">
+                <!-- 차트영역 -->
+                <img src="../common/images/sample_chart2.jpg" alt="">
+                <!-- 차트영역 -->
+              </div>
+              <ul>
+                <li>
+                  오늘 공기지수 평균 <span>85 <b class="level-1">좋음</b></span>
+                </li>
+                <li>
+                  1주전 공기지수 평균 <span>82 <b class="level-1"></b></span>
+                </li>
+                <li>
+                  2주전 공기지수 평균 <span>85 <b class="level-1"></b></span>
+                </li>
+                <li>
+                  3주전 공기지수 평균 <span>78 <b class="level-2"></b></span>
+                </li>
+              </ul>              
+              <div class="level">
+                <span>지수등급</span>
+                <ol>
+                  <li class="level-1">좋음</li>
+                  <li class="level-2">보통</li>
+                  <li class="level-3">나쁨</li>
+                  <li class="level-4">매우나쁨</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="data">
+            <div>
+              <h3>PM10 <button type="button">O</button> <span>5</span></h3>
+              <div>
+                <img src="../common/images/icon_pm10.png" alt="">
+                <div class="progress" data-min="0" data-max="500" data-level="1">
+                  <div class="txt"><b>90</b>ug/㎥</div>
+                  <!-- <div class="bar"><span></span></div>
+                  <div class="num">
+                    <span class="min"></span>
+                    <b></b>
+                    <span class="max"></span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>PM2.5 <span>5</span></h3>
+              <div>
+                <img src="../common/images/icon_pm2.5.png" alt="">
+                <div class="progress" data-min="0" data-max="500" data-level="1">
+                  <div class="txt"><b>100</b>ug/㎥</div>                 
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>PM1.0 <span>5</span></h3>
+              <div>
+                <img src="../common/images/icon_pm1.0.png" alt="">
+                <div class="progress" data-min="0" data-max="500" data-level="2">
+                  <div class="txt"><b>120</b>ug/㎥</div>                 
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>CO2 <span>5</span></h3>
+              <div>
+                <img src="../common/images/icon_co2.png" alt="">
+                <div class="progress" data-min="0" data-max="5000" data-level="2">
+                  <div class="txt"><b>350</b>ppm</div>     
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>TEMP <span>5</span></h3>
+              <div>
+                <img src="../common/images/icon_temp.png" alt="">
+                <div class="progress" data-min="-20" data-max="80" data-level="1">
+                  <div class="txt"><b>16</b>°C</div>     
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>RH <span>5</span></h3>
+              <div>
+                <img src="../common/images/icon_rh.png" alt="">
+                <div class="progress" data-min="0" data-max="100" data-level="1">
+                  <div class="txt"><b>10</b>%</div>     
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>HCHO <span>5</span></h3>
+              <div>
+                <img src="../common/images/icon_hcho.png" alt="">
+                <div class="progress" data-min="0" data-max="5" data-level="3">
+                  <div class="txt"><b>2</b>ppm</div>     
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>CO <span>5</span></h3>
+              <div>
+                <img src="../common/images/icon_co.png" alt="">
+                <div class="progress" data-min="0" data-max="20" data-level="4">
+                  <div class="txt"><b>15</b>ppm</div>     
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>TVOC <span>5</span></h3>
+              <div>
+                <img src="../common/images/icon_tvoc.png" alt="">
+                <div class="progress" data-min="0" data-max="50" data-level="1">
+                  <div class="txt"><b>10</b>ppm</div>     
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>공기살균정화기 <span>5</span></h3>
+              <div>
+                <ul>
+                  <li class="level-2">동작 ( 4 )</li>
+                  <li class="level-3">정지 ( 1 )</li>
+                  <li class="level-4">고장 ( 1 )</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+      <!-- //컨텐츠 -->
+    </div>
+    <!-- container -->
+  </div>
+
+  <!-- 팝업창
+    1. 팝업열기 = 클릭한 버튼 [data-pop-btn]속성 값과 동일한 값을 가지는[data-pop] 요소를 나타냄.
+    2. 팝업닫기 = 버튼 pop-close 클래스
+    3. .pop-box width=948px , .pop-box.sm width="600px"
+    -->
+  <div class="pop-wrap" data-pop="pop1">
+    <div class="pop-box">
+      <h2 class="pop-head">사용자 관리</h2>
+      <div class="pop-inner">
+        <form action="#" method="post">
+          <ul class="pop-inp">
+            <li>
+              <div class="inp-set">
+                <label for="inp3" class="rqd">사용자명</label>
+                <input type="text" id="inp3" value="" name="#" class="inp">
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp4">아이디</label>
+                <input type="text" id="inp4" value="" name="#" class="inp">
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp5">전화번호</label>
+                <input type="text" id="inp5" value="" name="#" class="inp">
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp6">메일주소</label>
+                <input type="text" id="inp6" value="" name="#" class="inp">
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp7">권한등급</label>
+                <select name="#" id="inp7">
+                  <option value="">기관사용자</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp8">SMS알림</label>
+                <select name="#" id="inp8">
+                  <option value="">전송</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp9">기본언어</label>
+                <select name="#" id="inp9">
+                  <option value="">한국어</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+          <div class="pop-btn">
+            <button type="button" class="btn2 blue" data-pop-btn="pop3">저장</button>
+            <button type="button" class="btn2 pop-close">취소</button>
+          </div>
+          <!-- 확인창 -->
+          <div class="confirm-wrap" data-pop="pop3">
+            <div class="confirm-box">
+              <strong>저장하겠습니까?</strong>
+              <button type="button" class="btn3 blue">확인</button>
+              <button type="button" class="btn3 pop-close">취소</button>
+            </div>
+          </div>
+          <!-- //확인창 -->
+        </form>
+      </div>
+      <button type="button" class="pop-close">닫기</button>
+    </div>
+  </div>
+  <!-- //팝업창 -->
+  <!-- 확인창 -->
+  <div class="confirm-wrap" data-pop="pop2">
+    <div class="confirm-box">
+      <strong>삭제하겠습니까?</strong>
+      <button type="button" class="btn3 blue">확인</button>
+      <button type="button" class="btn3 pop-close">취소</button>
+    </div>
+  </div>
+  <!-- //확인창 -->
+</body>
+
+</html>

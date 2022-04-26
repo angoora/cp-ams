@@ -29,6 +29,9 @@ $color2:#1b53a0; //주컬러2
 //border
 $border1: 1px solid #cbcccd;
 
+$ff-gm :'GmarketSans',sans-serif;
+$ff-noto :'Noto Sans',sans-serif;
+
 //mixin
 /*clear*/
 @mixin clear{&:after {content: ''; display: block; clear: both;}}

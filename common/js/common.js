@@ -127,11 +127,36 @@ function changeContent(){
   }
 }
 
+function progress(){
+  $('.progress').each(function(){
+    var html = '<div class="bar"><span></span></div><div class="num"><span class="min"></span><b></b><span class="max"></span></div>';
+    var min = $(this).data('min');
+    var max = $(this).data('max');
+    var val = $(this).find('.txt b').text();
+    var n = val/max * 100;
+    if(n < 15){
+      n *= 3;
+    }else if(n<30){
+      n *= 1.5;
+    }else if (n>70){
+      n *= 0.9;
+    }else if (n>85){
+      n *= 0.7;
+    }
+    $(this).append(html);
+    $(this).find('.num .min').text(min);
+    $(this).find('.num .max').text(max);
+    $(this).find('.num b').text(val).css('left',n+'%');
+    $(this).find('.bar span').width(n+'%');
+  });
+}
+
 $(function () {//document 로드 후 실행
   var scrollWidth = getScrollWidth();
   fxTable(scrollWidth);
   gnbAction();
   modalPopup();
   pagination();
-  changeContent()
+  changeContent();
+  progress();
 });
