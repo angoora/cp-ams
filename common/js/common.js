@@ -150,6 +150,17 @@ function progress(){
     $(this).find('.bar span').width(n+'%');
   });
 }
+function progress2(){
+  $('.progress-wrap > li').each(function(){   
+    var min = $(this).data('min');
+    var max = $(this).data('max');
+    var val = $(this).find('h4 b').text();
+    var n = val/max * 100;
+    $(this).find('.num .min').text(min);
+    $(this).find('.num .max').text(max);
+    $(this).find('.bar span').width(n+'%');
+  });
+}
 
 $(function () {//document 로드 후 실행
   var scrollWidth = getScrollWidth();
@@ -159,4 +170,5 @@ $(function () {//document 로드 후 실행
   pagination();
   changeContent();
   progress();
+  progress2();
 });

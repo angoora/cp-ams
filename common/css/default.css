@@ -595,7 +595,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .monitor { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
-.monitor .status { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 380px; margin-right: 66px; }
+.monitor .status { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 380px; }
 
 .monitor .status > div { border: 3px solid #0076ca; padding: 30px; }
 
@@ -635,7 +635,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .monitor .status > div.air .level ol > li { float: left; width: 25%; text-align: center; font-size: 12px; line-height: 35px; }
 
-.monitor .data { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -ms-flex-item-align: start; align-self: flex-start; padding-right: 1px; padding-top: 1px; }
+.monitor .data { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; margin-left: 66px; -ms-flex-item-align: start; align-self: flex-start; padding: 1px; }
 
 .monitor .data > div { width: 25%; border: 1px solid #d8d8d8; -webkit-box-shadow: 0 0 0 1px #d8d8d8; box-shadow: 0 0 0 1px #d8d8d8; }
 
@@ -694,6 +694,70 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 .monitor .data > div > div .air-cleaner { margin-top: -90px; padding: 0 14px; }
 
 .monitor .data > div > div .air-cleaner > li { line-height: 50px; margin-bottom: 5px; border-radius: 5px; }
+
+.monitor .data.type2 { margin-left: 62px; }
+
+.monitor .data.type2 > div { width: 50%; border: 2px solid #d8d8d8; padding: 20px 30px 0; }
+
+.monitor .data.type2 > div > h3 { line-height: 40px; height: 40px; border-bottom: 0; padding-right: 20px; padding-left: 27px; padding: 0; margin-bottom: 17px; }
+
+.monitor .data.type2 > div > h3 em { display: inline-block; height: 40px; width: 80px; text-align: center; vertical-align: top; font-size: 16px; border-radius: 0 0 15px 15px; font-weight: 400; margin-right: 10px; }
+
+.monitor .data.type2 > div > h3 span { margin-right: -9px; margin-top: 5px; }
+
+.monitor .data.type2 > div .progress-wrap { background-color: #f5f7f9; padding: 14px 28px 16px; }
+
+.monitor .data.type2 > div .progress-wrap > li { margin-bottom: 15px; }
+
+.monitor .data.type2 > div .progress-wrap > li:last-of-type { margin-bottom: 0; }
+
+.monitor .data.type2 > div .progress-wrap > li h4 { padding-left: 31px; background-position: left center; padding-top: 0.2em; background-repeat: no-repeat; color: #000; font-size: 20px; font-family: "GmarketSans", sans-serif; }
+
+.monitor .data.type2 > div .progress-wrap > li h4:after { content: ''; display: block; clear: both; }
+
+.monitor .data.type2 > div .progress-wrap > li h4 em { display: block; float: right; font-family: "Noto Sans", sans-serif; font-size: 16px; }
+
+.monitor .data.type2 > div .progress-wrap > li h4 em b { font-weight: 600; font-family: "GmarketSans", sans-serif; font-size: 20px; margin-right: 4px; }
+
+.monitor .data.type2 > div .progress-wrap > li h4.pm10 { background-image: url(../images/icon_pm10_sm.png); }
+
+.monitor .data.type2 > div .progress-wrap > li h4.pm25 { background-image: url(../images/icon_pm2.5_sm.png); }
+
+.monitor .data.type2 > div .progress-wrap > li h4.co2 { background-image: url(../images/icon_co2_sm.png); }
+
+.monitor .data.type2 > div .progress-wrap > li .bar { margin-top: 2px; position: relative; background-color: #e3e3e3; width: 100%; height: 15px; }
+
+.monitor .data.type2 > div .progress-wrap > li .bar span { position: absolute; left: 0; top: 0; width: 0; height: 100%; bottom: 0; -webkit-transition: 1.5s ease-out; transition: 1.5s ease-out; }
+
+.monitor .data.type2 > div .progress-wrap > li .bar .line { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 1; bottom: 0; background: url(../images/line_progress.png) repeat-x left center; }
+
+.monitor .data.type2 > div .progress-wrap > li .num { margin-top: 1px; position: relative; font-size: 12px; color: rgba(22, 23, 24, 0.4); }
+
+.monitor .data.type2 > div .progress-wrap > li .num:after { content: ''; display: block; clear: both; }
+
+.monitor .data.type2 > div .progress-wrap > li .num .min { float: left; }
+
+.monitor .data.type2 > div .progress-wrap > li .num .max { float: right; }
+
+.monitor .data.type2 > div .progress-wrap > li .num .u100 { position: absolute; -webkit-transform: translateX(-50%); transform: translateX(-50%); left: 20%; }
+
+.monitor .data.type2 > div .progress-wrap > li .num .u300 { position: absolute; -webkit-transform: translateX(-50%); transform: translateX(-50%); left: 60%; }
+
+.monitor .data.type2 > div .progress-wrap > li.lv-1 h4 span, .monitor .data.type2 > div .progress-wrap > li.lv-1 h4 em { color: #2359c4; }
+
+.monitor .data.type2 > div .progress-wrap > li.lv-1 .bar span { background: #015eea; background: -webkit-gradient(linear, left top, right top, from(#015eea), to(#00c0fa)); background: linear-gradient(90deg, #015eea 0%, #00c0fa 100%); }
+
+.monitor .data.type2 > div .progress-wrap > li.lv-2 h4 span, .monitor .data.type2 > div .progress-wrap > li.lv-2 h4 em { color: #01b56e; }
+
+.monitor .data.type2 > div .progress-wrap > li.lv-2 .bar span { background: #027146; background: -webkit-gradient(linear, left top, right top, from(#027146), to(#72d7cc)); background: linear-gradient(90deg, #027146 0%, #72d7cc 100%); }
+
+.monitor .data.type2 > div .progress-wrap > li.lv-3 h4 span, .monitor .data.type2 > div .progress-wrap > li.lv-3 h4 em { color: #ffb43e; }
+
+.monitor .data.type2 > div .progress-wrap > li.lv-3 .bar span { background: #f28e26; background: -webkit-gradient(linear, left top, right top, from(#f28e26), to(#fde24f)); background: linear-gradient(90deg, #f28e26 0%, #fde24f 100%); }
+
+.monitor .data.type2 > div .progress-wrap > li.lv-4 h4 span, .monitor .data.type2 > div .progress-wrap > li.lv-4 h4 em { color: #da3539; }
+
+.monitor .data.type2 > div .progress-wrap > li.lv-4 .bar span { background: #d10c1b; background: -webkit-gradient(linear, left top, right top, from(#d10c1b), to(#e94a6c)); background: linear-gradient(90deg, #d10c1b 0%, #e94a6c 100%); }
 
 .ta-c { text-align: center; }
 
