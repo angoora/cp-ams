@@ -81,8 +81,9 @@
       </div>
       <!-- 페이지 제목 -->
       <!-- 컨텐츠 -->
-      <div class="contents">        
-        <div class="update"><span>업데이트 시간 : 2022.03.02 16:18</spa></div>
+      <div class="contents">
+        <div class="update"><span>업데이트 시간 : 2022.03.02 16:18</spa>
+        </div>
         <div class="group-list">
           <a href="#">전체그룹 상위그룹명</a>
           <a href="#">전체그룹 하위그룹명</a>
@@ -119,7 +120,7 @@
                 <li>
                   3주전 공기지수 평균 <span>78 <b class="level-2"></b></span>
                 </li>
-              </ul>              
+              </ul>
               <div class="level">
                 <span>지수등급</span>
                 <ol>
@@ -133,17 +134,19 @@
           </div>
           <div class="data">
             <div>
-              <h3>PM10 <button type="button">O</button> <span>5</span></h3>
+              <h3>PM10 <button type="button" data-pop-btn="pop1"></button> <span>5</span></h3>
               <div>
                 <img src="../common/images/icon_pm10.png" alt="">
                 <div class="progress" data-min="0" data-max="500" data-level="1">
                   <div class="txt"><b>90</b>ug/㎥</div>
-                  <!-- <div class="bar"><span></span></div>
-                  <div class="num">
-                    <span class="min"></span>
-                    <b></b>
-                    <span class="max"></span>
-                  </div> -->
+                  <!-- 
+                    <div class="bar"><span></span></div>
+                    <div class="num">
+                      <span class="min"></span>
+                      <b></b>
+                      <span class="max"></span>
+                    </div> 
+                  -->
                 </div>
               </div>
             </div>
@@ -152,7 +155,7 @@
               <div>
                 <img src="../common/images/icon_pm2.5.png" alt="">
                 <div class="progress" data-min="0" data-max="500" data-level="1">
-                  <div class="txt"><b>100</b>ug/㎥</div>                 
+                  <div class="txt"><b>100</b>ug/㎥</div>
                 </div>
               </div>
             </div>
@@ -161,7 +164,7 @@
               <div>
                 <img src="../common/images/icon_pm1.0.png" alt="">
                 <div class="progress" data-min="0" data-max="500" data-level="2">
-                  <div class="txt"><b>120</b>ug/㎥</div>                 
+                  <div class="txt"><b>120</b>ug/㎥</div>
                 </div>
               </div>
             </div>
@@ -170,7 +173,7 @@
               <div>
                 <img src="../common/images/icon_co2.png" alt="">
                 <div class="progress" data-min="0" data-max="5000" data-level="2">
-                  <div class="txt"><b>350</b>ppm</div>     
+                  <div class="txt"><b>350</b>ppm</div>
                 </div>
               </div>
             </div>
@@ -179,7 +182,7 @@
               <div>
                 <img src="../common/images/icon_temp.png" alt="">
                 <div class="progress" data-min="-20" data-max="80" data-level="1">
-                  <div class="txt"><b>16</b>°C</div>     
+                  <div class="txt"><b>16</b>°C</div>
                 </div>
               </div>
             </div>
@@ -188,7 +191,7 @@
               <div>
                 <img src="../common/images/icon_rh.png" alt="">
                 <div class="progress" data-min="0" data-max="100" data-level="1">
-                  <div class="txt"><b>10</b>%</div>     
+                  <div class="txt"><b>10</b>%</div>
                 </div>
               </div>
             </div>
@@ -197,7 +200,7 @@
               <div>
                 <img src="../common/images/icon_hcho.png" alt="">
                 <div class="progress" data-min="0" data-max="5" data-level="3">
-                  <div class="txt"><b>2</b>ppm</div>     
+                  <div class="txt"><b>2</b>ppm</div>
                 </div>
               </div>
             </div>
@@ -206,7 +209,7 @@
               <div>
                 <img src="../common/images/icon_co.png" alt="">
                 <div class="progress" data-min="0" data-max="20" data-level="4">
-                  <div class="txt"><b>15</b>ppm</div>     
+                  <div class="txt"><b>15</b>ppm</div>
                 </div>
               </div>
             </div>
@@ -215,14 +218,14 @@
               <div>
                 <img src="../common/images/icon_tvoc.png" alt="">
                 <div class="progress" data-min="0" data-max="50" data-level="1">
-                  <div class="txt"><b>10</b>ppm</div>     
+                  <div class="txt"><b>10</b>ppm</div>
                 </div>
               </div>
             </div>
             <div>
               <h3>공기살균정화기 <span>5</span></h3>
               <div>
-                <ul>
+                <ul class="air-cleaner">
                   <li class="level-2">동작 ( 4 )</li>
                   <li class="level-3">정지 ( 1 )</li>
                   <li class="level-4">고장 ( 1 )</li>
@@ -231,7 +234,7 @@
             </div>
           </div>
         </div>
-        
+
 
       </div>
       <!-- //컨텐츠 -->
@@ -245,74 +248,59 @@
     3. .pop-box width=948px , .pop-box.sm width="600px"
     -->
   <div class="pop-wrap" data-pop="pop1">
-    <div class="pop-box">
-      <h2 class="pop-head">사용자 관리</h2>
+    <div class="pop-box type2">
+      <h2 class="pop-head">측정기명 지역화센서 <span>5</span></h2>
       <div class="pop-inner">
-        <form action="#" method="post">
-          <ul class="pop-inp">
-            <li>
-              <div class="inp-set">
-                <label for="inp3" class="rqd">사용자명</label>
-                <input type="text" id="inp3" value="" name="#" class="inp">
-              </div>
-            </li>
-            <li>
-              <div class="inp-set">
-                <label for="inp4">아이디</label>
-                <input type="text" id="inp4" value="" name="#" class="inp">
-              </div>
-            </li>
-            <li>
-              <div class="inp-set">
-                <label for="inp5">전화번호</label>
-                <input type="text" id="inp5" value="" name="#" class="inp">
-              </div>
-            </li>
-            <li>
-              <div class="inp-set">
-                <label for="inp6">메일주소</label>
-                <input type="text" id="inp6" value="" name="#" class="inp">
-              </div>
-            </li>
-            <li>
-              <div class="inp-set">
-                <label for="inp7">권한등급</label>
-                <select name="#" id="inp7">
-                  <option value="">기관사용자</option>
-                </select>
-              </div>
-            </li>
-            <li>
-              <div class="inp-set">
-                <label for="inp8">SMS알림</label>
-                <select name="#" id="inp8">
-                  <option value="">전송</option>
-                </select>
-              </div>
-            </li>
-            <li>
-              <div class="inp-set">
-                <label for="inp9">기본언어</label>
-                <select name="#" id="inp9">
-                  <option value="">한국어</option>
-                </select>
-              </div>
-            </li>
-          </ul>
-          <div class="pop-btn">
-            <button type="button" class="btn2 blue" data-pop-btn="pop3">저장</button>
-            <button type="button" class="btn2 pop-close">취소</button>
-          </div>
-          <!-- 확인창 -->
-          <div class="confirm-wrap" data-pop="pop3">
-            <div class="confirm-box">
-              <strong>저장하겠습니까?</strong>
-              <button type="button" class="btn3 blue">확인</button>
-              <button type="button" class="btn3 pop-close">취소</button>
+        <ul class="pop-inp">
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp1">센서명</label>
+              <input type="text" readonly id="inp1" value="200ug/㎥" name="#" class="inp">
             </div>
-          </div>
-          <!-- //확인창 -->
-        </form>
+          </li>
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp2">센서명</label>
+              <input type="text" readonly id="inp2" value="500ug/㎥" name="#" class="inp">
+            </div>
+          </li>
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp3">센서명</label>
+              <input type="text" readonly id="inp3" value="250ug/㎥" name="#" class="inp">
+            </div>
+          </li>
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp4">센서명</label>
+              <input type="text" readonly id="inp4" value="330ug/㎥" name="#" class="inp">
+            </div>
+          </li>
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp5">센서명</label>
+              <input type="text" readonly id="inp5" value="220ug/㎥" name="#" class="inp">
+            </div>
+          </li>
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp6">센서명</label>
+              <input type="text" readonly id="inp6" value="455ug/㎥" name="#" class="inp">
+            </div>
+          </li>
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp7">센서명</label>
+              <input type="text" readonly id="inp7" value="155ug/㎥" name="#" class="inp">
+            </div>
+          </li>
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp8">센서명</label>
+              <input type="text" readonly id="inp8" value="157ug/㎥" name="#" class="inp">
+            </div>
+          </li>
+        </ul>
       </div>
       <button type="button" class="pop-close">닫기</button>
     </div>

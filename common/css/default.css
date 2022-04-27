@@ -431,6 +431,20 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .pop-wrap .pop-box.sm { max-width: 600px; }
 
+.pop-wrap .pop-box.type2 { max-width: 520px; }
+
+.pop-wrap .pop-box.type2 .pop-head { line-height: 90px; background-color: #e1edf9; color: #1b53a0; font-size: 26px; font-weight: 600; }
+
+.pop-wrap .pop-box.type2 .pop-head span { font-size: 14px; display: inline-block; width: 38px; height: 38px; line-height: 38px; border-radius: 38px; background-color: #da3539; color: #fff; text-align: center; vertical-align: 4px; margin-left: 10px; }
+
+.pop-wrap .pop-box.type2 .pop-inner { max-height: calc(100% - 90px); padding: 30px 50px 40px; }
+
+.pop-wrap .pop-box.type2 .pop-inner .pop-inp > li .inp-set { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.pop-wrap .pop-box.type2 .pop-inner .pop-inp > li .inp-set .inp, .pop-wrap .pop-box.type2 .pop-inner .pop-inp > li .inp-set select { max-width: 240px; border-color: #c8c8c8; }
+
+.pop-wrap .pop-box.type2 > .pop-close { right: 31px; top: 34px; width: 22px; height: 22px; border-radius: 22px; background: url(../images/btn_closepop3.png) no-repeat 50% 50%; }
+
 .pop-wrap .pop-box[data-pop] { display: none; max-width: 665px; -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.15); box-shadow: 0 0 50px rgba(0, 0, 0, 0.15); }
 
 .pop-wrap .pop-box > .pop-close { position: absolute; right: 28px; top: 28px; width: 24px; height: 24px; border-radius: 24px; background: url(../images/btn_closepop.png) no-repeat 50% 50%; white-space: nowrap; text-indent: 28px; overflow: hidden; }
@@ -627,6 +641,8 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .monitor .data > div > h3 { line-height: 72px; height: 73px; border-bottom: 1px solid #d8d8d8; font-size: 22px; font-weight: 800; color: #161718; padding-right: 20px; padding-left: 27px; }
 
+.monitor .data > div > h3 button { width: 30px; height: 30px; border-radius: 30px; background: url(../images/icon_setting.png) no-repeat center; margin-left: 5px; vertical-align: -5px; }
+
 .monitor .data > div > h3 span { float: right; display: block; text-align: center; color: #fff; width: 30px; height: 30px; border-radius: 30px; font-size: 14px; line-height: 30px; background-color: #161718; margin-top: 20px; }
 
 .monitor .data > div > div { position: relative; border-top: 2px solid #f5f7f9; height: 263px; text-align: center; padding: 140px 20px 0; }
@@ -674,6 +690,10 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 .monitor .data > div > div .progress[data-level="4"] .bar { background-color: #f8e7ea; }
 
 .monitor .data > div > div .progress[data-level="4"] .bar span { background-color: #da3539; }
+
+.monitor .data > div > div .air-cleaner { margin-top: -90px; padding: 0 14px; }
+
+.monitor .data > div > div .air-cleaner > li { line-height: 50px; margin-bottom: 5px; border-radius: 5px; }
 
 .ta-c { text-align: center; }
 
