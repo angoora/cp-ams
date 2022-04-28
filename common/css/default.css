@@ -699,7 +699,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .monitor .data.type2 > div { width: 50%; border: 1.5px solid #d8d8d8; padding: 20px 30px 30px; height: 615px; -webkit-box-shadow: 0 0 0 1.5px #d8d8d8; box-shadow: 0 0 0 1.5px #d8d8d8; }
 
-.monitor .data.type2 > div > h3 { line-height: 40px; height: 40px; border-bottom: 0; padding-right: 20px; padding-left: 27px; padding: 0; margin-bottom: 17px; }
+.monitor .data.type2 > div > h3 { line-height: 40px; height: 40px; border-bottom: 0; padding-right: 20px; padding-left: 27px; padding: 0; margin-bottom: 17px; font-family: "GmarketSans", sans-serif; font-weight: 500; }
 
 .monitor .data.type2 > div > h3 em { display: inline-block; height: 40px; width: 80px; text-align: center; vertical-align: top; font-size: 16px; border-radius: 0 0 15px 15px; font-weight: 400; margin-right: 10px; }
 
