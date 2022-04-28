@@ -635,9 +635,9 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .monitor .status > div.air .level ol > li { float: left; width: 25%; text-align: center; font-size: 12px; line-height: 35px; }
 
-.monitor .data { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; margin-left: 66px; -ms-flex-item-align: start; align-self: flex-start; padding: 1.5px; }
+.monitor .data { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; margin-left: 66px; -ms-flex-item-align: start; align-self: flex-start; padding: 1px; }
 
-.monitor .data > div { width: 25%; border: 1.5px solid #d8d8d8; -webkit-box-shadow: 0 0 0 1.5px #d8d8d8; box-shadow: 0 0 0 1.5px #d8d8d8; }
+.monitor .data > div { width: 25%; border: 1px solid #d8d8d8; -webkit-box-shadow: 0 0 0 1px #d8d8d8; box-shadow: 0 0 0 1px #d8d8d8; }
 
 .monitor .data > div > h3 { line-height: 72px; height: 73px; border-bottom: 1px solid #d8d8d8; font-size: 22px; font-weight: 800; color: #161718; padding-right: 20px; padding-left: 27px; }
 
@@ -695,9 +695,9 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .monitor .data > div > div .air-cleaner > li { line-height: 50px; margin-bottom: 5px; border-radius: 5px; }
 
-.monitor .data.type2 { margin-left: 62px; }
+.monitor .data.type2 { margin-left: 62px; padding: 1.5px; }
 
-.monitor .data.type2 > div { width: 50%; border: 2px solid #d8d8d8; padding: 20px 30px 30px; height: 615px; }
+.monitor .data.type2 > div { width: 50%; border: 1.5px solid #d8d8d8; padding: 20px 30px 30px; height: 615px; -webkit-box-shadow: 0 0 0 1.5px #d8d8d8; box-shadow: 0 0 0 1.5px #d8d8d8; }
 
 .monitor .data.type2 > div > h3 { line-height: 40px; height: 40px; border-bottom: 0; padding-right: 20px; padding-left: 27px; padding: 0; margin-bottom: 17px; }
 
@@ -761,9 +761,9 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .monitor .simple-data { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-top: 5px; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
-.monitor .simple-data > li { margin-top: 5px; line-height: 46px; padding-top: 8px; background-color: #f5f7f9; width: calc(50% - 2.5px); padding-left: 58px; padding-right: 23px; position: relative; font-family: "GmarketSans", sans-serif; font-size: 20px; color: #000; }
+.monitor .simple-data > li { margin-top: 5px; line-height: 47px; padding-top: 7px; background-color: #f5f7f9; width: calc(50% - 2.5px); padding-left: 58px; padding-right: 23px; position: relative; font-family: "GmarketSans", sans-serif; font-size: 20px; color: #000; }
 
-.monitor .simple-data > li img { position: absolute; left: 40px; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.monitor .simple-data > li img { position: absolute; left: 40px; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); margin-top: 2px; }
 
 .monitor .simple-data > li span { font-family: "Noto Sans", sans-serif; float: right; font-size: 16px; line-height: 41px; }
 

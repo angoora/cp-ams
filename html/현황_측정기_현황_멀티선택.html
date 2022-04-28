@@ -112,9 +112,9 @@
               </div>
               <!-- radio.change 변경시 value값과 .radio-content data-radio 값이 잃치하는 컨텐츠 active (보이기) -->
               <div class="btn-group">
-                <input type="radio" id="inp7" value="graph" name="#" class="btn change" >
+                <input type="radio" id="inp7" value="graph" name="#" class="btn change" checked="checked">
                 <label for="inp7" class="type2">그래프</label>
-                <input type="radio" id="inp8" value="list" name="#" class="btn change" checked="checked">
+                <input type="radio" id="inp8" value="list" name="#" class="btn change" >
                 <label for="inp8" class="type2">목록</label>
               </div>
             </div>
@@ -126,20 +126,437 @@
         </div>
         <!-- 검색 상자 -->
         <ul class="radio-content">
-          <li data-radio="graph">
+          <li class="active" data-radio="graph">
             <!-- 그래프 -->
-            <div class="graph">
-              <div class="rt">
-                작업전입니다.
+            <div class="monitor">
+              <div class="status">
+                <div class="device">
+                  <h3>장치 현황</h3>
+                  <ul>
+                    <li>측정기 <b>10</b></li>
+                    <li>센서 <b>9</b></li>
+                    <li>지역화센서 <b>5</b></li>
+                    <li>공기살균정화기 <b>8</b></li>
+                  </ul>
+                </div>
+                <div class="air">
+                  <h3>공기질 지수 그래프</h3>
+                  <div class="chart">
+                    <!-- 차트영역 -->
+                    <img src="../common/images/sample_chart2.jpg" alt="">
+                    <!-- 차트영역 -->
+                  </div>
+                  <ul>
+                    <li>
+                      오늘 공기지수 평균 <span>85 <b class="level-1">좋음</b></span>
+                    </li>
+                    <li>
+                      1주전 공기지수 평균 <span>82 <b class="level-1"></b></span>
+                    </li>
+                    <li>
+                      2주전 공기지수 평균 <span>85 <b class="level-1"></b></span>
+                    </li>
+                    <li>
+                      3주전 공기지수 평균 <span>78 <b class="level-2"></b></span>
+                    </li>
+                  </ul>
+                  <div class="level">
+                    <span>지수등급</span>
+                    <ol>
+                      <li class="level-1">좋음</li>
+                      <li class="level-2">보통</li>
+                      <li class="level-3">나쁨</li>
+                      <li class="level-4">매우나쁨</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="data type2">
+                <div>
+                  <h3>
+                    <em class="level-1">좋음</em> 그룹명 / 측정기 명
+                    <span>5</span>
+                  </h3>
+                  <ul class="progress-wrap">
+                    <li class="lv-1" data-min="0" data-max="500">
+                      <h4 class="pm10">
+                        PM10 : <span>좋음</span>
+                        <em><b>50</b>ug/㎥</em>
+                      </h4>
+                      <div class="bar">
+                        <span></span>
+                        <em class="line"></em>
+                      </div>
+                      <div class="num">
+                        <span class="min"></span>
+                        <span class="u100">100</span>
+                        <span class="u300">300</span>
+                        <span class="max"></span>
+                      </div>
+                    </li>
+                    <li class="lv-2" data-min="0" data-max="500">
+                      <h4 class="pm25">
+                        PM10 : <span>보통</span>
+                        <em><b>80</b>ug/㎥</em>
+                      </h4>
+                      <div class="bar">
+                        <span></span>
+                        <em class="line"></em>
+                      </div>
+                      <div class="num">
+                        <span class="min"></span>
+                        <span class="u100">100</span>
+                        <span class="u300">300</span>
+                        <span class="max"></span>
+                      </div>
+                    </li>
+                    <li class="lv-3" data-min="0" data-max="500">
+                      <h4 class="co2">
+                        PM10 : <span>나쁨</span>
+                        <em><b>180</b>ppm</em>
+                      </h4>
+                      <div class="bar">
+                        <span></span>
+                        <em class="line"></em>
+                      </div>
+                      <div class="num">
+                        <span class="min"></span>
+                        <span class="u100">100</span>
+                        <span class="u300">300</span>
+                        <span class="max"></span>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="simple-data">
+                    <li class="lv-1">
+                      <img src="../common/images/icon_temp_sm.png" alt="">
+                      TEMP
+                      <span><b>16</b>°C</span>
+                    </li>
+                    <li class="lv-1">
+                      <img src="../common/images/icon_rh_sm.png" alt="">
+                      RH
+                      <span><b>10</b>%</span>
+                    </li>
+                    <li class="lv-4">
+                      <img src="../common/images/icon_hcho_sm.png" alt="">
+                      HCHO
+                      <span><b>4</b>ppm</span>
+                    </li>
+                    <li class="lv-1">
+                      <img src="../common/images/icon_pm1.0_sm.png" alt="">
+                      PM1.0
+                      <span><b>16</b>ug/㎥</span>
+                    </li>
+                    <li class="lv-3">
+                      <img src="../common/images/icon_co_sm.png" alt="">
+                      CO
+                      <span><b>10</b>ppm</span>
+                    </li>
+                    <li class="lv-2">
+                      <img src="../common/images/icon_tvoc_sm.png" alt="">
+                      TVOC
+                      <span><b>10</b>ppm</span>
+                    </li>
+                    <li class="air-cleaner">
+                      <div>공기살균정화기</div>
+                      <em class="level-2">1</em>
+                      <em class="level-3">2</em>
+                      <em class="level-4">3</em>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>
+                    <em class="level-2">좋음</em> 그룹명 / 측정기 명
+                    <span>5</span>
+                  </h3>
+                  <ul class="progress-wrap">
+                    <li class="lv-1" data-min="0" data-max="500">
+                      <h4 class="pm10">
+                        PM10 : <span>좋음</span>
+                        <em><b>50</b>ug/㎥</em>
+                      </h4>
+                      <div class="bar">
+                        <span></span>
+                        <em class="line"></em>
+                      </div>
+                      <div class="num">
+                        <span class="min"></span>
+                        <span class="u100">100</span>
+                        <span class="u300">300</span>
+                        <span class="max"></span>
+                      </div>
+                    </li>
+                    <li class="lv-2" data-min="0" data-max="500">
+                      <h4 class="pm25">
+                        PM10 : <span>보통</span>
+                        <em><b>80</b>ug/㎥</em>
+                      </h4>
+                      <div class="bar">
+                        <span></span>
+                        <em class="line"></em>
+                      </div>
+                      <div class="num">
+                        <span class="min"></span>
+                        <span class="u100">100</span>
+                        <span class="u300">300</span>
+                        <span class="max"></span>
+                      </div>
+                    </li>
+                    <li class="lv-3" data-min="0" data-max="500">
+                      <h4 class="co2">
+                        PM10 : <span>나쁨</span>
+                        <em><b>180</b>ppm</em>
+                      </h4>
+                      <div class="bar">
+                        <span></span>
+                        <em class="line"></em>
+                      </div>
+                      <div class="num">
+                        <span class="min"></span>
+                        <span class="u100">100</span>
+                        <span class="u300">300</span>
+                        <span class="max"></span>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="simple-data">
+                    <li class="lv-1">
+                      <img src="../common/images/icon_temp_sm.png" alt="">
+                      TEMP
+                      <span><b>16</b>°C</span>
+                    </li>
+                    <li class="lv-1">
+                      <img src="../common/images/icon_rh_sm.png" alt="">
+                      RH
+                      <span><b>10</b>%</span>
+                    </li>
+                    <li class="lv-4">
+                      <img src="../common/images/icon_hcho_sm.png" alt="">
+                      HCHO
+                      <span><b>4</b>ppm</span>
+                    </li>
+                    <li class="lv-1">
+                      <img src="../common/images/icon_pm1.0_sm.png" alt="">
+                      PM1.0
+                      <span><b>16</b>ug/㎥</span>
+                    </li>
+                    <li class="lv-3">
+                      <img src="../common/images/icon_co_sm.png" alt="">
+                      CO
+                      <span><b>10</b>ppm</span>
+                    </li>
+                    <li class="lv-2">
+                      <img src="../common/images/icon_tvoc_sm.png" alt="">
+                      TVOC
+                      <span><b>10</b>ppm</span>
+                    </li>
+                    <li class="air-cleaner">
+                      <div>공기살균정화기</div>
+                      <em class="level-2">1</em>
+                      <em class="level-3">2</em>
+                      <em class="level-4">3</em>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>
+                    <em class="level-3">좋음</em> 그룹명 / 측정기 명
+                    <span>5</span>
+                  </h3>
+                  <ul class="progress-wrap">
+                    <li class="lv-1" data-min="0" data-max="500">
+                      <h4 class="pm10">
+                        PM10 : <span>좋음</span>
+                        <em><b>50</b>ug/㎥</em>
+                      </h4>
+                      <div class="bar">
+                        <span></span>
+                        <em class="line"></em>
+                      </div>
+                      <div class="num">
+                        <span class="min"></span>
+                        <span class="u100">100</span>
+                        <span class="u300">300</span>
+                        <span class="max"></span>
+                      </div>
+                    </li>
+                    <li class="lv-2" data-min="0" data-max="500">
+                      <h4 class="pm25">
+                        PM10 : <span>보통</span>
+                        <em><b>80</b>ug/㎥</em>
+                      </h4>
+                      <div class="bar">
+                        <span></span>
+                        <em class="line"></em>
+                      </div>
+                      <div class="num">
+                        <span class="min"></span>
+                        <span class="u100">100</span>
+                        <span class="u300">300</span>
+                        <span class="max"></span>
+                      </div>
+                    </li>
+                    <li class="lv-3" data-min="0" data-max="500">
+                      <h4 class="co2">
+                        PM10 : <span>나쁨</span>
+                        <em><b>180</b>ppm</em>
+                      </h4>
+                      <div class="bar">
+                        <span></span>
+                        <em class="line"></em>
+                      </div>
+                      <div class="num">
+                        <span class="min"></span>
+                        <span class="u100">100</span>
+                        <span class="u300">300</span>
+                        <span class="max"></span>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="simple-data">
+                    <li class="lv-1">
+                      <img src="../common/images/icon_temp_sm.png" alt="">
+                      TEMP
+                      <span><b>16</b>°C</span>
+                    </li>
+                    <li class="lv-1">
+                      <img src="../common/images/icon_rh_sm.png" alt="">
+                      RH
+                      <span><b>10</b>%</span>
+                    </li>
+                    <li class="lv-4">
+                      <img src="../common/images/icon_hcho_sm.png" alt="">
+                      HCHO
+                      <span><b>4</b>ppm</span>
+                    </li>
+                    <li class="lv-1">
+                      <img src="../common/images/icon_pm1.0_sm.png" alt="">
+                      PM1.0
+                      <span><b>16</b>ug/㎥</span>
+                    </li>
+                    <li class="lv-3">
+                      <img src="../common/images/icon_co_sm.png" alt="">
+                      CO
+                      <span><b>10</b>ppm</span>
+                    </li>
+                    <li class="lv-2">
+                      <img src="../common/images/icon_tvoc_sm.png" alt="">
+                      TVOC
+                      <span><b>10</b>ppm</span>
+                    </li>
+                    <li class="air-cleaner">
+                      <div>공기살균정화기</div>
+                      <em class="level-2">1</em>
+                      <em class="level-3">2</em>
+                      <em class="level-4">3</em>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>
+                    <em class="level-4">매우나쁨</em> 그룹명 / 측정기 명
+                    <span>5</span>
+                  </h3>
+                  <ul class="progress-wrap">
+                    <li class="lv-1" data-min="0" data-max="500">
+                      <h4 class="pm10">
+                        PM10 : <span>좋음</span>
+                        <em><b>50</b>ug/㎥</em>
+                      </h4>
+                      <div class="bar">
+                        <span></span>
+                        <em class="line"></em>
+                      </div>
+                      <div class="num">
+                        <span class="min"></span>
+                        <span class="u100">100</span>
+                        <span class="u300">300</span>
+                        <span class="max"></span>
+                      </div>
+                    </li>
+                    <li class="lv-2" data-min="0" data-max="500">
+                      <h4 class="pm25">
+                        PM10 : <span>보통</span>
+                        <em><b>80</b>ug/㎥</em>
+                      </h4>
+                      <div class="bar">
+                        <span></span>
+                        <em class="line"></em>
+                      </div>
+                      <div class="num">
+                        <span class="min"></span>
+                        <span class="u100">100</span>
+                        <span class="u300">300</span>
+                        <span class="max"></span>
+                      </div>
+                    </li>
+                    <li class="lv-4" data-min="0" data-max="500">
+                      <h4 class="co2">
+                        PM10 : <span>매우나쁨</span>
+                        <em><b>180</b>ppm</em>
+                      </h4>
+                      <div class="bar">
+                        <span></span>
+                        <em class="line"></em>
+                      </div>
+                      <div class="num">
+                        <span class="min"></span>
+                        <span class="u100">100</span>
+                        <span class="u300">300</span>
+                        <span class="max"></span>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="simple-data">
+                    <li class="lv-1">
+                      <img src="../common/images/icon_temp_sm.png" alt="">
+                      TEMP
+                      <span><b>16</b>°C</span>
+                    </li>
+                    <li class="lv-1">
+                      <img src="../common/images/icon_rh_sm.png" alt="">
+                      RH
+                      <span><b>10</b>%</span>
+                    </li>
+                    <li class="lv-4">
+                      <img src="../common/images/icon_hcho_sm.png" alt="">
+                      HCHO
+                      <span><b>4</b>ppm</span>
+                    </li>
+                    <li class="lv-1">
+                      <img src="../common/images/icon_pm1.0_sm.png" alt="">
+                      PM1.0
+                      <span><b>16</b>ug/㎥</span>
+                    </li>
+                    <li class="lv-3">
+                      <img src="../common/images/icon_co_sm.png" alt="">
+                      CO
+                      <span><b>10</b>ppm</span>
+                    </li>
+                    <li class="lv-2">
+                      <img src="../common/images/icon_tvoc_sm.png" alt="">
+                      TVOC
+                      <span><b>10</b>ppm</span>
+                    </li>
+                    <li class="air-cleaner">
+                      <div>공기살균정화기</div>
+                      <em class="level-2">1</em>
+                      <em class="level-3">2</em>
+                      <em class="level-4">3</em>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
             <!-- //그래프 -->
           </li>
-          <li class="active" data-radio="list">
+          <li data-radio="list">
             <!-- 리스트 테이블 -->
             <div class="table board">
               <table>
-                <colgroup>               
+                <colgroup>
                   <col style="width:8%;">
                   <col style="width:auto;" span="12">
                   <col style="width:10%;" span="2">
@@ -160,7 +577,7 @@
                     <th>CO</th>
                     <th>TVOC</th>
                     <th>공기살균정화기</th>
-                    <th>수신일시</th>                    
+                    <th>수신일시</th>
                   </tr>
                 </thead>
                 <tbody>

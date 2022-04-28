@@ -112,9 +112,9 @@
               </div>
               <!-- radio.change 변경시 value값과 .radio-content data-radio 값이 잃치하는 컨텐츠 active (보이기) -->
               <div class="btn-group">
-                <input type="radio" id="inp7" value="graph" name="#" class="btn change">
+                <input type="radio" id="inp7" value="graph" name="#" class="btn change" checked="checked">
                 <label for="inp7" class="type2">그래프</label>
-                <input type="radio" id="inp8" value="list" name="#" class="btn change" checked="checked">
+                <input type="radio" id="inp8" value="list" name="#" class="btn change">
                 <label for="inp8" class="type2">목록</label>
               </div>
             </div>
@@ -126,20 +126,161 @@
         </div>
         <!-- 검색 상자 -->
         <ul class="radio-content">
-          <li data-radio="graph">
+          <li class="active" data-radio="graph">
             <!-- 그래프 -->
-            <div class="graph">
-              <div class="rt">
-                작업전입니다.
+            <div class="monitor">
+              <div class="status">
+                <div class="device">
+                  <h3>장치 현황</h3>
+                  <ul>
+                    <li>측정기 <b>10</b></li>
+                    <li>센서 <b>9</b></li>
+                    <li>지역화센서 <b>5</b></li>
+                    <li>공기살균정화기 <b>8</b></li>
+                  </ul>
+                </div>
+                <div class="air">
+                  <h3>공기질 지수 그래프</h3>
+                  <div class="chart">
+                    <!-- 차트영역 -->
+                    <img src="../common/images/sample_chart2.jpg" alt="">
+                    <!-- 차트영역 -->
+                  </div>
+                  <ul>
+                    <li>
+                      오늘 공기지수 평균 <span>85 <b class="level-1">좋음</b></span>
+                    </li>
+                    <li>
+                      1주전 공기지수 평균 <span>82 <b class="level-1"></b></span>
+                    </li>
+                    <li>
+                      2주전 공기지수 평균 <span>85 <b class="level-1"></b></span>
+                    </li>
+                    <li>
+                      3주전 공기지수 평균 <span>78 <b class="level-2"></b></span>
+                    </li>
+                  </ul>
+                  <div class="level">
+                    <span>지수등급</span>
+                    <ol>
+                      <li class="level-1">좋음</li>
+                      <li class="level-2">보통</li>
+                      <li class="level-3">나쁨</li>
+                      <li class="level-4">매우나쁨</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="data">
+                <div>
+                  <h3>PM10 <button type="button" data-pop-btn="pop3"></button> <span>5</span></h3>
+                  <div>
+                    <img src="../common/images/icon_pm10.png" alt="">
+                    <div class="progress" data-min="0" data-max="500" data-level="1">
+                      <div class="txt"><b>90</b>ug/㎥</div>
+                      <!-- 
+                        <div class="bar"><span></span></div>
+                        <div class="num">
+                          <span class="min"></span>
+                          <b></b>
+                          <span class="max"></span>
+                        </div> 
+                      -->
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3>PM2.5 <span>5</span></h3>
+                  <div>
+                    <img src="../common/images/icon_pm2.5.png" alt="">
+                    <div class="progress" data-min="0" data-max="500" data-level="1">
+                      <div class="txt"><b>100</b>ug/㎥</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3>PM1.0 <span>5</span></h3>
+                  <div>
+                    <img src="../common/images/icon_pm1.0.png" alt="">
+                    <div class="progress" data-min="0" data-max="500" data-level="2">
+                      <div class="txt"><b>120</b>ug/㎥</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3>CO2 <span>5</span></h3>
+                  <div>
+                    <img src="../common/images/icon_co2.png" alt="">
+                    <div class="progress" data-min="0" data-max="5000" data-level="2">
+                      <div class="txt"><b>350</b>ppm</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3>TEMP <span>5</span></h3>
+                  <div>
+                    <img src="../common/images/icon_temp.png" alt="">
+                    <div class="progress" data-min="-20" data-max="80" data-level="1">
+                      <div class="txt"><b>16</b>°C</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3>RH <span>5</span></h3>
+                  <div>
+                    <img src="../common/images/icon_rh.png" alt="">
+                    <div class="progress" data-min="0" data-max="100" data-level="1">
+                      <div class="txt"><b>10</b>%</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3>HCHO <span>5</span></h3>
+                  <div>
+                    <img src="../common/images/icon_hcho.png" alt="">
+                    <div class="progress" data-min="0" data-max="5" data-level="3">
+                      <div class="txt"><b>2</b>ppm</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3>CO <span>5</span></h3>
+                  <div>
+                    <img src="../common/images/icon_co.png" alt="">
+                    <div class="progress" data-min="0" data-max="20" data-level="4">
+                      <div class="txt"><b>15</b>ppm</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3>TVOC <span>5</span></h3>
+                  <div>
+                    <img src="../common/images/icon_tvoc.png" alt="">
+                    <div class="progress" data-min="0" data-max="50" data-level="1">
+                      <div class="txt"><b>10</b>ppm</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3>공기살균정화기 <span>5</span></h3>
+                  <div>
+                    <ul class="air-cleaner">
+                      <li class="level-2">동작 ( 4 )</li>
+                      <li class="level-3">정지 ( 1 )</li>
+                      <li class="level-4">고장 ( 1 )</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
+
             <!-- //그래프 -->
           </li>
-          <li class="active" data-radio="list">
-             <!-- 리스트 테이블 -->
-             <div class="table board">
+          <li data-radio="list">
+            <!-- 리스트 테이블 -->
+            <div class="table board">
               <table>
-                <colgroup>               
+                <colgroup>
                   <col style="width:8%;">
                   <col style="width:auto;" span="12">
                   <col style="width:10%;" span="2">
@@ -160,7 +301,7 @@
                     <th>CO</th>
                     <th>TVOC</th>
                     <th>공기살균정화기</th>
-                    <th>수신일시</th>                    
+                    <th>수신일시</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -483,6 +624,64 @@
             <button type="button" class="btn2 pop-close">닫기</button>
           </div>
         </form>
+      </div>
+      <button type="button" class="pop-close">닫기</button>
+    </div>
+  </div>
+  <div class="pop-wrap" data-pop="pop3">
+    <div class="pop-box type2">
+      <h2 class="pop-head">측정기명 지역화센서 <span>5</span></h2>
+      <div class="pop-inner">
+        <ul class="pop-inp">
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp1">센서명</label>
+              <input type="text" readonly id="inp1" value="200ug/㎥" name="#" class="inp">
+            </div>
+          </li>
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp2">센서명</label>
+              <input type="text" readonly id="inp2" value="500ug/㎥" name="#" class="inp">
+            </div>
+          </li>
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp3">센서명</label>
+              <input type="text" readonly id="inp3" value="250ug/㎥" name="#" class="inp">
+            </div>
+          </li>
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp4">센서명</label>
+              <input type="text" readonly id="inp4" value="330ug/㎥" name="#" class="inp">
+            </div>
+          </li>
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp5">센서명</label>
+              <input type="text" readonly id="inp5" value="220ug/㎥" name="#" class="inp">
+            </div>
+          </li>
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp6">센서명</label>
+              <input type="text" readonly id="inp6" value="455ug/㎥" name="#" class="inp">
+            </div>
+          </li>
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp7">센서명</label>
+              <input type="text" readonly id="inp7" value="155ug/㎥" name="#" class="inp">
+            </div>
+          </li>
+          <li class="full">
+            <div class="inp-set">
+              <label for="inp8">센서명</label>
+              <input type="text" readonly id="inp8" value="157ug/㎥" name="#" class="inp">
+            </div>
+          </li>
+        </ul>
       </div>
       <button type="button" class="pop-close">닫기</button>
     </div>
