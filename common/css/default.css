@@ -775,6 +775,14 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .monitor .simple-data > li.air-cleaner em { font-size: 12px; text-align: center; width: 25px; height: 25px; margin-left: 2px; line-height: 25px; vertical-align: -2px; display: inline-block; border-radius: 25px; font-family: "Noto Sans", sans-serif; }
 
+.monitor .simple-data > li.lv-1 span { color: #2359c4; }
+
+.monitor .simple-data > li.lv-2 span { color: #01b56e; }
+
+.monitor .simple-data > li.lv-3 span { color: #ffb43e; }
+
+.monitor .simple-data > li.lv-4 span { color: #da3539; }
+
 .ta-c { text-align: center; }
 
 .ta-l { text-align: left; }
