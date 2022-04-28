@@ -703,7 +703,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .monitor .data.type2 > div > h3 em { display: inline-block; height: 40px; width: 80px; text-align: center; vertical-align: top; font-size: 16px; border-radius: 0 0 15px 15px; font-weight: 400; margin-right: 10px; }
 
-.monitor .data.type2 > div > h3 span { margin-right: -9px; margin-top: 5px; }
+.monitor .data.type2 > div > h3 span { margin-right: -9px; margin-top: 5px; font-family: "Noto Sans", sans-serif; }
 
 .monitor .data.type2 > div .progress-wrap { background-color: #f5f7f9; padding: 14px 28px 16px; }
 
