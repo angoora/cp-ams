@@ -95,7 +95,7 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 
 .header #gnb > .dep1 > li:not(.active):hover > a { background-color: #1b53a0; }
 
-.header #gnb .dep2 { display: none; background-color: #fff; color: #0076ca; }
+.header #gnb .dep2 { display: none; background-color: #fff; color: #0076ca; line-height: 20px; }
 
 .header #gnb .dep2 > li { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 12px 0; border-bottom: 1px solid #3b92e5; }
 
@@ -107,7 +107,7 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 
 .header #gnb .dep3 { color: #555555; }
 
-.header #gnb .dep3 > li { padding: 1px 10px 1px 13px; position: relative; }
+.header #gnb .dep3 > li { padding: 3px 10px 3px 13px; position: relative; }
 
 .header #gnb .dep3 > li:before { content: none; width: 7px; height: 10px; background: url(../images/gnb_point.png) no-repeat 50% 50%; position: absolute; left: 0; top: 50%; margin-top: -4px; }
 
@@ -255,7 +255,7 @@ input, select, textarea { padding: 0 10px; -webkit-appearance: none; -moz-appear
 .inp-set.email .inp ~ .inp { margin-left: 5px; }
 
 /*select*/
-select { width: 100%; max-width: 200px; border: 1px solid #e8e8e8; padding: 0 12px; line-height: 40px; height: 42px; background: #fff url(../images/arrow_select.png) no-repeat right 15px center; border-radius: 5px; color: #111; }
+select { width: 100%; max-width: 200px; border: 1px solid #e8e8e8; padding: 0 12px; line-height: 40px; height: 42px; background: #fff url(../images/arrow_select.png) no-repeat right 12px center; border-radius: 5px; color: #111; }
 
 select:disabled { color: rgba(0, 0, 0, 0.4); }
 
@@ -431,6 +431,8 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .pop-wrap .pop-box.sm { max-width: 600px; }
 
+.pop-wrap .pop-box.lg { max-width: 1200px; }
+
 .pop-wrap .pop-box.type2 { max-width: 520px; }
 
 .pop-wrap .pop-box.type2 .pop-head { line-height: 90px; background-color: #e1edf9; color: #1b53a0; font-size: 26px; font-weight: 600; }
@@ -498,8 +500,6 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 .pop-wrap .pop-inp > li.full .inp, .pop-wrap .pop-inp > li.full select { max-width: 100%; }
 
 .pop-wrap .table .inp { height: 37px; line-height: 35px; text-align: center; }
-
-.pop-wrap .table select { padding: 0 2px; background-position: right 2px center; }
 
 .pop-wrap .pop-inp2 { margin: 0 -10px -10px; }
 
