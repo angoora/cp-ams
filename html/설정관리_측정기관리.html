@@ -64,7 +64,7 @@
                   <li><a href="#">센서 평균 현황</a></li>
                   <li><a href="#">센서 기간별 현황</a></li>
                 </ul>
-              </li>             
+              </li>
             </ul>
           </li>
           <li><a href="#"><i><img src="../common/images/icon_gnb_4.png" alt=""></i><span>도움말</span></a></li>
@@ -390,6 +390,13 @@
                 </select>
               </div>
             </li>
+            <li>
+              <div class="inp-set">
+                <label for="inp10">공기살균정화기</label>
+                <input type="text" id="inp10" value="A001" name="#" class="inp">
+                <button type="button" class="btn1 blue" data-pop-btn="pop4">선택하기</button>
+              </div>
+            </li>
           </ul>
           <div class="pop-btn">
             <button type="button" class="btn2 blue" data-pop-btn="pop3">저장</button>
@@ -397,6 +404,76 @@
           </div>
           <!-- 확인창 -->
           <div class="confirm-wrap" data-pop="pop3">
+            <div class="confirm-box">
+              <strong>저장하겠습니까?</strong>
+              <button type="button" class="btn3 blue">확인</button>
+              <button type="button" class="btn3 pop-close">취소</button>
+            </div>
+          </div>
+          <!-- //확인창 -->
+        </form>
+      </div>
+      <button type="button" class="pop-close">닫기</button>
+    </div>
+    <div class="pop-box sm" data-pop="pop4">
+      <h2 class="pop-head">공기살균정화기 선택</h2>
+      <div class="pop-inner">
+        <form action="#" method="post">
+          <!-- 리스트 테이블 -->
+          <div class="table fx-hd" data-row="5">
+            <table>
+              <colgroup>
+                <col style="width:15%;">
+                <col style="width:auto;" span="2">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>선택</th>
+                  <th>공기살균정화기 코드</th>
+                  <th>모델명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" name="#"></td>
+                  <td>A001</td>
+                  <td>abc</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="#"></td>
+                  <td>A001</td>
+                  <td>abc</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="#"></td>
+                  <td>A001</td>
+                  <td>abc</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="#"></td>
+                  <td>A001</td>
+                  <td>abc</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="#" checked></td>
+                  <td>A001</td>
+                  <td>abc</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="#" checked></td>
+                  <td>A001</td>
+                  <td>abc</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 리스트 테이블 -->
+          <div class="pop-btn">
+            <button type="button" class="btn2 blue" data-pop-btn="pop5">저장</button>
+            <button type="button" class="btn2 pop-close">취소</button>
+          </div>
+          <!-- 확인창 -->
+          <div class="confirm-wrap" data-pop="pop5">
             <div class="confirm-box">
               <strong>저장하겠습니까?</strong>
               <button type="button" class="btn3 blue">확인</button>
