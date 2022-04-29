@@ -46,12 +46,12 @@
       > li {display:flex;align-items:center;padding:12px 0;
         border-bottom:1px solid #3b92e5;
         &:last-of-type{border-bottom:0;}
-        > a {flex:none;width:104px;padding:0 10px 0 15px;color:$color1;font-weight: 500;}
+        > a {flex:none;width:84px;padding:0 10px 0 20px;color:$color1;font-weight: 500;}
         .dep3 {flex:auto;}
       }
     }
     .dep3 {color:#555555;
-      > li {padding:3px 15px 3px 13px;position:relative;
+      > li {padding:1px 10px 1px 13px;position:relative;
         &:before {content:none;width:7px;height:10px;background:url(../images/gnb_point.png) no-repeat 50% 50%;position:absolute;left:0;top:50%;margin-top:-4px;}
         &.active,&:hover {
           &:before {content:'';}
