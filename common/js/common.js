@@ -16,14 +16,25 @@ function getScrollWidth() {
   return scrollbarWidth;
 }
 
+//디바이스 너비에 따라 true | false
+function deviceChk(width){
+  if($(window).width()> width - getScrollWidth()){
+    return true;
+  }else{
+    return false;
+  }
+}
+
 //gnb 관련 함수
-function gnbAction() {
+function gnbAction() {  
   function openGnb(el) {//gnb 펼치기
-    $('#container').stop().animate({ marginLeft: '280px' }, 200);
-    $('.header').stop().animate({ width: '280px' }, 200, function () {
-      $(this).removeClass('sm');
-      slideGnb(el);
-    });
+    if(deviceChk(1024)){
+      $('#container').stop().animate({ marginLeft: '280px' }, 200);
+      $('.header').stop().animate({ width: '280px' }, 200, function () {
+        $(this).removeClass('sm');
+        slideGnb(el);
+      });
+    }
   }
   function slideGnb(el) {
     var thisWrap = $(el).closest('li');
@@ -57,7 +68,12 @@ function gnbAction() {
   //dep3 클릭시 active 표기
   $('.dep3 > li > a').on('click', function () {
     $('.dep3 > li').removeClass('active');
-    $(this).closest('li').addClass('active');
+    $(this).closest('li').addClass('active');    
+  });
+  $('.dep1 a:not(.btn)').on('click',function(){
+    if(!deviceChk(1024)){
+      $('.header').removeClass('active');
+    }
   });
 
   //전체메뉴 펼침
@@ -76,14 +92,27 @@ function gnbAction() {
 
   //gnb 감추기
   $('.btn_menu').on('click', function () {
-    if ($('.header').hasClass('sm')) {//gnb펼치기
-      openGnb();
-    } else {//gnb줄이기
-      $('.header').addClass('sm').stop().animate({ width: '80px' }, 200);
-      $('#container').stop().animate({ marginLeft: '80px' }, 200);
-      $('#gnb .dep1 > li').removeClass('active');
-      $('#gnb .dep2').stop().slideUp(200);
+    if(deviceChk(1024)){
+      if ($('.header').hasClass('sm')) {//gnb펼치기
+        openGnb();
+      } else {//gnb줄이기
+        $('.header').addClass('sm').stop().animate({ width: '80px' }, 200);
+        $('#container').stop().animate({ marginLeft: '80px' }, 200);
+        $('#gnb .dep1 > li').removeClass('active');
+        $('#gnb .dep2').stop().slideUp(200);
+      }
+    }else{
+      $('body').css('overflow','hidden');
+      $('.header').addClass('active');
     }
+  });
+  $('.btn_mobile').on('click',function(){
+    $('body').css('overflow','auto');
+    $('.header').removeClass('active');
+  });
+
+  $(window).resize(function(){
+    $('.header,#gnb,#container,body').removeAttr('style').removeClass('active').removeClass('sm');
   });
 }
 
