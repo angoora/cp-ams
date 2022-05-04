@@ -191,6 +191,19 @@ function progress2(){
   });
 }
 
+function dropdown() {//드롭다운 선택상자
+  $('.dropdown .btn').click(function () {
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active').attr('title', '열기').next('ul').stop().slideUp(200);
+    } else {
+      $(this).addClass('active').attr('title', '닫기').next('ul').stop().slideDown(200);
+    }
+  });
+  $('.dropdown label').click(function () {   
+    $(this).closest('.dropdown').find('.btn').removeClass('active').attr('title', '열기').next('ul').stop().slideUp(200);
+  });
+}
+
 $(function () {//document 로드 후 실행
   var scrollWidth = getScrollWidth();
   fxTable(scrollWidth);
@@ -200,4 +213,5 @@ $(function () {//document 로드 후 실행
   changeContent();
   progress();
   progress2();
+  dropdown();
 });

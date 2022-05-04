@@ -599,7 +599,25 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .group-list { background-color: #e1edf9; padding: 25px 30px; font-size: 0; margin-bottom: 30px; }
 
-.group-list a { display: inline-block; margin-right: 5px; line-height: 40px; border-radius: 4px; border: 1px solid #e8e8e8; color: #111; padding: 0 55px 0 12px; background: #fff url(../images/btn_add.png) no-repeat right 15px center; margin-right: 5px; font-size: 16px; }
+.group-list .dropdown { display: inline-block; margin-right: 5px; position: relative; line-height: 40px; border: 1px solid #e8e8e8; color: #111; font-size: 16px; z-index: 2; }
+
+.group-list .dropdown > .btn { padding: 0 55px 0 12px; width: 100%; background: #fff url(../images/btn_on.png) no-repeat right 15px center; border-radius: 4px; }
+
+.group-list .dropdown > .btn.active { border-radius: 4px 4px 0 0; background-image: url(../images/btn_off.png); }
+
+.group-list .dropdown > .btn.active + ul { border-radius: 0 0 4px 4px; }
+
+.group-list .dropdown > ul { display: none; position: absolute; left: -1px; top: 100%; width: calc(100% + 2px); z-index: 1; background-color: #fff; border: 1px solid #e8e8e8; }
+
+.group-list .dropdown > ul > li { border-bottom: 1px solid #e8e8e8; }
+
+.group-list .dropdown > ul > li:last-of-type { border-bottom: 0; }
+
+.group-list .dropdown > ul > li label { display: block; width: 100%; padding: 0 12px; line-height: 40px; cursor: pointer; margin: 0; }
+
+.group-list .dropdown > ul > li input:checked + label { background-color: #f4f4f4; }
+
+.group-list .dropdown > ul > li:hover label { background-color: #f4f4f4; }
 
 .monitor { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
