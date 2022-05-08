@@ -118,7 +118,7 @@ function gnbAction() {
 
 //팝업
 function modalPopup() {
-  $('[data-pop]').hide();
+  $('[data-pop]').css({display:'none',visibility:'visible'});
   $('[data-pop-btn]').click(function () {
     var popName = $(this).data('pop-btn');
     $('[data-pop="' + popName + '"]').stop().fadeIn(200);

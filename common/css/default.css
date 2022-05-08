@@ -299,7 +299,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .table { margin: 10px 0; text-align: center; word-break: break-all; border-top: 2px solid #0076ca; }
 
-.table.fx-hd { position: relative; border-bottom: 1px solid #e2e2e2; overflow-x: auto; }
+.table.fx-hd { position: relative; border-bottom: 1px solid #e2e2e2; }
 
 .table.fx-hd .scr-y { overflow-x: hidden; overflow-y: scroll; }
 
@@ -308,8 +308,6 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 .table.fx-hd .clone-tb { position: absolute; left: 0; top: 0; width: 100%; z-index: 1; }
 
 .table.fx-hd .clone-tb > tbody, .table.fx-hd .clone-tb tfoot { display: none; }
-
-.table.board { overflow-x: auto; }
 
 .table.board table { min-width: 1200px; }
 
@@ -435,7 +433,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 .graph .rt .chart + .ref span:before { content: '*'; }
 
 /*팝업*/
-.pop-wrap { position: fixed; left: 0; top: 0; bottom: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 10; /*마이페이지 팝업*/ }
+.pop-wrap { visibility: hidden; position: fixed; left: 0; top: 0; bottom: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 10; /*마이페이지 팝업*/ }
 
 .pop-wrap .pop-box { max-width: 948px; width: 100%; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-height: 90vh; }
 
@@ -835,7 +833,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   .sch-box .flex-col + .btn-group { width: 100%; -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; align-self: stretch; }
   .sch-box .flex-col + .btn-group button { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; padding: 0; width: 50%; font-size: 17px; } }
 
-@media screen and (max-width: 1200px) { .sch-box .btn-group { width: 100%; } }
+@media screen and (max-width: 1200px) { .sch-box .btn-group { width: calc(100% - 86px); margin-left: auto; padding-left: 0; } }
 
 @media screen and (max-width: 1024px) { body, html { font-size: 14px; }
   .header { width: 100%; height: 70px; padding: 0 20px; position: relative; text-align: left; }
@@ -850,6 +848,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   .header.active #gnb { left: 0; }
   .sch-box { margin: 0 -20px; padding: 12px 20px 20px 0; }
   .sch-box .inp-set { margin-left: 20px; margin-top: 8px; }
+  .sch-box .inp-set label:first-child { min-width: 50px; }
   .sch-box .btn-group { margin-top: 8px; }
   .sch-box .btn-group button { min-height: 31px; }
   #container { margin-left: 0; padding-left: 20px; padding-right: 20px; }
@@ -858,8 +857,9 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   #container .title h2 span { margin-left: 3px; }
   #container .title h2 span:before { content: ''; width: 6px; height: 6px; margin-right: 5px; vertical-align: 4px; }
   #container .title a { display: none; }
-  .table { margin: 15px 0; }
+  .table { margin: 15px 0; overflow-x: auto; }
   .table table { font-size: 14px; min-width: 720px; }
+  .table table thead { font-size: 15px; }
   .table.board table { min-width: auto; display: block; }
   .table.board colgroup { display: none; }
   .table.board thead { display: none; }
@@ -888,14 +888,25 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   select { padding: 0 9px; line-height: 29px; height: 31px; background-position: right 9px center; border-radius: 3px; }
   /*페이징*/
   .pagination { margin-top: 30px; font-size: 12px; }
-  .pagination.pc { display: none; }
+  .pagination:not(.mobile) { display: none; }
   .pagination.mobile { display: -webkit-box; display: -ms-flexbox; display: flex; }
   .pagination a { width: 32px; height: 32px; line-height: 32px; }
   .pagination .arrw-first, .pagination .arrw-last, .pagination .arrw-prev, .pagination .arrw-next { background-size: auto 8px; }
   /*팝업*/
   .pop-wrap .pop-box { max-height: 100vh; height: 100vh; background-color: #fff; -webkit-transform: translate(0); transform: translate(0); left: 0; top: 0; width: 100%; max-width: none; padding-bottom: 120px; padding-top: 60px; }
+  .pop-wrap .pop-box.sm { max-width: none; }
   .pop-wrap .pop-box .pop-head { position: absolute; left: 0; top: 0; width: 100%; line-height: 60px; font-size: 18px; padding: 0 20px; }
   .pop-wrap .pop-box .pop-inner { max-height: 100%; height: 100%; padding: 25px 20px 20px; }
   .pop-wrap .pop-box > .pop-close { width: 60px; height: 60px; right: 0; top: 0; background: url(../images/gnb_close_m.png) no-repeat center/18px auto; text-indent: 60px; overflow: hidden; }
   .pop-wrap .pop-btn { position: absolute; left: 0; bottom: 0; width: 100%; height: 100px; margin: 0; padding: 15px 20px 0; }
-  .pop-wrap .pop-btn .btn2 { height: 51px; line-height: 49px; font-size: 18px; } }
+  .pop-wrap .pop-btn .btn2 { height: 51px; line-height: 49px; font-size: 18px; }
+  .pop-wrap .pop-inp, .pop-wrap .pop-inp2 { margin: -6px 0 0; }
+  .pop-wrap .pop-inp > li, .pop-wrap .pop-inp2 > li { width: 100%; margin: 0; }
+  .pop-wrap .pop-inp > li .inp-set, .pop-wrap .pop-inp2 > li .inp-set { font-size: 12px; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .pop-wrap .pop-inp > li .inp-set label, .pop-wrap .pop-inp2 > li .inp-set label { min-width: 104px; width: auto; }
+  .pop-wrap .pop-inp > li .inp-set label ~ *, .pop-wrap .pop-inp > li .inp-set label ~ .inp, .pop-wrap .pop-inp2 > li .inp-set label ~ *, .pop-wrap .pop-inp2 > li .inp-set label ~ .inp { margin-left: auto; max-width: none; width: calc(100% - 104px); line-height: 36px; height: 34px; padding: 0 9px; margin-top: 6px; }
+  .pop-wrap .pop-inp > li .inp-set.email .inp, .pop-wrap .pop-inp2 > li .inp-set.email .inp { width: calc(100% - 104px); max-width: none; }
+  .pop-wrap .pop-inp > li .inp-set.email > span, .pop-wrap .pop-inp2 > li .inp-set.email > span { display: none; }
+  .pop-wrap .pop-inp > li .inp-set.email > span ~ select, .pop-wrap .pop-inp > li .inp-set.email > span ~ .inp, .pop-wrap .pop-inp2 > li .inp-set.email > span ~ select, .pop-wrap .pop-inp2 > li .inp-set.email > span ~ .inp { width: calc(100% - 104px); margin-left: auto; }
+  .pop-wrap .pop-inp2 > li.br { margin-right: 0; }
+  .pop-wrap .pop-inp2 > li .inp-set label { padding-left: 20px; background-size: 14px; } }
