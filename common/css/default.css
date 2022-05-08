@@ -299,7 +299,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .table { margin: 10px 0; text-align: center; word-break: break-all; border-top: 2px solid #0076ca; }
 
-.table.fx-hd { position: relative; border-bottom: 1px solid #e2e2e2; }
+.table.fx-hd { position: relative; border-bottom: 1px solid #e2e2e2; overflow-x: auto; }
 
 .table.fx-hd .scr-y { overflow-x: hidden; overflow-y: scroll; }
 
@@ -435,7 +435,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 .graph .rt .chart + .ref span:before { content: '*'; }
 
 /*팝업*/
-.pop-wrap { display: none; position: fixed; left: 0; top: 0; bottom: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 10; /*마이페이지 팝업*/ }
+.pop-wrap { position: fixed; left: 0; top: 0; bottom: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 10; /*마이페이지 팝업*/ }
 
 .pop-wrap .pop-box { max-width: 948px; width: 100%; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-height: 90vh; }
 
@@ -457,7 +457,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .pop-wrap .pop-box.type2 > .pop-close { right: 31px; top: 34px; width: 22px; height: 22px; border-radius: 22px; background: url(../images/btn_closepop3.png) no-repeat 50% 50%; }
 
-.pop-wrap .pop-box[data-pop] { display: none; max-width: 665px; -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.15); box-shadow: 0 0 50px rgba(0, 0, 0, 0.15); }
+.pop-wrap .pop-box[data-pop] { max-width: 665px; -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.15); box-shadow: 0 0 50px rgba(0, 0, 0, 0.15); }
 
 .pop-wrap .pop-box > .pop-close { position: absolute; right: 28px; top: 28px; width: 24px; height: 24px; border-radius: 24px; background: url(../images/btn_closepop.png) no-repeat 50% 50%; white-space: nowrap; text-indent: 28px; overflow: hidden; }
 

@@ -245,7 +245,7 @@ input[type="radio"] {display:inline-block;width:19px;height:18px;cursor:pointer;
   .table {flex:1;}
 }
 .table {margin:10px 0;text-align:center;word-break:break-all;border-top:2px solid $color1;
-  &.fx-hd {position:relative;border-bottom:1px solid #e2e2e2;
+  &.fx-hd {position:relative;border-bottom:1px solid #e2e2e2;overflow-x:auto;
     .scr-y {overflow-x:hidden;overflow-y:scroll;
       tbody{
         tr:last-of-type {
@@ -371,7 +371,7 @@ input[type="radio"] {display:inline-block;width:19px;height:18px;cursor:pointer;
 
 
 /*팝업*/
-.pop-wrap {display:none;position:fixed;left:0;top:0;bottom:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);z-index:10;
+.pop-wrap {position:fixed;left:0;top:0;bottom:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);z-index:10;
   .pop-box {max-width:948px;width:100%;position:absolute;top:50%;left:50%;transform:translate(-50% ,-50%);max-height:90vh;
     &.sm {max-width:600px;}
     &.lg {max-width:1200px;}
@@ -391,7 +391,7 @@ input[type="radio"] {display:inline-block;width:19px;height:18px;cursor:pointer;
       }
       > .pop-close {right:31px;top:34px;width:22px;height:22px;border-radius:22px;background:url(../images/btn_closepop3.png) no-repeat 50% 50%;}
     }
-    &[data-pop]{display:none;max-width:665px;box-shadow:0 0 50px rgba(0,0,0,0.15);}
+    &[data-pop]{max-width:665px;box-shadow:0 0 50px rgba(0,0,0,0.15);}
     > .pop-close {position:absolute;right:28px;top:28px;width:24px;height:24px;border-radius:24px;background:url(../images/btn_closepop.png) no-repeat 50% 50%;white-space:nowrap;text-indent:28px;overflow:hidden;}
     &.pop-login {max-width:860px;
       h2 {font-size:36px;text-align:center;color:#000;margin-bottom:35px;}
