@@ -851,6 +851,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   .sch-box .inp-set label:first-child { min-width: 69px; padding-left: 10px; }
   .sch-box .btn-group { margin-top: 4px; width: calc(100% - 105px); }
   .sch-box .btn-group button { min-height: 32px; width: 100%; }
+  .sch-box .btn-group button:first-of-type { margin-left: 0; }
   .sch-box .flex-row .inp-set .btn1.blue2 { width: 53px; }
   .sch-box .flex-col + .btn-group { max-width: none; -ms-flex-wrap: wrap; flex-wrap: wrap; padding-left: 20px; margin-top: 10px; }
   .sch-box .flex-col + .btn-group button { width: 100%; -webkit-box-flex: 0; -ms-flex: none; flex: none; font-size: 15px; height: 46px; line-height: 44px; }
@@ -862,8 +863,9 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   #container .title h2 span:before { content: ''; width: 6px; height: 6px; margin-right: 5px; vertical-align: 4px; }
   #container .title a { display: none; }
   .table { margin: 15px 0; overflow-x: auto; }
-  .table table { font-size: 14px; min-width: 720px; }
+  .table table { font-size: 14px; min-width: 720px; /*select*/ }
   .table table thead { font-size: 15px; }
+  .table table select { padding: 0 3px; background-position: right 3px center; }
   .table.board table { min-width: auto; display: block; }
   .table.board colgroup { display: none; }
   .table.board thead { display: none; }
@@ -915,4 +917,22 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   .pop-wrap .pop-inp > li .inp-set.email > span, .pop-wrap .pop-inp2 > li .inp-set.email > span { display: none; }
   .pop-wrap .pop-inp > li .inp-set.email > span ~ select, .pop-wrap .pop-inp > li .inp-set.email > span ~ .inp, .pop-wrap .pop-inp2 > li .inp-set.email > span ~ select, .pop-wrap .pop-inp2 > li .inp-set.email > span ~ .inp { width: calc(100% - 104px); margin-left: auto; }
   .pop-wrap .pop-inp2 > li.br { margin-right: 0; }
-  .pop-wrap .pop-inp2 > li .inp-set label { padding-left: 20px; background-size: 14px; } }
+  .pop-wrap .pop-inp2 > li .inp-set label { padding-left: 20px; background-size: 14px; }
+  /*로그인*/
+  #login { padding-top: 0; padding-bottom: 0; }
+  #login:before { background-image: none; top: 216px; width: 100%; height: calc(100% - 216px); }
+  #login .logo { left: 20px; top: 25px; width: 114px; }
+  #login .login-box { text-align: center; }
+  #login .login-box h1 { border: none; border-radius: 0; height: 216px; padding: 83px 0 0; display: inline-block; text-align: left; }
+  #login .login-box h1 span { font-size: 22px; margin-bottom: 2px; }
+  #login .login-box h1 b { font-size: 39px; }
+  #login .login-box h1 img { margin-left: 13px; width: 147px; }
+  #login .login-box h1:before { background-image: url(../images/bg_login_m.png); width: 360px; background-position: center top; height: 43px; bottom: -4px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); background-size: auto 43px; }
+  #login .login-box h1:after { content: none; }
+  #login .login-box > div { border: none; border-radius: 0; padding: 30px 0; max-width: 320px; margin: auto; }
+  #login .login-box > div .inp { height: 43px; line-height: 43px; padding: 0 45px; margin-bottom: 8px; font-size: 16px; background-position: 17px center; background-size: 17px auto; }
+  #login .login-box .inp-set { margin-top: 29px; }
+  #login .login-box .inp-set input[type="checkbox"] { width: 17px; height: 16px; background-size: 17px auto; -webkit-transform: translateY(-2px); transform: translateY(-2px); }
+  #login .login-box .inp-set input[type="checkbox"] + label { font-size: 15px; margin-left: 5px; }
+  #login .login-box .btn_login { margin-top: 25px; line-height: 60px; font-size: 20px; }
+  #login .login-box .btn-find { margin-top: 30px; padding-left: 18px; background-size: 14px auto; font-size: 12px; padding-bottom: 0; } }
