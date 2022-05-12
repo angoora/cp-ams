@@ -667,11 +667,11 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .monitor .data > div { width: 25%; border: 1px solid #d8d8d8; -webkit-box-shadow: 0 0 0 1px #d8d8d8; box-shadow: 0 0 0 1px #d8d8d8; }
 
-.monitor .data > div > h3 { line-height: 72px; height: 73px; border-bottom: 1px solid #d8d8d8; font-size: 22px; font-weight: 800; color: #161718; padding-right: 20px; padding-left: 27px; }
+.monitor .data > div > h3 { line-height: 76px; height: 73px; border-bottom: 1px solid #d8d8d8; font-size: 22px; font-weight: 800; color: #161718; padding-right: 20px; padding-left: 27px; font-family: "GmarketSans", sans-serif; }
 
 .monitor .data > div > h3 button { width: 30px; height: 30px; border-radius: 30px; background: url(../images/icon_setting.png) no-repeat center; margin-left: 5px; vertical-align: -5px; }
 
-.monitor .data > div > h3 span { float: right; display: block; text-align: center; color: #fff; width: 30px; height: 30px; border-radius: 30px; font-size: 14px; line-height: 30px; background-color: #161718; margin-top: 20px; }
+.monitor .data > div > h3 span { float: right; display: block; text-align: center; font-family: "Noto Sans", sans-serif; color: #fff; width: 30px; height: 30px; border-radius: 30px; font-size: 14px; line-height: 30px; font-weight: 400; background-color: #161718; margin-top: 20px; }
 
 .monitor .data > div > div { position: relative; border-top: 2px solid #f5f7f9; height: 263px; text-align: center; padding: 140px 20px 0; }
 
@@ -994,7 +994,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   .monitor .status > div.air .level { margin-top: 24px; }
   .monitor .status > div.air .level > span { font-size: 14px; margin-bottom: 4px; }
   .monitor .status > div.air .level ol > li { font-size: 10px; line-height: 30px; }
-  .monitor .data > div h3 { font-size: 26px; line-height: 87px; height: 87px; padding-right: 26px; padding-left: 34px; }
+  .monitor .data > div h3 { font-size: 26px; line-height: 92px; height: 87px; padding-right: 26px; padding-left: 34px; }
   .monitor .data > div h3 button, .monitor .data > div h3 span { width: 35px; height: 35px; border-radius: 35px; background-size: 35px auto; font-size: 16px; line-height: 35px; margin-top: 25px; }
   .monitor .data > div > div { height: 310px; padding: 165px 24px 0; }
   .monitor .data > div > div img { top: 102px; }
@@ -1002,7 +1002,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   .monitor .data > div > div .progress .txt b { font-size: 48px; }
   .monitor .data > div > div .progress .bar { height: 12px; margin-top: 14px; }
   .monitor .data > div > div .progress .num { font-size: 14px; }
-  .monitor .data > div > div .air-cleaner { padding: 0 16px; }
+  .monitor .data > div > div .air-cleaner { padding: 0 16px; margin-top: -110px; }
   .monitor .data > div > div .air-cleaner > li { line-height: 60px; font-size: 18px; } }
 
 @media screen and (max-width: 768px) { .pop-wrap .pop-box.pop-login .inp-wrap { display: block; }
