@@ -825,10 +825,13 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .level-4 { background-color: #da3539; color: #fff; }
 
+@media screen and (max-width: 1902px) { .monitor .data.type2 > div { width: 100%; } }
+
 @media screen and (max-width: 1700px) { .monitor .data > div { width: 33.3333%; } }
 
 @media screen and (max-width: 1500px) { .monitor .data { margin-left: 30px; }
   .monitor .data > div { width: 50%; }
+  .monitor .data.type2 { margin-left: 30px; }
   .sch-box { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
   .sch-box .flex-row { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 100%; }
   .sch-box .flex-row .inp-set { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
@@ -840,7 +843,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   .sch-box .flex-col + .btn-group { width: 100%; -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; align-self: stretch; max-width: none; margin-left: 0; }
   .sch-box .flex-col + .btn-group button { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; padding: 0; width: 50%; font-size: 17px; } }
 
-@media screen and (max-width: 1280px) { .group-list { display: -webkit-box; display: -ms-flexbox; display: flex; }
+@media screen and (max-width: 1350px) { .group-list { display: -webkit-box; display: -ms-flexbox; display: flex; }
   .group-list .dropdown { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
   .group-list .dropdown > .btn { padding-right: 32px; }
   .monitor { display: block; }
@@ -848,7 +851,8 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   .monitor .status > div { width: 50%; }
   .monitor .status > div.air { margin-top: 0; margin-left: 10px; }
   .monitor .data { margin-left: 0; margin-top: 20px; }
-  .monitor .data > div { width: 50%; } }
+  .monitor .data > div { width: 50%; }
+  .monitor .data.type2 { margin-left: 0; } }
 
 @media screen and (max-width: 1200px) { .sch-box .flex-row .btn-group { width: calc(100% - 86px); margin-left: auto; padding-left: 0; } }
 
@@ -975,7 +979,8 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   #login .login-box .inp-set input[type="checkbox"] + label { font-size: 15px; margin-left: 5px; }
   #login .login-box .btn_login { margin-top: 25px; line-height: 60px; font-size: 20px; }
   #login .login-box .btn-find { margin-top: 30px; padding-left: 18px; background-size: 14px auto; font-size: 12px; padding-bottom: 0; }
-  .group-list { padding: 15px; margin-bottom: 25px; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .update { display: none; }
+  .group-list { padding: 15px; margin: 0 -20px 25px; -ms-flex-wrap: wrap; flex-wrap: wrap; }
   .group-list .dropdown { width: calc(50% - 5px); margin: 2.5px; line-height: 30px; font-size: 14px; }
   .group-list .dropdown:last-of-type { width: calc(100% - 5px); -webkit-box-flex: 0; -ms-flex: none; flex: none; }
   .group-list .dropdown > .btn { padding: 0 30px 0 10px; background-size: 9px auto; background-position: right 10px center; }
