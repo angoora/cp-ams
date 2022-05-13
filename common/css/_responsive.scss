@@ -317,7 +317,7 @@
     .dropdown {width:calc(50% - 5px);
       margin:2.5px;line-height: 30px;font-size:14px;
       &:last-of-type{width:calc(100% - 5px);flex:none;}
-      > .btn {padding:0 30px 0 10px;background-size:9px auto;background-position:right 10px center;}
+      > .btn {padding:0 25px 0 10px;background-size:9px auto;background-position:right 10px center;line-height:18px;padding-top:6px;padding-bottom:6px;}
       > ul {
         > li {
           label {padding:0 10px;line-height:30px;}
@@ -385,6 +385,42 @@
           }
         }
       }
+      &.type2 {
+        > div {padding:11px 18px 18px;height:auto;border-width:1px;box-shadow:0 0 0 1px #d8d8d8;width:50%;height:361px;
+          > h3 {line-height:23px;height:23px;margin-bottom:10px;font-size:13px;
+            em {height:23px;width:48px;font-size:9px;border-radius:0 0 8px 8px;margin-right:7px;line-height:25px;}
+            span {margin-right:-6px;width:18px;height:18px;font-size:9px;line-height:18px;margin-top:0;}
+          }
+          .progress-wrap  {
+            padding:8px 16px 8px 18px;
+            > li {margin-bottom:6px;
+              h4 {left:auto;left:initial;right:19px;font-size:12px;background-size:auto 10px;
+                em {font-size:9px;
+                  b {font-size:11px;margin-right:2px;}
+                }
+              }
+              .bar {margin-top:0;height:9px;
+                .line{background-size:auto 9px;}
+              }
+              .num {font-size:7px;}
+            }
+          }
+        }
+      }
+    }
+    .simple-data {
+      margin-top:3px;
+      > li {margin-top:3px;line-height:27px;padding-top:4px;width:calc(50% - 1.5px);padding-left:30px;padding-right:13px;font-size:12px;
+        img {left:20px;transform:translate(-50%,-50%) scale(0.6);transform-origin:50%;}
+        span {line-height:25px;font-size:9px;
+          b {font-size:12px;}
+        }
+        &.air-cleaner {
+          padding-left:13px;padding-right:9px;
+          div {font-size:9px;}
+          em {font-size:7px;line-height:16px;width:16px;height:16px;margin-left:1px;}
+        }
+      }
     }
   }
 }
@@ -418,6 +454,9 @@
         > div {
           img {transform:scale(1.18) translate(-50%,-50%);transform-origin:50% 50%;}
         }
+      }
+      &.type2 {
+        > div {width:100%;height:auto;}
       }
     }
   }

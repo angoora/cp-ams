@@ -603,7 +603,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .group-list .dropdown { display: inline-block; margin-right: 5px; position: relative; line-height: 40px; border: 1px solid #e8e8e8; color: #111; font-size: 16px; }
 
-.group-list .dropdown > .btn { padding: 0 55px 0 12px; width: 100%; background: #fff url(../images/btn_on.png) no-repeat right 15px center; border-radius: 4px; position: relative; z-index: 1; }
+.group-list .dropdown > .btn { padding: 0 55px 0 12px; width: 100%; background: #fff url(../images/btn_on.png) no-repeat right 15px center; text-align: left; border-radius: 4px; position: relative; z-index: 1; }
 
 .group-list .dropdown > .btn.active { border-radius: 4px 4px 0 0; background-image: url(../images/btn_off.png); }
 
@@ -727,7 +727,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .monitor .data.type2 > div { width: 50%; border: 1.5px solid #d8d8d8; padding: 20px 30px 30px; height: 615px; -webkit-box-shadow: 0 0 0 1.5px #d8d8d8; box-shadow: 0 0 0 1.5px #d8d8d8; }
 
-.monitor .data.type2 > div > h3 { line-height: 40px; height: 40px; border-bottom: 0; padding-right: 20px; padding-left: 27px; padding: 0; margin-bottom: 17px; font-family: "GmarketSans", sans-serif; font-weight: 500; }
+.monitor .data.type2 > div > h3 { line-height: 40px; height: 40px; border-bottom: 0; padding: 0; margin-bottom: 17px; font-family: "GmarketSans", sans-serif; font-weight: 500; }
 
 .monitor .data.type2 > div > h3 em { display: inline-block; height: 40px; width: 80px; text-align: center; vertical-align: top; font-size: 16px; border-radius: 0 0 15px 15px; font-weight: 400; margin-right: 10px; }
 
@@ -983,7 +983,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   .group-list { padding: 15px; margin: 0 -20px 25px; -ms-flex-wrap: wrap; flex-wrap: wrap; }
   .group-list .dropdown { width: calc(50% - 5px); margin: 2.5px; line-height: 30px; font-size: 14px; }
   .group-list .dropdown:last-of-type { width: calc(100% - 5px); -webkit-box-flex: 0; -ms-flex: none; flex: none; }
-  .group-list .dropdown > .btn { padding: 0 30px 0 10px; background-size: 9px auto; background-position: right 10px center; }
+  .group-list .dropdown > .btn { padding: 0 25px 0 10px; background-size: 9px auto; background-position: right 10px center; line-height: 18px; padding-top: 6px; padding-bottom: 6px; }
   .group-list .dropdown > ul > li label { padding: 0 10px; line-height: 30px; }
   .monitor .status > div { padding: 26px; }
   .monitor .status > div h3 { padding-left: 24px; background-size: 17px auto; font-size: 17px; }
@@ -1008,7 +1008,27 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   .monitor .data > div > div .progress .bar { height: 12px; margin-top: 14px; }
   .monitor .data > div > div .progress .num { font-size: 14px; }
   .monitor .data > div > div .air-cleaner { padding: 0 16px; margin-top: -110px; }
-  .monitor .data > div > div .air-cleaner > li { line-height: 60px; font-size: 18px; } }
+  .monitor .data > div > div .air-cleaner > li { line-height: 60px; font-size: 18px; }
+  .monitor .data.type2 > div { padding: 11px 18px 18px; height: auto; border-width: 1px; -webkit-box-shadow: 0 0 0 1px #d8d8d8; box-shadow: 0 0 0 1px #d8d8d8; width: 50%; height: 361px; }
+  .monitor .data.type2 > div > h3 { line-height: 23px; height: 23px; margin-bottom: 10px; font-size: 13px; }
+  .monitor .data.type2 > div > h3 em { height: 23px; width: 48px; font-size: 9px; border-radius: 0 0 8px 8px; margin-right: 7px; line-height: 25px; }
+  .monitor .data.type2 > div > h3 span { margin-right: -6px; width: 18px; height: 18px; font-size: 9px; line-height: 18px; margin-top: 0; }
+  .monitor .data.type2 > div .progress-wrap { padding: 8px 16px 8px 18px; }
+  .monitor .data.type2 > div .progress-wrap > li { margin-bottom: 6px; }
+  .monitor .data.type2 > div .progress-wrap > li h4 { left: auto; left: initial; right: 19px; font-size: 12px; background-size: auto 10px; }
+  .monitor .data.type2 > div .progress-wrap > li h4 em { font-size: 9px; }
+  .monitor .data.type2 > div .progress-wrap > li h4 em b { font-size: 11px; margin-right: 2px; }
+  .monitor .data.type2 > div .progress-wrap > li .bar { margin-top: 0; height: 9px; }
+  .monitor .data.type2 > div .progress-wrap > li .bar .line { background-size: auto 9px; }
+  .monitor .data.type2 > div .progress-wrap > li .num { font-size: 7px; }
+  .monitor .simple-data { margin-top: 3px; }
+  .monitor .simple-data > li { margin-top: 3px; line-height: 27px; padding-top: 4px; width: calc(50% - 1.5px); padding-left: 30px; padding-right: 13px; font-size: 12px; }
+  .monitor .simple-data > li img { left: 20px; -webkit-transform: translate(-50%, -50%) scale(0.6); transform: translate(-50%, -50%) scale(0.6); -webkit-transform-origin: 50%; transform-origin: 50%; }
+  .monitor .simple-data > li span { line-height: 25px; font-size: 9px; }
+  .monitor .simple-data > li span b { font-size: 12px; }
+  .monitor .simple-data > li.air-cleaner { padding-left: 13px; padding-right: 9px; }
+  .monitor .simple-data > li.air-cleaner div { font-size: 9px; }
+  .monitor .simple-data > li.air-cleaner em { font-size: 7px; line-height: 16px; width: 16px; height: 16px; margin-left: 1px; } }
 
 @media screen and (max-width: 768px) { .pop-wrap .pop-box.pop-login .inp-wrap { display: block; }
   .pop-wrap .pop-box.pop-login .inp-wrap > div { display: block; width: 100%; margin-bottom: 30px; padding: 0 25px; }
@@ -1020,4 +1040,5 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   .monitor .status > div { width: 100%; }
   .monitor .status > div.air { margin-left: 0; margin-top: 17px; width: 100%; }
   .monitor .data > div { width: 100%; }
-  .monitor .data > div > div img { -webkit-transform: scale(1.18) translate(-50%, -50%); transform: scale(1.18) translate(-50%, -50%); -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; } }
+  .monitor .data > div > div img { -webkit-transform: scale(1.18) translate(-50%, -50%); transform: scale(1.18) translate(-50%, -50%); -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; }
+  .monitor .data.type2 > div { width: 100%; height: auto; } }
