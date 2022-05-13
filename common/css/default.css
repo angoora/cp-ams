@@ -426,13 +426,13 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 .graph > .chk-bar > ul > li { border: 1px solid #c8c8ca; margin-top: 2px; line-height: 49px; padding-left: 50px; }
 
-.graph .rt { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; padding-right: 30px; padding-left: 30px; }
+.graph > .rt { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; padding-right: 30px; padding-left: 30px; }
 
-.graph .rt .chart + .ref { text-align: right; margin-top: 30px; }
+.graph > .rt .chart + .ref { text-align: right; margin-top: 30px; }
 
-.graph .rt .chart + .ref span { margin-left: 10px; }
+.graph > .rt .chart + .ref span { margin-left: 10px; }
 
-.graph .rt .chart + .ref span:before { content: '*'; }
+.graph > .rt .chart + .ref span:before { content: '*'; }
 
 /*팝업*/
 .pop-wrap { visibility: hidden; position: fixed; left: 0; top: 0; bottom: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 10; /*마이페이지 팝업*/ }
@@ -1028,7 +1028,22 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   .monitor .simple-data > li span b { font-size: 12px; }
   .monitor .simple-data > li.air-cleaner { padding-left: 13px; padding-right: 9px; }
   .monitor .simple-data > li.air-cleaner div { font-size: 9px; }
-  .monitor .simple-data > li.air-cleaner em { font-size: 7px; line-height: 16px; width: 16px; height: 16px; margin-left: 1px; } }
+  .monitor .simple-data > li.air-cleaner em { font-size: 7px; line-height: 16px; width: 16px; height: 16px; margin-left: 1px; }
+  /*그래프 콘텐츠*/
+  .graph { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .graph .g-head { padding: 15px 0; margin-bottom: 20px; line-height: 1.5; position: relative; }
+  .graph .g-head .lt span { margin-left: 15px; }
+  .graph .g-head .rt { float: left; width: 100%; }
+  .graph .g-head .rt .chk-list { width: 100%; text-align: center; margin-top: 10px; }
+  .graph .g-head .rt .chk-list > li { display: inline-block; float: none; }
+  .graph .g-head .rt .status { float: right; margin-left: 0; position: absolute; right: 0; top: 0; background-position: left center; margin-top: 15px; padding-left: 20px; }
+  .graph > .chk-bar { width: 100%; margin-top: 0; }
+  .graph > .chk-bar h3 { line-height: 50px; font-size: 16px; }
+  .graph > .chk-bar > ul > li { float: left; width: 50%; padding: 0; text-align: center; line-height: 40px; margin-top: 0; font-size: 14px; }
+  .graph > .rt { padding-right: 0; padding-left: 0; width: 100%; margin-top: 20px; }
+  .graph > .rt .chart + .ref { margin-top: 20px; }
+  .graph > .rt .chart + .ref span { display: block; margin-left: 0; margin-top: 5px; font-size: 14px; }
+  .graph > .rt .chart + .ref span:before { content: '*'; } }
 
 @media screen and (max-width: 768px) { .pop-wrap .pop-box.pop-login .inp-wrap { display: block; }
   .pop-wrap .pop-box.pop-login .inp-wrap > div { display: block; width: 100%; margin-bottom: 30px; padding: 0 25px; }
