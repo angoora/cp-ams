@@ -1015,7 +1015,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   .monitor .data.type2 > div > h3 span { margin-right: -6px; width: 18px; height: 18px; font-size: 9px; line-height: 18px; margin-top: 0; }
   .monitor .data.type2 > div .progress-wrap { padding: 8px 16px 8px 18px; }
   .monitor .data.type2 > div .progress-wrap > li { margin-bottom: 6px; }
-  .monitor .data.type2 > div .progress-wrap > li h4 { left: auto; left: initial; right: 19px; font-size: 12px; background-size: auto 10px; }
+  .monitor .data.type2 > div .progress-wrap > li h4 { left: auto; left: initial; right: 19px; font-size: 12px; background-size: 14px auto; padding-left: 19px; }
   .monitor .data.type2 > div .progress-wrap > li h4 em { font-size: 9px; }
   .monitor .data.type2 > div .progress-wrap > li h4 em b { font-size: 11px; margin-right: 2px; }
   .monitor .data.type2 > div .progress-wrap > li .bar { margin-top: 0; height: 9px; }
