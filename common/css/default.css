@@ -545,7 +545,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 .confirm-wrap .confirm-box .btn3 ~ .btn3 { margin-left: 5px; }
 
 /*로그인*/
-#login { padding-top: 106px; padding-bottom: 30px; position: relative; min-height: 100vh; background-color: #0076ca; }
+#login { padding-top: 96px; padding-bottom: 30px; position: relative; min-height: 100vh; background-color: #0076ca; }
 
 #login:before { content: ''; position: absolute; left: 0; top: 330px; width: 100%; height: calc(100% - 330px); background: #fff url(../images/bg_login.png) no-repeat center 64px; }
 
@@ -553,7 +553,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
 
 #login .login-box { position: relative; z-index: 1; max-width: 614px; margin: auto; }
 
-#login .login-box h1 { border: 2px solid #fff; border-radius: 16px 16px 0 0; border-bottom: 0; height: 224px; font-family: 'GmarketSans',sans-serif; padding: 53px 0 0 80px; color: #fff; position: relative; }
+#login .login-box h1 { border: 2px solid #fff; border-radius: 16px 16px 0 0; border-bottom: 0; height: 234px; font-family: 'GmarketSans',sans-serif; padding: 88px 0 0 80px; color: #fff; position: relative; }
 
 #login .login-box h1 span { font-weight: 400; font-size: 36px; color: #1b53a0; display: block; margin-bottom: 5px; }
 
@@ -966,7 +966,7 @@ input[type="radio"].btn:checked + label.type2 { background-color: #8590c8; color
   #login:before { background-image: none; top: 216px; width: 100%; height: calc(100% - 216px); }
   #login .logo { left: 20px; top: 25px; width: 114px; }
   #login .login-box { text-align: center; }
-  #login .login-box h1 { border: none; border-radius: 0; height: 216px; padding: 83px 0 0; display: inline-block; text-align: left; }
+  #login .login-box h1 { border: none; border-radius: 0; height: 216px; padding: 98px 0 0; display: inline-block; text-align: left; }
   #login .login-box h1 span { font-size: 22px; margin-bottom: 2px; }
   #login .login-box h1 b { font-size: 39px; }
   #login .login-box h1 img { margin-left: 13px; width: 147px; }
