@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>CP-AMS에 오신 것을 환영합니다.</title>
+  <link rel="stylesheet" href="../common/css/default.css">
+  <script src="../common/js/prefixfree.min.js"></script>
+  <script src="../common/js/jquery-3.6.0.min.js"></script>
+  <script src="../common/js/common.js"></script>
+
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- 헤더 -->
+    <header class="header">
+      <h1 class="logo"><a href="#"><span class="hide">AerQ</span></a></h1>
+      <nav id="gnb">
+        <a href="#" class="mypage">마이페이지</a>
+        <ul class="dep1">
+          <li class="active"><a href="#"><i><img src="../common/images/icon_gnb_1.png" alt=""></i><span>관리</span></a>
+            <ul class="dep2">
+              <li><a href="#">USER 관리</a>
+                <ul class="dep3">
+                  <li><a href="#">기관 사용자</a></li>
+                  <li class="active"><a href="#">일반 사용자</a></li>
+                  <li><a href="#">사용 권한</a></li>
+                </ul>
+              </li>
+              <li><a href="#">마스터 관리</a>
+                <ul class="dep3">
+                  <li><a href="#">Local 서버 관리</a></li>
+                  <li><a href="#">마스터 센서 관리</a></li>
+                  <li><a href="#">마스터 공기살균 정화기 관리</a></li>
+                  <li><a href="#">기관 마스터<br>센서 관리</a></li>
+                </ul>
+              </li>
+              <li><a href="#">설정 관리</a>
+                <ul class="dep3">
+                  <li><a href="#">측정기 관리</a></li>
+                  <li><a href="#">측정기 센서 관리</a></li>
+                  <li><a href="#">그룹 관리</a></li>
+                  <li><a href="#">공기살균정화기 관리</a></li>
+                </ul>
+              </li>
+              <li><a href="#">장애 관리</a>
+                <ul class="dep3">
+                  <li><a href="#">실시간 장애 현황</a></li>
+                  <li><a href="#">장애 관리</a></li>
+                  <li><a href="#">로그인 이력 현황</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#"><i><img src="../common/images/icon_gnb_2.png" alt=""></i><span>모니터링</span></a></li>
+          <li><a href="#"><i><img src="../common/images/icon_gnb_3.png" alt=""></i><span>현황</span></a>
+            <ul class="dep2">
+              <li><a href="#">현황</a>
+                <ul class="dep3">
+                  <li><a href="#">미등록 현황</a></li>
+                  <li><a href="#">측정기 현황</a></li>
+                  <li><a href="#">센서 평균 현황</a></li>
+                  <li><a href="#">센서 기간별 현황</a></li>
+                </ul>
+              </li>             
+            </ul>
+          </li>
+          <li><a href="#"><i><img src="../common/images/icon_gnb_4.png" alt=""></i><span>도움말</span></a></li>
+        </ul>
+        <button type="button" class="btn_mobile"><span class="hide">메뉴닫기</span></button>
+      </nav>
+      <button type="button" class="btn_menu"><span class="hide">메뉴닫기</span></button>
+    </header>
+    <!-- //헤더 -->
+    <!-- container -->
+    <div id="container">
+      <!-- 페이지 제목 -->
+      <div class="title">
+        <h2>청파초등학교 <span>기관 센서 관리</span></h2>
+        <a href="#" class="fullpage">전체보기</a>
+        <a href="#" class="mypage">마이페이지</a>
+      </div>
+      <!-- 페이지 제목 -->
+      <!-- 컨텐츠 -->
+      <div class="contents">
+        <!-- 검색 상자 -->
+        <div class="sch-box">         
+          <div class="btn-group">
+            <button type="button" class="btn1" data-pop-btn="pop1">수정</button>
+          </div>
+        </div>
+        <!-- 검색 상자 -->
+        <!-- 리스트 테이블 -->
+        <div class="table board">
+          <table>
+            <colgroup>
+              <col style="width:6%;">
+              <col style="width:20%;">
+              <col style="width:20%;">
+              <col style="width:15%;">
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th>선택</th>
+                <th>코드</th>
+                <th>그룹</th>
+                <th>등급</th>
+                <th>설명</th>                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="chk-cell"><input type="checkbox" name="#"></td>
+                <td>A101</td>
+                <td>측정기</td>
+                <td>CRITICAL</td>
+                <td>공기질 측정기 무응답</td>               
+              </tr>
+              <tr>
+                <td class="chk-cell"><input type="checkbox" name="#"></td>
+                <td>A201</td>
+                <td>공기정화기</td>
+                <td>MAJOR</td>
+                <td>공기질 측정기 무응답</td>               
+              </tr>
+              <tr>
+                <td class="chk-cell"><input type="checkbox" name="#"></td>
+                <td></td>
+                <td></td>
+                <td>CRITICAL</td>
+                <td></td>               
+              </tr>
+              <tr>
+                <td class="chk-cell"><input type="checkbox" name="#"></td>
+                <td></td>
+                <td></td>
+                <td>MAJOR</td>
+                <td></td>               
+              </tr>
+              <tr>
+                <td class="chk-cell"><input type="checkbox" name="#"></td>
+                <td></td>
+                <td></td>
+                <td>CRITICAL</td>
+                <td></td>               
+              </tr>
+              <tr>
+                <td class="chk-cell"><input type="checkbox" name="#"></td>
+                <td></td>
+                <td></td>
+                <td>MAJOR</td>
+                <td></td>               
+              </tr>            
+            </tbody>
+          </table>
+        </div>     
+        <!-- 리스트 테이블 -->
+       
+      </div>
+      <!-- //컨텐츠 -->
+    </div>
+    <!-- container -->
+  </div>
+
+</body>
+
+</html>
