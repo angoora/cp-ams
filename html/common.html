@@ -21,51 +21,59 @@
       <nav id="gnb">
         <a href="#" class="mypage">마이페이지</a>
         <ul class="dep1">
-          <li class="active"><a href="#"><i><img src="../common/images/icon_gnb_1.png" alt=""></i><span>관리</span></a>
-            <ul class="dep2">
-              <li><a href="#">USER 관리</a>
-                <ul class="dep3">
-                  <li><a href="#">기관 사용자</a></li>
-                  <li class="active"><a href="#">일반 사용자</a></li>
-                  <li><a href="#">사용 권한</a></li>
-                </ul>
-              </li>
-              <li><a href="#">마스터 관리</a>
-                <ul class="dep3">
-                  <li><a href="#">Local 서버 관리</a></li>
-                  <li><a href="#">마스터 센서 관리</a></li>
-                  <li><a href="#">마스터 공기살균 정화기 관리</a></li>
-                  <li><a href="#">기관 마스터<br>센서 관리</a></li>
-                </ul>
-              </li>
-              <li><a href="#">설정 관리</a>
-                <ul class="dep3">
-                  <li><a href="#">측정기 관리</a></li>
-                  <li><a href="#">측정기 센서 관리</a></li>
-                  <li><a href="#">그룹 관리</a></li>
-                  <li><a href="#">공기살균정화기 관리</a></li>
-                </ul>
-              </li>
-              <li><a href="#">장애 관리</a>
-                <ul class="dep3">
-                  <li><a href="#">실시간 장애 현황</a></li>
-                  <li><a href="#">장애 관리</a></li>
-                  <li><a href="#">로그인 이력 현황</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
           <li><a href="#"><i><img src="../common/images/icon_gnb_2.png" alt=""></i><span>모니터링</span></a></li>
           <li><a href="#"><i><img src="../common/images/icon_gnb_3.png" alt=""></i><span>현황</span></a>
             <ul class="dep2">
               <li><a href="#">현황</a>
                 <ul class="dep3">
-                  <li><a href="#">미등록 현황</a></li>
                   <li><a href="#">측정기 현황</a></li>
                   <li><a href="#">센서 평균 현황</a></li>
                   <li><a href="#">센서 기간별 현황</a></li>
+                  <li><a href="#">미등록 현황</a></li>
                 </ul>
-              </li>             
+              </li>
+              <li><a href="#">장애</a>
+                <ul class="dep3">
+                  <li><a href="#">실시간 장애</a></li>
+                  <li><a href="#">장애 이력</a></li>
+                </ul>
+              </li>
+              <li><a href="#">이력</a>
+                <ul class="dep3">
+                  <li><a href="#">로그인 이력</a></li>                
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="active"><a href="#"><i><img src="../common/images/icon_gnb_1.png" alt=""></i><span>관리</span></a>
+            <ul class="dep2">
+              <li><a href="#">사용자 관리</a>
+                <ul class="dep3">
+                  <li class="active"><a href="#">사용자</a></li>               
+                </ul>
+              </li>
+              <li><a href="#">기관관리</a>
+                <ul class="dep3">
+                  <li><a href="#">기관</a></li>               
+                  <li><a href="#">그룹</a></li>               
+                </ul>
+              </li>
+              <li><a href="#">마스터 관리</a>
+                <ul class="dep3">
+                  <li><a href="#">로컬 서버</a></li>
+                  <li><a href="#">마스터 센서</a></li>
+                  <li><a href="#">기관 센서</a></li>
+                  <li><a href="#">마스터 장애등급</a></li>
+                  <li><a href="#">기관 장애등급</a></li>
+                </ul>
+              </li>
+              <li><a href="#">장치관리</a>
+                <ul class="dep3">
+                  <li><a href="#">측정기</a></li>
+                  <li><a href="#">센서</a></li>
+                  <li><a href="#">공기살균정화기</a></li>                
+                </ul>
+              </li>              
             </ul>
           </li>
           <li><a href="#"><i><img src="../common/images/icon_gnb_4.png" alt=""></i><span>도움말</span></a></li>
@@ -277,7 +285,7 @@
             <a href="#">8</a>
             <a href="#">9</a>
             <a href="#">10</a>
-          </div>         
+          </div>
           <div class="next-wrap">
             <a href="#" class="arrw-next">다음페이지</a>
             <a href="#" class="arrw-last">마지막페이지</a>
@@ -293,8 +301,8 @@
           <div class="page-wrap">
             <a href="#" class="active">1</a>
             <a href="#">2</a>
-            <a href="#">3</a>           
-          </div>         
+            <a href="#">3</a>
+          </div>
           <div class="next-wrap">
             <a href="#" class="arrw-next">다음페이지</a>
             <a href="#" class="arrw-last">마지막페이지</a>
@@ -305,7 +313,7 @@
         테이블 헤더가 고정되고 스크롤 발생하는 경우 fx-hd 클래스 추가 
         data-row="노출되고자 하는 줄의 개수"
         -->
-        <div class="table fx-hd"  data-row="3">
+        <div class="table fx-hd" data-row="3">
           <table>
             <colgroup>
               <col style="width:6%;">
